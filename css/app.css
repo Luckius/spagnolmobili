@@ -20434,13 +20434,16 @@ img {
       .header.isWhite .header__hamburger .header__hamburger__3 {
         background-color: #000; }
       .header.isWhite .menu .menu-item .menu-title:before, .header.isWhite .menu .menu-item .menu-title-2:before {
-        background-color: #000; }
+        background-color: #000;
+        font-weight: 700; }
       .header.isWhite .menu .menu-item a {
-        color: #000 !important; }
+        color: #000 !important;
+        font-weight: 700; }
       .header.isWhite .menu .menu-item.menu-has-submenu .menu-title:after, .header.isWhite .menu .menu-item.menu-has-submenu .menu-title-2:after {
         background-image: url("../images/app/arrow-right-white.svg"); }
       .header.isWhite .menu .menu-item.menu-has-submenu .menu-submenu {
-        background-color: #000; } }
+        background-color: #000;
+        font-weight: 700; } }
 
 div.header {
   z-index: 1; }
