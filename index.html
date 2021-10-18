@@ -308,11 +308,31 @@
             }
         }
 
+        #slideImg{
+          animation: zoom 6s linear infinite
+        }
+
+        @keyframes zoom{
+          0%{
+            transform: scale(1.3);
+          }
+          15%{
+            transform: scale(1);
+          }
+
+          85%{
+            transform: scale(1.3);
+          }
+          100%{
+            transform: scale(1.3);
+          }
+        }
+
 
     </style>
     
     </head>
-<body class=" ">
+<body onload="slider()">
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCXV85L"
@@ -2348,10 +2368,13 @@ N° REA: TV 185064                    </p>
 
         <div class="container-fluid padding--lr-0 isHomepage" >
 
-          <div class="row row--1   row--first" style="background-image: url('uploads/sections/images/3/backg.jpg');">
+          <div id="slideImg" class="row row--1   row--first" style="background-image: url('uploads/sections/images/3/backg.jpg');">
+
+            <!--<img id="slideImg" src="uploads/sections/images/2/2c8b19833164c9ba5b25e6a59f83527e61cccd2d_l.png" />-->
+
         <div class="col-12 padding--lr-0 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="300">
             <a href="javascript: void(0);"  class="noGallery" >
-                <img src="uploads/sections/images/2/2c8b19833164c9ba5b25e6a59f83527e61cccd2d_l.png" />
+                <img id="slideImgs" src="uploads/sections/images/2/2c8b19833164c9ba5b25e6a59f83527e61cccd2d_l.png" />
             </a>
         </div>
 
@@ -2508,6 +2531,30 @@ N° REA: TV 185064                    </p>
 
     <img style="height: 600px;width: 100%;" src="uploads/sections/images/3/Gr21.png" />-->
         
+
+    <script type="text/javascript">
+      
+      var slideImg = document.getElementById("slideImg");
+      var images = new Array(
+        "uploads/sections/images/3/backg.jpg",
+        "uploads/sections/images/3/spagnol.jpg",
+        "uploads/sections/images/3/spagnol1.jpg"
+      );
+      var len = images.length;
+      var i = 0;
+
+      function slider(){
+        if(i> len-1){
+          i=0;
+        }
+        var myimage = images[i];
+        console.log(myimage);
+        slideImg.style.backgroundImage  = "url("+myimage+")";//images[i];
+        i++;
+        setTimeout("slider()",6000);
+      }
+
+    </script>
 
 
     </div>
