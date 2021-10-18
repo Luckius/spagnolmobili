@@ -20300,7 +20300,7 @@ img {
     left: 0px; }
 
 .header {
-  position: fixed;
+  /*position: fixed;*/
   top: 0;
   left: 0;
   width: 100%;
@@ -20309,11 +20309,13 @@ img {
   padding-left: calc(80px + 40px);
   padding-right: 40px; }
   .header .colDX {
-    top: -4px; }
+    /*top: -4px;*/
+    top:0px; }
   .header.isScroll {
     background-color: #fff; }
   .header.isScrollDown {
-    top: -102px; }
+    /*top: -102px;*/
+    top:0px; }
   .header.header-border-bottom {
     border-bottom-color: #efefef; }
   .header .hideIsOpen {
@@ -20939,7 +20941,7 @@ div.header {
   border-top: 1px solid #eeeeee;
   position: relative;
   z-index: 1;
-  background-color: #fff; }
+  background-color: #F7F7F7; }
   .footer .container-fluid-menu {
     padding-left: calc(80px + 15px); }
     @media (max-width: 1220px) {
