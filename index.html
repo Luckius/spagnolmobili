@@ -130,7 +130,7 @@
 
     </script>
 
-    <style type="text/css">
+    <!--<style type="text/css">
 
         @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
@@ -333,7 +333,78 @@
         }
 
 
-    </style>
+        .header1{
+          background: black;
+           height: 50px;
+        }
+
+      .header-items{
+        color: white;
+        margin-left: 2px; 
+        padding: 20px;
+        position: absolute;
+        right: 1150px;
+       }
+
+       .edgtf-position-right-inner1{
+        position: relative;
+        left: 1100px;
+        text-align: left;
+        padding-top: 20px;
+       }
+
+
+       @media screen and (min-width: 1400px) {
+        .header1{
+        background-color: green;
+      }
+        .header-items{
+        color: white;
+        margin-left: 2px; 
+        padding: 20px;
+        position: absolute;
+        right: 1500px;
+      }
+    }
+
+
+      @media screen and (max-width: 1330px) {
+      .header1{
+        background-color: green;
+      }
+      .header-items{
+        color: white;
+        margin-left: 2px; 
+        padding: 20px;
+        position: absolute;
+        right: 1000px;
+      }
+    }
+
+    @media screen and (max-width: 1000px){
+      .header-items{
+        color: white;
+        margin-left: 2px; 
+        padding: 20px;
+        position: absolute;
+        right: 500px;
+      }
+    }
+
+
+    @media screen and (max-width: 500px){
+      .header-items{
+        color: white;
+        margin-left: 2px; 
+        padding: 20px;
+        position: absolute;
+        right: 250px;
+      }
+    }
+
+
+    </style>-->
+
     
     </head>
 <body onload="slider()">
@@ -1892,22 +1963,24 @@ N° REA: TV 185064                    </p>
 
 <div class="container-fluid container-fluid-main">
 
-  <div class="header1" style="background: black; height: 50px;">
-    <div style="color: white;margin-left: 10px; padding: 20px;position: absolute;
-       right: 1100px;">
+  <div class="header1">
+    <div class="header-items">
       <a href="#">IT</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
       <a href="#">EN</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-      <a href="#">RU</a>
+      <a href="#">RU</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <a href="#">ES</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <a href="#">DE</a>
 
     </div>
 
 
       <div class="edgtf-position-right-inner1"
-           style="position: relative;left: 1100px;text-align: left;
-            padding-top: 20px;" >
+           style="" >
                           
-        <a class="edgtf-social-icon-widget-holder edgtf-icon-has-hover" style="color: #ffffff;;font-size: 14px;margin: 0px 5px 0px 10px;" href="https://www.facebook.com/GruppoTomasellaOfficial" target="_blank">
-            <span class="edgtf-social-icon-widget fa fa-facebook    "></span>        </a>
+        <a class="edgtf-social-icon-widget-holder edgtf-icon-has-hover" 
+        style="color: #ffffff;;font-size: 14px;margin: 0px 5px 0px 10px;" href="https://www.facebook.com/GruppoTomasellaOfficial" target="_blank">
+            <span class="edgtf-social-icon-widget fa fa-facebook">  
+            </span></a>
     
         <a class="edgtf-social-icon-widget-holder edgtf-icon-has-hover" style="color: #ffffff;;font-size: 14px;margin: 0px 5px 0px 5px;" href="https://www.instagram.com/gruppotomasella/" target="_blank">
             <span class="edgtf-social-icon-widget fa fa-instagram    "></span>        </a>
@@ -1917,13 +1990,17 @@ N° REA: TV 185064                    </p>
     
         <a class="edgtf-social-icon-widget-holder edgtf-icon-has-hover" style="color: #ffffff;;font-size: 14px;margin: 0px 10px 0px 5px;" href="https://www.youtube.com/user/TomasellaGroup" target="_blank">
             <span class="edgtf-social-icon-widget fa fa-youtube-play    "></span>        </a>
-    <!--<div class="widget edgtf-separator-widget"><div class="edgtf-separator-holder clearfix  edgtf-separator-center edgtf-separator-normal">
-     <div class="edgtf-separator" style="border-color: #ffffff;border-style: solid;width: 1px;border-bottom-width: 20px;margin-top: 0px;margin-bottom: 0px"></div>
-     </div>
+      <!--<div class="widget edgtf-separator-widget">
+        <div class="edgtf-separator-holder clearfix  edgtf-separator-center edgtf-separator-normal">
+        <div class="edgtf-separator" style="border-color: #ffffff;border-style: solid;width: 1px;border-bottom-width: 0px;margin-top: 0px;margin-bottom: 0px"></div>
+      </div>
     </div>-->
+    
         <a class="edgtf-icon-widget-holder edgtf-icon-has-hover edgtf-text-left" data-hover-color="#ffffff" href="https://www.tomasella.it/area-riservata" target="_self" style="color: #ffffff;font-size: 13px;margin: 0px 5px 0px 5px">
-          <span class="edgtf-icon-widget fa fa-lock    "></span><span class="edgtf-icon-text" style="font-size: 11px">AREA RISERVATA</span>        </a>
-                          </div>
+          <span class="edgtf-icon-text" style="font-size: 11px">AREA RISERVATA</span>&nbsp&nbsp
+          <span class="edgtf-icon-widget fa fa-lock    "></span>&nbsp
+                  </a>
+      </div>
 
 
   </div>
@@ -2622,7 +2699,7 @@ N° REA: TV 185064                    </p>
           
 
 
-          <div class="col-sm-6 col-md-2">
+          <div id="col-sm-1" class="col-sm-6 col-md-2">
               <h6>PRODOTTI</h6>
               <ul>
                 <li><a href="#">RIVENDITORI</a> </li>
@@ -2632,7 +2709,7 @@ N° REA: TV 185064                    </p>
               </ul>
           </div>
 
-          <div class="col-sm-6 col-md-2">
+          <div id="col-sm-2" class="col-sm-6 col-md-2">
               <h6>CATALOGHI</h6>
               <ul>
                 <li><a href="#">CONTATTI</a> </li>
@@ -2642,7 +2719,7 @@ N° REA: TV 185064                    </p>
               </ul>
           </div>
 
-          <div class="col-sm-6 col-md-2">
+          <div id="col-sm-3" class="col-sm-6 col-md-2">
               <h6>NEWS</h6>
               <ul>
                 <li><a href="#">Terms & Conditions</a> </li>
@@ -2652,8 +2729,7 @@ N° REA: TV 185064                    </p>
           </div>
 
         
-            <div style="position: relative; left: 300px; align-content: center;margin-top: 80px;"
-              class="col-md-6 col-md-3">
+            <div id="col-sm-4" class="col-md-6 col-md-3">
             <h6 >SPAGNOLMOBILI</h6>
             <p style="font-size: 14px;text-decoration:underline;font-family:Arial;">
     Mobil s.r.l. - SpagnolMobiliVia Vidor,<br> 1 - Mosnigo di Moriago (TV) - ITALY <br>Tel. +39.0438.89.11 - Fax +39.0438.89.00.82 <br>info.mobili@spagnol.it  P.IVA 03329920262.</p>
