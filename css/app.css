@@ -21854,17 +21854,19 @@ slider */
 }
 
 
-.header1{
+.header2{
   background: black;
    height: 50px;
 }
 
-.header-items{
+.header-items2{
   color: white;
   margin-left: 2px; 
   padding: 20px;
   position: absolute;
-  right: 1150px;
+  /*right: 1150px;*/
+  left: 1%;
+
 }
 
 .f-menu:hover{
@@ -21872,10 +21874,11 @@ slider */
   color: black;
 }
 
-.edgtf-position-right-inner1{
-  position: relative;
-  left: 1100px;
-  text-align: left;
+.edgtf-position-right-inner2{
+  position: absolute;
+  /*left: 1100px;*/
+  right: 1%;
+  /*text-align: left;*/
   padding-top: 20px;
 }
 
@@ -21893,7 +21896,7 @@ slider */
 
 
   .edgtf-position-right-inner1{
-    position: relative;
+    position: absolute;
     left: 1900px;
     text-align: left;
     padding-top: 20px;
