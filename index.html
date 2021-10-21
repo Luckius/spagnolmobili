@@ -2489,43 +2489,69 @@ N° REA: TV 185064                    </p>
 
 
 
-        <div class="container-fluid padding--lr-0 isHomepage" >
+    <div class="container-fluid padding--lr-0 isHomepage">
 
-          <div id="slideImg" class="row row--1   row--first" style="background-image: url('uploads/sections/images/3/backg.jpg');">
+      <!--<div id="slideImg1" class="row row--1   row--first" style="background-image: url('uploads/sections/images/3/backg1.jpg');">-->
 
-            <!--<img id="slideImg" src="uploads/sections/images/2/2c8b19833164c9ba5b25e6a59f83527e61cccd2d_l.png" />-->
+        <div style="text-align: center;position: relative;" id="slideImg12">
+          <img style="width: 100%;height: 100%;" id="slideImg" src="uploads/sections/images/3/backg.jpg">
 
-        <div class="col-12 padding--lr-0 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="300">
-            <a href="javascript: void(0);"  class="noGallery" >
-                <img id="slideImgs" src="uploads/sections/images/2/2c8b19833164c9ba5b25e6a59f83527e61cccd2d_l.png" />
-            </a>
-        </div>
-
-        <div onclick=" location.href='https://www.novamobili.it/en/news/renew-the-experience-of-visiting-our-flagship-store' " class="row--hover" style="cursor: pointer">
-            
-        <div class="col-12">  
+          <div style="text-align: center;align-items: center;position: absolute;
+          bottom: 50%;" class="col-12">  
             
             <a href="#" class="btn btn-lined">VIRTUAL TOUR SHOWROOM
                 <span class="span1"></span></a>
         </div>
 
-        </div>
-                    
-          
 
+
+        <div class="navigation">
+                <label onclick="changeImg()" id="radio1" for="radio1" class="navigation-btn">
+                </label>
+                <label onclick="changeImg()" id="radio2" for="radio2" class="navigation-btn">
+                </label>
+                <label onclick="changeImg()" id="radio3" for="radio3" class="navigation-btn">
+                </label>
+                <label onclick="changeImg()" id="radio4" for="radio4" class="navigation-btn">
+                </label>
+                <label onclick="changeImg()" id="radio5" for="radio5" class="navigation-btn">
+                </label>
+            </div>
+
+
+        </div>
+
+
+
+
+
+            <!--<img id="slideImg" src="uploads/sections/images/2/2c8b19833164c9ba5b25e6a59f83527e61cccd2d_l.png" />-->
+
+        <!--<div class="col-12 padding--lr-0 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="300">
+            <a href="javascript: void(0);"  class="noGallery" >
+                <img id="slideImgs" src="uploads/sections/images/2/2c8b19833164c9ba5b25e6a59f83527e61cccd2d_l.png" />
+            </a>
+        </div>-->
+
+        <div onclick=" location.href='https://www.novamobili.it/en/news/renew-the-experience-of-visiting-our-flagship-store' " class="row--hover" style="cursor: pointer">
+            
+        <!--<div class="col-12">  
+            
+            <a href="#" class="btn btn-lined">VIRTUAL TOUR SHOWROOM
+                <span class="span1"></span></a>
+        </div>-->
+
+        </div>
         
          <!--<div onclick=" location.href='https://www.novamobili.it/en/news/renew-the-experience-of-visiting-our-flagship-store' " class="row--hover" style="cursor: pointer">
                     
           <div class="col-12">
-                                                                                                            <h5 class="paragraph-4 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="500"><strong>Virtual tour</strong></h5>
-                                                                                                                                                            <h1 class="heading-1 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="700">LIVE THE EXPERIENCE OF VISITING OUR FLAGSHIP STORE</h1>
-                                                                                                                                                                                                                </div>
-
-                                                    </div>-->
-                                    </div>
+                                                                                                        d
+          </div>-->
+        <!--</div>-->
 
         
-                    <div class="container">
+  <div class="container">
     <div class="row row--2">
         <div class="col-lg-8 offset-lg-2 col-12 offset-0 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="500">
                             <!--<h4 class="paragraph-4"><strong>featured</strong></h4>
@@ -2659,9 +2685,9 @@ N° REA: TV 185064                    </p>
       
       var slideImg = document.getElementById("slideImg");
       var images = new Array(
-        "uploads/sections/images/3/backg.jpg",
-        "uploads/sections/images/3/spagnol.jpg",
-        "uploads/sections/images/3/spagnol1.jpg"
+        "uploads/sections/images/3/p1.jpg",
+        "uploads/sections/images/3/p2.jpg",
+        "uploads/sections/images/3/p3.jpg"
       );
       var len = images.length;
       var i = 0;
@@ -2672,10 +2698,29 @@ N° REA: TV 185064                    </p>
         }
         var myimage = images[i];
         console.log(myimage);
-        slideImg.style.backgroundImage  = "url("+myimage+")";//images[i];
+        slideImg.src  = images[i];//"url("+myimage+")";//images[i];
         i++;
         setTimeout("slider()",6000);
       }
+
+
+      var radio1 = document.getElementById("radio1");
+      var radio1 = document.getElementById("radio1");
+      var radio1 = document.getElementById("radio1");
+      var radio1 = document.getElementById("radio1");
+      var radio1 = document.getElementById("radio1");
+
+      function changeImg(){
+        if(i> len-1){
+          i=0;
+        }
+        var myimage = images[i];
+        console.log("changed image");
+        slideImg.src  = images[i];//"url("+myimage+")";//images[i];
+        i++;
+        //setTimeout("slider()",6000);
+      }
+
 
     </script>
 
@@ -2702,29 +2747,29 @@ N° REA: TV 185064                    </p>
           <div id="col-sm-1" class="col-sm-6 col-md-2">
               <h6>PRODOTTI</h6>
               <ul>
-                <li><a href="#">RIVENDITORI</a> </li>
-                <li><a href="#">VIRTUAL SHOWROOM</a> </li>
-                <li><a href="#">Branding</a> </li>
-                <li><a href="#">Offline</a> </li>
+                <li><a class="f-menu" href="#">RIVENDITORI</a> </li>
+                <li><a class="f-menu" href="#">VIRTUAL SHOWROOM</a> </li>
+                <li><a class="f-menu" href="#">Branding</a> </li>
+                <li><a class="f-menu" href="#">Offline</a> </li>
               </ul>
           </div>
 
           <div id="col-sm-2" class="col-sm-6 col-md-2">
               <h6>CATALOGHI</h6>
               <ul>
-                <li><a href="#">CONTATTI</a> </li>
-                <li><a href="#">AZIENDA</a> </li>
-                <li><a href="#">Team</a> </li>
-                <li><a href="#">Careers</a> </li>
+                <li><a class="f-menu" href="#">CONTATTI</a> </li>
+                <li><a class="f-menu" href="#">AZIENDA</a> </li>
+                <li><a class="f-menu" href="#">Team</a> </li>
+                <li><a class="f-menu" href="#">Careers</a> </li>
               </ul>
           </div>
 
           <div id="col-sm-3" class="col-sm-6 col-md-2">
               <h6>NEWS</h6>
               <ul>
-                <li><a href="#">Terms & Conditions</a> </li>
-                <li><a href="#">Privacy Policy</a> </li>
-                <li><a href="#">Terms of use</a> </li>
+                <li><a class="f-menu" href="#">Terms & Conditions</a> </li>
+                <li><a class="f-menu" href="#">Privacy Policy</a> </li>
+                <li><a class="f-menu" href="#">Terms of use</a> </li>
               </ul>
           </div>
 

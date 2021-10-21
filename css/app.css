@@ -21702,7 +21702,7 @@ html, body{
   line-height: 39px;
   display: inline-block;
   border-radius: 50%;
-  border: 2px solid #05ff05;
+  border: 2px solid #000;/*#05ff05;*/
   box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.4);
   margin: 10px;
   color: #000;
@@ -21712,6 +21712,8 @@ html, body{
 .global .social a:hover{
   opacity: 0.9;
   box-shadow: 0px 1px 3px 2px rgba(255, 255, 255, 0.9);
+  background-color: black;
+  color: white;
 }
 .global .copyright{
   text-align: center;
@@ -21748,6 +21750,61 @@ html, body{
 
 
 
+/* css for slide navigation */
+.navigation {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    display: flex;
+    justify-content: center;
+    bottom: 5%;
+}
+
+.navigation-btn {
+    border: 2px solid #de6a23;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.navigation-btn:hover {
+    background: #de6a23;
+}
+
+/* The checked attribute is used with
+reference to <input type="radio">, 
+when radio button is clicked the 
+class will shift w.r.t  left margin 
+as mentioned which results in image 
+slider */
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -20%;
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+}
+
+#radio4:checked~.first {
+    margin-left: -60%;
+}
+
+#radio5:checked~.first {
+    margin-left: -80%;
+}
+
+
+
+
 @media (max-width: 767px) {
 
     .global .curve{
@@ -21770,7 +21827,11 @@ html, body{
 
 #slideImg{
   animation: zoom 6s linear infinite
+  
 }
+
+
+
 
 @keyframes zoom{
   0%{
@@ -21781,7 +21842,7 @@ html, body{
   }
 
   50%{
-    transform: scale(1);
+    transform: scale(1.02);
   }
 
   85%{
@@ -21799,11 +21860,16 @@ html, body{
 }
 
 .header-items{
-color: white;
-margin-left: 2px; 
-padding: 20px;
-position: absolute;
-right: 1150px;
+  color: white;
+  margin-left: 2px; 
+  padding: 20px;
+  position: absolute;
+  right: 1150px;
+}
+
+.f-menu:hover{
+  text-decoration: underline;
+  color: black;
 }
 
 .edgtf-position-right-inner1{
@@ -21812,6 +21878,31 @@ right: 1150px;
   text-align: left;
   padding-top: 20px;
 }
+
+
+
+
+@media screen and (min-width: 2300px) {
+  .header-items{
+    color: white;
+    margin-left: 2px; 
+    padding: 20px;
+    position: absolute;
+    right: 1500px;
+  }
+
+
+  .edgtf-position-right-inner1{
+    position: relative;
+    left: 1900px;
+    text-align: left;
+    padding-top: 20px;
+    }
+
+}
+
+
+
 
 
 @media screen and (min-width: 1400px) {
@@ -21976,4 +22067,12 @@ right: 1150px;
 
 
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map
+
+git push https://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@github.com/Luckius/spagnolmobili.git
+  
+  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
+
+  git remote set-url origin https://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@github.com/Luckius/spagnolauto.git
+
+ */
