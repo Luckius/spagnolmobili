@@ -21724,27 +21724,62 @@ html, body{
 }
 
 
-#col-sm-1{
+#col-sm-11{
   position: absolute;
-  left: 50px;
+  left: 3%;
  }
 
-#col-sm-2{
-    margin-left: 15%;
+#col-sm-21{
+    margin-left: 12%;
    }
 
-#col-sm-3{
+#col-sm-31{
   position: absolute;
-  left: 600px;
-  margin-left: 5%;
+  left: 30%;
+  margin-left: 15%;
 
   }
 
-#col-sm-4{
+#col-sm-41{
   
   position: absolute;
-  left: 900px;
-  margin-left: 5%;
+  /*left: 70%;*/
+  margin-left: 55%;
+}
+
+
+
+/*}*/
+
+
+
+
+@media screen and (min-width: 751px){
+
+#col-sm-01{
+  position: absolute;
+  left: 3%;
+ }
+
+#col-sm-02{
+    margin-left: 12%;
+   }
+
+#col-sm-03{
+  position: absolute;
+  left: 30%;
+  margin-left: 15%;
+
+  }
+
+#col-sm-04{
+  
+  position: absolute;
+  /*left: 70%;*/
+  margin-left: 55%;
+}
+
+
 }
 
 
@@ -21761,7 +21796,7 @@ html, body{
 }
 
 .navigation-btn {
-    border: 2px solid #de6a23;
+    border: 2px solid #fff;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -21773,7 +21808,9 @@ html, body{
 }
 
 .navigation-btn:hover {
-    background: #de6a23;
+    /*background: #de6a23;*/
+    background: #000;
+    border: 2px solid #000;
 }
 
 /* The checked attribute is used with
