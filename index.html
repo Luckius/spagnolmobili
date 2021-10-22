@@ -402,14 +402,17 @@
       }
     }
 
+onload="slider1()"
 
     </style>-->
 
     
     </head>
-<body onload="slider()">
+<body>
 
-<!-- Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript)
+
+ -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCXV85L"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
@@ -2007,7 +2010,7 @@ N° REA: TV 185064                    </p>
 
     <header class="header col-12">
     <div class="row isDesktop align-items-center">
-        <div class="col-2">
+        <div style="position: absolute;left: 1%;" class="col-2">
             <a href="en.html">
                 <!--<a href="">logo--black.svg logo--white.svg</a>-->
                 <img src="images/app/logo1.png" height="22" class="isBlack" />
@@ -2015,9 +2018,8 @@ N° REA: TV 185064                    </p>
             </a>
         </div>
 
-        <div class="col-6 offset-1 align-center padding--lr-0">
-            <ul style="position: absolute;left: 35%;
-             margin-left: 210px;width: 100%;" class="menu">
+        <div style="position: absolute;left: 48%" class="col-6 offset-1 align-center padding--lr-0">
+            <ul class="menu">
                 <li class="menu-has-submenu menu-item">
                     <a href="javascript: void(0);" id="menu-title" class="menu-title" data-menu="menu-title-1">PRODOTTI</a>
                 </li>
@@ -2495,7 +2497,14 @@ N° REA: TV 185064                    </p>
       <!--<div id="slideImg1" class="row row--1   row--first" style="background-image: url('uploads/sections/images/3/backg1.jpg');">-->
 
         <div style="text-align: center;position: relative;" id="slideImg12">
-          <img style="width: 100%;height: 100%;" id="slideImg" src="uploads/sections/images/3/backg.jpg">
+          <!--<img style="width: 100%;height: 100%;" id="slideImg" src="uploads/sections/images/3/Timeline1.mov">-->
+          <video width= "100%" height="100%" autoplay muted loop id="myVideo">
+            <source src="uploads/sections/images/3/Timeline1.mp4" type="video/mp4">
+          </video>
+
+          
+
+
 
           <div style="text-align: center;align-items: center;position: absolute;
           bottom: 50%;" class="col-12">  
@@ -2745,27 +2754,27 @@ N° REA: TV 185064                    </p>
           
 
 
-          <div id="col-sm-1" class="col-sm-6 col-md-2">
+          <div id="col-sm-01" class="col-sm-6 col-md-2">
               <h6>PRODOTTI</h6>
               <ul>
-                <li><a class="f-menu" href="#">RIVENDITORI</a> </li>
-                <li><a class="f-menu" href="#">VIRTUAL SHOWROOM</a> </li>
+                <li><a class="f-menu" href="#">Rivenditori</a> </li>
+                <li><a class="f-menu" href="#">Virtual showroom</a> </li>
                 <li><a class="f-menu" href="#">Branding</a> </li>
                 <li><a class="f-menu" href="#">Offline</a> </li>
               </ul>
           </div>
 
-          <div id="col-sm-2" class="col-sm-6 col-md-2">
+          <div id="col-sm-02" class="col-sm-6 col-md-2">
               <h6>CATALOGHI</h6>
               <ul>
-                <li><a class="f-menu" href="#">CONTATTI</a> </li>
-                <li><a class="f-menu" href="#">AZIENDA</a> </li>
+                <li><a class="f-menu" href="#">Contatti</a> </li>
+                <li><a class="f-menu" href="#">Azienda</a> </li>
                 <li><a class="f-menu" href="#">Team</a> </li>
                 <li><a class="f-menu" href="#">Careers</a> </li>
               </ul>
           </div>
 
-          <div id="col-sm-3" class="col-sm-6 col-md-2">
+          <div id="col-sm-03" class="col-sm-6 col-md-2">
               <h6>NEWS</h6>
               <ul>
                 <li><a class="f-menu" href="#">Terms & Conditions</a> </li>
@@ -2775,8 +2784,8 @@ N° REA: TV 185064                    </p>
           </div>
 
         
-            <div id="col-sm-4" class="col-md-6 col-md-3">
-            <h6 >SPAGNOLMOBILI</h6>
+            <div id="col-sm-04" class="col-md-6 col-md-3">
+            <h6 id="f-logo" >SPAGNOLMOBILI</h6>
             <p style="font-size: 14px;text-decoration:underline;font-family:Arial;">
     Mobil s.r.l. - SpagnolMobiliVia Vidor,<br> 1 - Mosnigo di Moriago (TV) - ITALY <br>Tel. +39.0438.89.11 - Fax +39.0438.89.00.82 <br>info.mobili@spagnol.it  P.IVA 03329920262.</p>
           </div>
