@@ -21,7 +21,7 @@
         </script>
         <!-- End Google Tag Manager -->
     
-    <meta charset="utf-8">
+<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
 <meta name="format-detection" content="telephone=no">
@@ -408,7 +408,7 @@ onload="slider1()"
 
     
     </head>
-<body>
+<body onload="slider()">
 
 <!-- Google Tag Manager (noscript)
 
@@ -2494,7 +2494,9 @@ N° REA: TV 185064                    </p>
 
     <div class="container-fluid padding--lr-0 isHomepage">
 
-      <!--<div id="slideImg1" class="row row--1   row--first" style="background-image: url('uploads/sections/images/3/backg1.jpg');">-->
+      <div id="slideImg14" class="row row--1   row--first" style="background-image: url('uploads/sections/images/3/backg.jpg');">
+      </div>
+     
 
         <div style="text-align: center;position: relative;" id="slideImg12">
           <!--<img style="width: 100%;height: 100%;" id="slideImg" src="uploads/sections/images/3/Timeline1.mov">-->
@@ -2506,16 +2508,15 @@ N° REA: TV 185064                    </p>
 
 
 
-          <div style="text-align: center;align-items: center;position: absolute;
-          bottom: 50%;" class="col-12">  
+          <div id="showBtn" class="col-12">  
             
             <a href="#" class="btn btn-lined">VIRTUAL TOUR SHOWROOM
                 <span class="span1"></span></a>
-        </div>
+          </div>
 
 
 
-        <div class="navigation">
+        <!--<div class="navigation">
                 <label onclick="changeImg()" id="radio1" for="radio1" class="navigation-btn">
                 </label>
                 <label onclick="changeImg()" id="radio2" for="radio2" class="navigation-btn">
@@ -2526,26 +2527,27 @@ N° REA: TV 185064                    </p>
                 </label>
                 <label onclick="changeImg()" id="radio5" for="radio5" class="navigation-btn">
                 </label>
-            </div>
+            </div>-->
 
 
         </div>
 
 
+      </div>
 
 
 
-            <!--<img id="slideImg" src="uploads/sections/images/2/2c8b19833164c9ba5b25e6a59f83527e61cccd2d_l.png" />-->
+        <!--<img id="slideImg" src="uploads/sections/images/2/2c8b19833164c9ba5b25e6a59f83527e61cccd2d_l.png" />
 
-        <!--<div class="col-12 padding--lr-0 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="300">
+        <div class="col-12 padding--lr-0 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="300">
             <a href="javascript: void(0);"  class="noGallery" >
                 <img id="slideImgs" src="uploads/sections/images/2/2c8b19833164c9ba5b25e6a59f83527e61cccd2d_l.png" />
             </a>
-        </div>-->
+        </div>
 
         <div onclick=" location.href='https://www.novamobili.it/en/news/renew-the-experience-of-visiting-our-flagship-store' " class="row--hover" style="cursor: pointer">
             
-        <!--<div class="col-12">  
+        <div class="col-12">  
             
             <a href="#" class="btn btn-lined">VIRTUAL TOUR SHOWROOM
                 <span class="span1"></span></a>
@@ -2693,11 +2695,12 @@ N° REA: TV 185064                    </p>
 
     <script type="text/javascript">
       
-      var slideImg = document.getElementById("slideImg");
+      var slideImg = document.getElementById("slideImg14");
       var images = new Array(
         "uploads/sections/images/3/p1.jpg",
         "uploads/sections/images/3/p2.jpg",
-        "uploads/sections/images/3/p3.jpg"
+        "uploads/sections/images/3/p3.jpg",
+        "uploads/sections/images/3/backg.jpg"
       );
       var len = images.length;
       var i = 0;
@@ -2708,13 +2711,13 @@ N° REA: TV 185064                    </p>
         }
         var myimage = images[i];
         console.log(myimage);
-        slideImg.src  = images[i];//"url("+myimage+")";//images[i];
+        slideImg.style.backgroundImage  = "url("+myimage+")";//images[i];
         i++;
         setTimeout("slider()",6000);
       }
 
 
-      var radio1 = document.getElementById("radio1");
+      /*var radio1 = document.getElementById("radio1");
       var radio1 = document.getElementById("radio1");
       var radio1 = document.getElementById("radio1");
       var radio1 = document.getElementById("radio1");
@@ -2729,7 +2732,7 @@ N° REA: TV 185064                    </p>
         slideImg.src  = images[i];//"url("+myimage+")";//images[i];
         i++;
         //setTimeout("slider()",6000);
-      }
+      }*/
 
 
     </script>
