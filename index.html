@@ -2492,13 +2492,14 @@ N° REA: TV 185064                    </p>
 
 
 
-    <div class="container-fluid padding--lr-0 isHomepage">
+    <div id="mContainer" class="container-fluid padding--lr-0 isHomepage">
 
-      <div id="slideImg14" class="row row--1   row--first" style="background-image: url('uploads/sections/images/3/backg.jpg');">
-      </div>
-     
+      <!--<div id="slideImg50" class="row row--1   row--first" style="background-image: url('uploads/sections/images/3/backg.jpg');">
+        </div>
+      -->
+        <img id="slideImg14" src="uploads/sections/images/3/backg.jpg">
 
-        <div style="text-align: center;position: relative;" id="slideImg12">
+        <div style="text-align: center;position: relative;" id="slideImg20">
           <!--<img style="width: 100%;height: 100%;" id="slideImg" src="uploads/sections/images/3/Timeline1.mov">-->
           <video width= "100%" height="100%" autoplay muted loop id="myVideo">
             <source src="uploads/sections/images/3/Timeline1.mp4" type="video/mp4">
@@ -2516,7 +2517,7 @@ N° REA: TV 185064                    </p>
 
 
 
-        <!--<div class="navigation">
+        <!--<div id="radioNav" class="navigation">
                 <label onclick="changeImg()" id="radio1" for="radio1" class="navigation-btn">
                 </label>
                 <label onclick="changeImg()" id="radio2" for="radio2" class="navigation-btn">
@@ -2551,9 +2552,9 @@ N° REA: TV 185064                    </p>
             
             <a href="#" class="btn btn-lined">VIRTUAL TOUR SHOWROOM
                 <span class="span1"></span></a>
-        </div>-->
-
         </div>
+
+        </div>-->
         
          <!--<div onclick=" location.href='https://www.novamobili.it/en/news/renew-the-experience-of-visiting-our-flagship-store' " class="row--hover" style="cursor: pointer">
                     
@@ -2711,7 +2712,8 @@ N° REA: TV 185064                    </p>
         }
         var myimage = images[i];
         console.log(myimage);
-        slideImg.style.backgroundImage  = "url("+myimage+")";//images[i];
+        //slideImg.style.backgroundImage  = "url("+myimage+")";//images[i];
+        slideImg.src  = images[i];
         i++;
         setTimeout("slider()",6000);
       }
