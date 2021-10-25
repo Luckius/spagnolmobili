@@ -21817,6 +21817,37 @@ html, body{
 
 
 
+@media screen and (min-width: 1800px){
+
+#col-sm-01{
+  position: absolute;
+  left: 3%;
+ }
+
+#col-sm-02{
+    margin-left: 15%;
+   }
+
+#col-sm-03{
+  position: absolute;
+  left: 35%;
+  margin-left: 20%;
+
+  }
+
+#col-sm-04{
+  
+  position: absolute;
+  /*left: 70%;*/
+  margin-left: 65%;
+}
+
+
+}
+
+
+
+
 /* css for slide navigation */
 .navigation {
     position: absolute;
@@ -21970,6 +22001,7 @@ slider */
 .header2{
   background: black;
    height: 50px;
+
 }
 
 .header-items2{
@@ -21979,6 +22011,7 @@ slider */
   position: absolute;
   /*right: 1150px;*/
   left: 1%;
+
 
 }
 
@@ -22178,8 +22211,36 @@ slider */
 }
 
 
+#contact-title{
+  text-align: center;
+  font-size: 3.500em;
+  font-family: 'Granville-Regular';
+  text-transform: uppercase;
+  margin-top: 10%;
+  line-height: 1;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+
+}
 
 
+#menu-div{
+  position: absolute;
+  left: 48%
+}
+
+@media screen and (min-width: 1800px){
+  #menu-div{
+    position: absolute;
+    left: 68%
+  }
+}
+
+
+
+
+
+/* drop down menu*/
 
 
 
