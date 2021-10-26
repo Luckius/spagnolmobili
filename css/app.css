@@ -9860,7 +9860,7 @@ pre code {
 .col-6 {
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
-  max-width: 50%; }
+  max-width: 100%; }
 
 .col-7 {
   -ms-flex: 0 0 58.333333%;
@@ -22226,12 +22226,12 @@ slider */
 
 #menu-div{
   position: absolute;
-  left: 48%
+  left: 25%;
 }
 
 @media screen and (min-width: 1800px){
   #menu-div{
-    left: 50%
+    left: 30%
   }
 }
 
