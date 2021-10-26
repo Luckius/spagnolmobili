@@ -22216,7 +22216,7 @@ slider */
   font-size: 3.500em;
   font-family: 'Granville-Regular';
   text-transform: uppercase;
-  margin-top: 10%;
+  margin-top: 1%;
   line-height: 1;
   font-weight: normal;
   letter-spacing: 0.5px;
@@ -22235,6 +22235,54 @@ slider */
   }
 }
 
+
+#contact-l-title{
+  background-color: #F7F7F7;
+  font-family: 'Fantasy';
+  font-weight: bold;
+  background: #F7F7F7;
+
+}
+
+#contacth1{
+  height: 200px;
+  padding-top: 7%;
+  font-weight: bold;
+}
+
+
+.contact-container{
+  border-radius: 5px;
+  /*background-color: #f2f2f2;*/
+  background-color: #fff;
+  padding: 20px;
+}
+
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
 
 
 
