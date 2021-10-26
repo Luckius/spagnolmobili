@@ -21628,10 +21628,12 @@ div.header {
 .btn-lined:hover .span1{
     animation: button_animation 1s ease;
 
+
 }
 
 .btn-lined:hover {
     color: white;
+    
 }
 
 .menu-title:{
