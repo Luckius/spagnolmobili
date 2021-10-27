@@ -2110,7 +2110,9 @@ N° REA: TV 185064                    </p>
                 <div class="row">
                     <div class="col-6 align-center">
                         <h5 class="heading-4 margin--bottom-25"></h5>
-                        <p class="paragraph-2 margin--bottom-45">Spagnolmobili S.R.L.<br> Via G. Pascoli, 14<br> 31053 Pieve di Soligo (TV) Italy</p>
+                        <p class="paragraph-2 margin--bottom-45">
+                            Mobil s.r.l. - SpagnolMobili<br>
+                            Via Vidor, 1 - 31010 Mosnigo di Moriago (TV) - ITALY</p>
 
                     </div>
                     <div class="col-6 align-center">
@@ -2131,30 +2133,90 @@ N° REA: TV 185064                    </p>
 
         <div class="row margin--bottom-90">
             <div class="col-lg-6 offset-lg-3 col-12 align-center">
-                <!--<div class="contact-container">
-                  <form action="#">
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-                        btn btn--second
-                        btn btn--second openContacts 
- 
-                    <input type="text" id="lname" name="lastname" placeholder="Your Email..">
-
-                    <select id="country" name="country">
-                      <option value="australia">Country</option>
-                      <option value="canada">Italy</option>
-                      <option value="usa">USA</option>
-                    </select>
-
-                    <label for="subject">Leave us your email</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px;"></textarea>
-
-                    <input style="width: 100%;" type="submit" value="Submit">
-                  </form>
-                </div>-->
-
             </div>
         </div>
+
+        <!-- start end-->
+
+        <div wire:id="tWhUPkLKg6EIEdA42McA">
+    
+    <form class="cs-form uk-width-2-3@m" wire:submit.prevent="submit" method="post">
+
+        <input type="hidden" name="_token" value="jqUSEJndSxnM6IY3WuV3tgHxt5ILYY3g0sy2Mxb1">
+        <h3 class="cs-form-title t-xlarge">Richiesta informazioni</h3>
+        <p class="cs-form-intro t-large t-light">Compilando e inviando il seguente modulo, riceverai le informazioni richieste via e-mail o telefonicamente.</p>
+
+        <fieldset class="uk-fieldset">
+            
+            <div class="field">
+                <input wire:model.defer="name" id="name" type="text" class="uk-input " name="name" value="" autocomplete="name">
+                <label class="discard placeholder uk-form-label" for="name">Nome *</label>
+                
+                                    
+            </div>
+            <div class="field">
+                <input wire:model.defer="surname" id="surname" type="text" class="uk-input " name="surname" value="" autocomplete="surname">
+                <label class="discard placeholder uk-form-label" for="surname">Cognome *</label>
+                
+                            </div>
+            <div class="field">
+                <input wire:model.defer="email" id="email" type="text" class="uk-input " name="email" value="" autocomplete="email">
+                <label class="discard placeholder uk-form-label" for="email">email *</label>
+                
+                            </div>
+            <div class="field" for="phone">
+                <input wire:model.defer="phone" id="phone" type="text" class="uk-input " name="phone" value="" autocomplete="phone">
+                <label class="discard placeholder uk-form-label">Telefono</label>
+                
+                            </div>
+            <div class="field">
+                <input wire:model.defer="country" id="country" type="text" class="uk-input " name="country" value="" autocomplete="country">
+                <label class="discard placeholder uk-form-label" for="country">Nazione</label>
+                
+                            </div>
+            
+            
+            <div class="field" for="city">
+                <label class="discard placeholder uk-form-label">Città</label>
+                <input wire:model.defer="city" id="city" type="text" class="uk-input " name="city" value="" autocomplete="city">
+                
+                            </div>
+            
+            <div class="field" for="district">
+                <input wire:model.defer="district" id="district" type="text" class="uk-input " name="district" value="" autocomplete="district">
+                <label class="discard placeholder uk-form-label">Provincia</label>
+                
+                            </div>
+        
+            <div class="field">
+                <textarea wire:model.defer="message" id="message" class="uk-textarea " name="message" autocomplete="message"></textarea>
+                <label class="discard placeholder uk-form-label" for="message">Richiesta *</label>
+                
+                            </div>
+            
+            <div class="field info uk-width-1-1 uk-margin-top">
+                <label class="uk-form-label">* campi obbligatori</label>
+            </div>
+
+            <div class="field info uk-margin-top-large">
+            <input wire:model.defer="check_privacy" id="check_privacy" type="checkbox" class="uk-checkbox  custom_checkbox" name="check_privacy" value="1">
+            <label class="uk-form-label t-small" for="check_privacy">
+                <a target="_blank" href="https://www.zalf.com/it/privacy">Dichiaro di aver letto e accettato l’informativa sulla privacy ai sensi del GDPR 2016/679 *</a>
+                <br>
+                            </label>
+        </div>
+        
+       
+            <div class="field">
+                <button type="submit" class="uk-button uk-button-primary">Invia</button>
+            </div>
+        </fieldset>
+    </form>
+
+            
+        </div>
+
+        <!-- end -->
 
         
 
