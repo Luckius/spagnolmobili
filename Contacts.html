@@ -2133,31 +2133,26 @@ N° REA: TV 185064                    </p>
         </div>
 
         <div class="row margin--bottom-90">
-            <div class="col-lg-6 offset-lg-3 col-12 align-center">
-            </div>
-        </div>
-
-        <!-- start end-->
-
-        <div wire:id="tWhUPkLKg6EIEdA42McA">
+            <div style="text-align: left;" class="col-lg-6 offset-lg-3 col-12 align-center">
+                <div wire:id="tWhUPkLKg6EIEdA42McA">
     
     <form class="cs-form uk-width-2-3@m" wire:submit.prevent="submit" method="post">
 
         <input type="hidden" name="_token" value="jqUSEJndSxnM6IY3WuV3tgHxt5ILYY3g0sy2Mxb1">
         <h3 class="cs-form-title t-xlarge">Richiesta informazioni</h3>
-        <p class="cs-form-intro t-large t-light">Compilando e inviando il seguente modulo, riceverai le informazioni richieste via e-mail o telefonicamente.</p>
+        <p style="font-family: 'Arial';font-style: normal;font-size: 16px;margin-top: 6px;" class="cs-form-intro t-large t-light">Per richiedere informazioni sui nostri prodotti e sul gruppo. (* Dati obbligatori).</p>
 
         <fieldset class="uk-fieldset">
             
             <div class="field">
                 <input wire:model.defer="name" id="name" type="text" class="uk-input " name="name" value="" autocomplete="name">
-                <label class="discard placeholder uk-form-label" for="name">Nome *</label>
+                <label class="discard placeholder uk-form-label" for="name">Name *</label>
                 
                                     
             </div>
             <div class="field">
                 <input wire:model.defer="surname" id="surname" type="text" class="uk-input " name="surname" value="" autocomplete="surname">
-                <label class="discard placeholder uk-form-label" for="surname">Cognome *</label>
+                <label class="discard placeholder uk-form-label" for="surname">Surname *</label>
                 
                             </div>
             <div class="field">
@@ -2167,55 +2162,84 @@ N° REA: TV 185064                    </p>
                             </div>
             <div class="field" for="phone">
                 <input wire:model.defer="phone" id="phone" type="text" class="uk-input " name="phone" value="" autocomplete="phone">
-                <label class="discard placeholder uk-form-label">Telefono</label>
+                <label class="discard placeholder uk-form-label">Phone no</label>
                 
                             </div>
             <div class="field">
                 <input wire:model.defer="country" id="country" type="text" class="uk-input " name="country" value="" autocomplete="country">
-                <label class="discard placeholder uk-form-label" for="country">Nazione</label>
+                <label class="discard placeholder uk-form-label" for="country">Nationality</label>
                 
                             </div>
+
+
+            <div class="field" for="phone">
+                <input wire:model.defer="phone" id="phone" type="text" class="uk-input " name="phone" value="" autocomplete="phone">
+                <label class="discard placeholder uk-form-label">City</label>
+
+
+                <div class="field" for="phone">
+                <input wire:model.defer="phone" id="phone" type="text" class="uk-input " name="phone" value="" autocomplete="phone">
+                <label class="discard placeholder uk-form-label">Province</label>
             
             
-            <div class="field" for="city">
+            <!--<div class="field" for="city">
                 <label class="discard placeholder uk-form-label">Città</label>
                 <input wire:model.defer="city" id="city" type="text" class="uk-input " name="city" value="" autocomplete="city">
                 
-                            </div>
+                            </div>-->
             
             <div class="field" for="district">
                 <input wire:model.defer="district" id="district" type="text" class="uk-input " name="district" value="" autocomplete="district">
-                <label class="discard placeholder uk-form-label">Provincia</label>
+                <label class="discard placeholder uk-form-label">Request</label>
                 
                             </div>
+
+
+
+            <div class="field" for="phone">
+                <input wire:model.defer="phone" id="phone" type="text" class="uk-input " name="phone" value="" autocomplete="phone">
+                <label class="discard placeholder uk-form-label"></label>
+
         
             <div class="field">
-                <textarea wire:model.defer="message" id="message" class="uk-textarea " name="message" autocomplete="message"></textarea>
-                <label class="discard placeholder uk-form-label" for="message">Richiesta *</label>
+                <!--<textarea wire:model.defer="message" id="message" class="uk-textarea " name="message" autocomplete="message"></textarea>-->
+                <label class="discard placeholder uk-form-label" for="message"></label>
                 
                             </div>
             
-            <div class="field info uk-width-1-1 uk-margin-top">
+            <!--<div class="field info uk-width-1-1 uk-margin-top">
                 <label class="uk-form-label">* campi obbligatori</label>
-            </div>
+            </div>-->
 
             <div class="field info uk-margin-top-large">
+
             <input wire:model.defer="check_privacy" id="check_privacy" type="checkbox" class="uk-checkbox  custom_checkbox" name="check_privacy" value="1">
+
+
+
             <label class="uk-form-label t-small" for="check_privacy">
-                <a target="_blank" href="https://www.zalf.com/it/privacy">Dichiaro di aver letto e accettato l’informativa sulla privacy ai sensi del GDPR 2016/679 *</a>
+                <a target="_blank" href="#">Confermo la lettura dell'informativa sulla privacy e acconsento al trattamento dei dati personali.*</a>
                 <br>
                             </label>
-        </div>
+            </div>
         
        
+
             <div class="field">
-                <button type="submit" class="uk-button uk-button-primary">Invia</button>
+                <button style="
+                background-color: #1F1F1F;color: #fff;border: 1px solid transparent;
+                " 
+                type="submit" class="btn btn--second">Invia</button>
             </div>
         </fieldset>
     </form>
 
             
         </div>
+            </div>
+        </div>
+
+        <!-- start end-->
 
         <!-- end -->
 
