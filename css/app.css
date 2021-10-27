@@ -21633,7 +21633,7 @@ div.header {
 
 .btn-lined:hover {
     color: white;
-    
+
 }
 
 .menu-title:{
@@ -22286,6 +22286,24 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
+
+
+.uk-checkbox{
+  display: inline-block;
+    height: 16px;
+    width: 16px;
+    overflow: hidden;
+    margin-top: -4px;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: 1px solid #cccbcb;
+    transition: 0.2s ease-in-out;
+    transition-property: background-color,border;
+}
 
 
 
