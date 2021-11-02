@@ -162,7 +162,7 @@
       left: 0;
       height: 25px;
       width: 25px;
-      background-color: #eee;
+      background-color: #fff;
     }
 
     /* On mouse-over, add a grey background color */
@@ -173,6 +173,7 @@
     /* When the checkbox is checked, add a blue background */
     .container input:checked ~ .checkmark {
       background-color: #2196F3;
+      
     }
 
     /* Create the checkmark/indicator (hidden when not checked) */
@@ -180,6 +181,7 @@
       content: "";
       position: absolute;
       display: none;
+
     }
 
     /* Show the checkmark when checked */
@@ -200,7 +202,92 @@
       transform: rotate(45deg);
     }
 
+
+    #cont-form {
+      opacity: 0;
+      transition: opacity 2s ease;
+      display: none;
+    }
+
+    /*#cont-form.hide {
+      opacity: 0;
+    }*/
+
+    .menu-title{
+        font-weight: bold;
+    }
+
+
 </style>
+
+
+<script type="text/javascript">
+    function showhide() {
+
+        console.log("display");
+        console.log(document.getElementById('cont-form').style.display);
+
+        var x = document.getElementById("cont-form");
+        var speed = 2000;
+        var seconds = speed/1000;
+        //if (!x.classList.contains("hide")) {
+        if (x.style.display == "block") {
+          //x.classList.remove("hide");
+          x.style.transition = "opacity "+seconds+"s ease";
+          x.style.opacity = 0;
+          setTimeout(function() {
+                //x.classList.remove("hide");
+                //x.parentNode.removeChild(el);
+                x.style.display = 'none';
+            }, speed);
+          //removeFadeOut();
+        } else if(x.style.display == "none") {
+          x.style.display = 'block';
+          //x.style.opacity = 1;
+          setTimeout(function() {
+                //x.classList.remove("hide");
+                //x.parentNode.removeChild(el);
+                x.style.transition = "opacity "+seconds+"s ease";
+                x.style.opacity = 1;
+            
+            }, 200);
+        }else{
+           
+          //x.style.opacity = 1;
+          //console.log("atleast");
+          setTimeout(function() {
+                //x.classList.remove("hide");
+                //x.parentNode.removeChild(el);
+                x.style.transition = "opacity "+seconds+"s ease";
+                x.style.opacity = 1;
+                x.style.display = 'block';
+            
+            }, 1000); 
+        }
+
+        
+
+      }
+
+      
+
+//removeFadeOut(document.getElementById('test'), 2000);
+
+    function removeFadeOut() {
+        var speed = 2000;
+        var el = document.getElementById("cont-form");
+        var seconds = speed/1000;
+        el.style.transition = "opacity "+seconds+"s ease";
+        el.style.opacity = 0;
+        setTimeout(function() {
+            el.parentNode.removeChild(el);
+        }, speed);
+    }
+
+
+
+
+</script>
 
 
     
@@ -2198,17 +2285,18 @@ N° REA: TV 185064                    </p>
                         <a href="https://www.google.it/maps/place/SpagnolGroup+-+Mobil+Srl/@45.870612,12.0757166,17z/data=!3m1!4b1!4m5!3m4!1s0x4779227c00527cd1:0x8b23e4774052195c!8m2!3d45.8706076!4d12.0779152" target="_blank" class="btn btn--second">Directions</a>
                     </div>
                     <div class="col-6 align-center">
-                        <a href="#" class="btn btn--second openContacts1" data-fromcontact="Novamobili spa">Contact us<span class="span1"></span></a>
+                        <a onclick="showhide()" class="btn btn--second openContacts1" data-fromcontact="Novamobili spa">Contact us<span class="span1"></span></a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row margin--bottom-90">
+
+        <div id="cont-form" class="row margin--bottom-90">
             <div style="text-align: left;" class="col-lg-6 offset-lg-3 col-12 align-center">
                 <div wire:id="tWhUPkLKg6EIEdA42McA">
     
-    <form class="cs-form uk-width-2-3@m" wire:submit.prevent="submit" method="post">
+    <form  class="cs-form uk-width-2-3@m" wire:submit.prevent="submit" method="post">
 
         <input type="hidden" name="_token" value="jqUSEJndSxnM6IY3WuV3tgHxt5ILYY3g0sy2Mxb1">
         <h3 style="font-weight: bold;font-family: 'Granville regular';" class="contact-l-title">Richiesta informazioni</h3>
@@ -2296,6 +2384,9 @@ N° REA: TV 185064                    </p>
               <input type="checkbox" checked="checked">
               <span class="checkmark"></span>
             </label>
+
+
+            <input type="checkbox" name="privacy">
 
 
 
@@ -2398,8 +2489,8 @@ N° REA: TV 185064                    </p>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="global">
-      <div class="curve"></div>
-      <div class="container">
+      <!--<div class="curve"></div>
+      <div class="container">-->
         <div class="row">
           
 
@@ -2434,27 +2525,29 @@ N° REA: TV 185064                    </p>
           </div>
 
         
-            <div id="col-sm-04" class="col-md-6 col-md-3">
+            <!--<div id="col-sm-04" class="col-md-6 col-md-3">
             <h6 id="f-logo" >SPAGNOLMOBILI</h6>
             <p style="font-size: 14px;text-decoration:underline;font-family:Arial;">
     Mobil s.r.l. - SpagnolMobiliVia Vidor,<br> 1 - Mosnigo di Moriago (TV) - ITALY <br>Tel. +39.0438.89.11 - Fax +39.0438.89.00.82 <br>info.mobili@spagnol.it  P.IVA 03329920262.</p>
-          </div>
+          </div>-->
 
 
 
           <div class="social">
             <h6>Follow us</h6>
+            <div class="social-menu">
             <a href="#"><i class="fa fa-facebook"></i> </a>
             <a href="#"><i class="fa fa-twitter"></i> </a>
             <!--<a href="#"><i class="fa fa-snapchat-ghost"></i> </a>-->
             <a href="#"><i class="fa fa-instagram"></i> </a>
             <a href="#"><i class="fa fa-google-plus"></i> </a>
+        </div>
           </div>
 
 
         </div>
         <p class="copyright"> &copy; Copyright All rights reserved. </p>
-      </div>
+      <!--</div>-->
     </div>
 
 
