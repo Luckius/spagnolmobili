@@ -21659,24 +21659,17 @@ div.header {
 
 
 
-
-*{
-  margin: 0px;
-  padding: 0px;
-}
-html, body{
-  font-family: "Lato", sans-serif;
-}
-.row{
+.row1{
   margin-left: 0px;
   margin-right: 0px;
+  width: 100%;
 }
 .global{
-  padding: 50px;
+  /*padding: 50px;*/
   /*color: #f0f9ff;*/
   color: #000;
   margin-top: 80px;
-  background-color: #F7F7F7;
+  background-color: #fefefe
   /*background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Ftechbeasts.com%2Fwp-content%2Fuploads%2F2016%2F05%2Fmountain_nature_elegant_wallpaper_3f.jpg&f=1&nofb=1);*/
   background-repeat: no-repeat;
   background-position: center;
@@ -21686,9 +21679,9 @@ html, body{
 .global .curve{
   position: absolute;
   top: 17%;
-  background: #F7F7F7;
+  background: #fefefe;
   opacity: 0.2;
-  width: 90%;
+  /*width: 50%;*/
   height: 38%;
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
@@ -21714,7 +21707,6 @@ html, body{
 }
 .global ul a:hover{
   opacity: 0.8;
-  /*color: #eee;*/
   color: #000;
 }
 .global .social{
@@ -21733,7 +21725,7 @@ html, body{
   line-height: 39px;
   display: inline-block;
   border-radius: 50%;
-  border: 2px solid #000;/*#05ff05;*/
+  border: 2px solid #000;
   box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.4);
   margin: 10px;
   color: #000;
@@ -21743,8 +21735,125 @@ html, body{
 .global .social a:hover{
   opacity: 0.9;
   box-shadow: 0px 1px 3px 2px rgba(255, 255, 255, 0.9);
-  background-color: black;
-  color: white;
+}
+.global .copyright{
+  text-align: center;
+  padding-top: 24px;
+  font-weight: 500;
+  opacity: 0.8;
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+
+    .global .curve{
+      left: 5%;
+      height: 70%;
+    }
+    .global h6{
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .global ul{
+      text-align: center;
+    }
+    .social{
+      margin: 0 auto;
+    }
+}
+
+
+@media(min-width: 770px){
+
+  .row{
+    margin-left: 10px;
+  width: 100%;
+}
+.global{
+  /*padding: 50px;*/
+  /*color: #f0f9ff;*/
+  color: #000;
+  margin-top: 80px;
+  background-color: #fefefe
+  /*background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Ftechbeasts.com%2Fwp-content%2Fuploads%2F2016%2F05%2Fmountain_nature_elegant_wallpaper_3f.jpg&f=1&nofb=1);*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+}
+.global .curve{
+  position: absolute;
+  top: 17%;
+  background: #fefefe;
+  opacity: 0.2;
+  /*width: 50%;*/
+  height: 38%;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+.global h6{
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 20%;
+}
+.global ul{
+  list-style-type: none;
+  line-height: 30px;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+.global ul a{
+  color: #000;
+  text-decoration: none;
+  transition: 0.3s;
+
+}
+.global ul a:hover{
+  opacity: 0.8;
+  color: #000;
+}
+.global .social{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px;
+  padding-bottom: 0px;
+  border-top: 1px solid #eee;
+  margin-top: 50px;
+}
+.global .social a{
+  font-size: 22px;
+  width: 45px;
+  height: 45px;
+  line-height: 39px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid #000;
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.4);
+  margin: 10px;
+  color: #000;
+  opacity: 0.7;
+  transition: 0.3s ease-in-out;
+
+  /**/
+
+}
+
+.social-menu{
+  margin-left: 20%;
+  
+  align-items: left;
+}
+
+
+.global .social a:hover{
+  opacity: 0.9;
+  box-shadow: 0px 1px 3px 2px rgba(255, 255, 255, 0.9);
 }
 .global .copyright{
   text-align: center;
@@ -21754,98 +21863,12 @@ html, body{
   font-size: 16px;
 }
 
-
-#col-sm-11{
-  position: absolute;
-  left: 3%;
- }
-
-#col-sm-21{
-    margin-left: 12%;
-   }
-
-#col-sm-31{
-  position: absolute;
-  left: 30%;
-  margin-left: 15%;
-
-  }
-
-#col-sm-41{
-  
-  position: absolute;
-  /*left: 70%;*/
-  margin-left: 55%;
-}
-
-
-
-/*}*/
-
-
-
-
-
-
-
-@media screen and (min-width: 751px){
-
-#col-sm-01{
-  position: absolute;
-  left: 3%;
- }
-
-#col-sm-02{
-    margin-left: 12%;
-   }
-
-#col-sm-03{
-  position: absolute;
-  left: 30%;
-  margin-left: 15%;
-
-  }
-
-#col-sm-04{
-  
-  position: absolute;
-  /*left: 70%;*/
-  margin-left: 55%;
-}
-
-
 }
 
 
 
 
-@media screen and (min-width: 1800px){
 
-#col-sm-01{
-  position: absolute;
-  left: 3%;
- }
-
-#col-sm-02{
-    margin-left: 15%;
-   }
-
-#col-sm-03{
-  position: absolute;
-  left: 35%;
-  margin-left: 20%;
-
-  }
-
-#col-sm-04{
-  
-  position: absolute;
-  /*left: 70%;*/
-  margin-left: 65%;
-}
-
-
-}
 
 
 
@@ -21906,26 +21929,6 @@ slider */
 
 
 
-
-@media (max-width: 767px) {
-
-    .global .curve{
-      left: 5%;
-      height: 70%;
-    }
-    .global h6{
-      margin: 0 auto;
-      text-align: center;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-    .global ul{
-      text-align: center;
-    }
-    .social{
-      margin: 0 auto;
-    }
-}
 
 
 
@@ -22288,7 +22291,7 @@ input[type=submit]:hover {
 
 
 
-.uk-checkbox{
+/*.uk-checkbox{
   display: inline-block;
     height: 16px;
     width: 16px;
@@ -22303,7 +22306,7 @@ input[type=submit]:hover {
     border: 1px solid #cccbcb;
     transition: 0.2s ease-in-out;
     transition-property: background-color,border;
-}
+}*/
 
 
 
