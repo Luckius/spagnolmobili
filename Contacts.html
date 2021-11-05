@@ -218,6 +218,35 @@
     }
 
 
+
+    input[type=checkbox] {
+    display:none;
+    }
+    input[type=checkbox] + label
+    {
+    background: #999;
+    height: 16px;
+    width: 16px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    }
+    input[type=checkbox]:checked + label
+    {
+    background: #0080FF;
+    text-decoration: line-through;
+    height: 16px;
+    width: 16px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    }
+    input[type=checkbox]:checked + label + label {
+        text-decoration: line-through;
+    }
+
+
+
+
+
 </style>
 
 
@@ -2376,26 +2405,41 @@ N° REA: TV 185064                    </p>
 
             <div class="field info uk-margin-top-large">
 
-            <input style="display: block;" wire:model.defer="check_privacy" id="check_privacy" type="checkbox" class="uk-checkbox  custom_checkbox" name="check_privacy" value="1">
+            <!--<input style="display: block;visibility: visible;opacity: 1;" wire:model.defer="check_privacy" id="check_privacy" type="checkbox" class="uk-checkbox  custom_checkbox" name="check_privacy" value="1">-->
+
+            
+            <div class="box">
+            <input type='checkbox' name='thing' value='valuable' id="thing"/>
+            <label for="thing"></label>
+            <label>Confermo la lettura dell'informativa sulla privacy e acconsento al trattamento dei dati personali.*</label>
+            <!--<br>
+            <input type='checkbox' name='thing1' value='valuable2' id="thing1"/><label for="thing1"></label> <label>free the slaves</label>
+            <br>
+            <input type='checkbox' name='thing2' value='valuable3' id="thing2"/><label for="thing2"></label> <label>train my dragons</label>
+            <br>
+            <input type='checkbox' name='thing3' value='valuable4' id="thing3"/><label for="thing3"></label> <label>cross the narrow sea</label>
+            <br>
+            <input type='checkbox' name='thing4' value='valuable5' id="thing4"/><label for="thing4"></label> <label>become Queen of Westeros</label>-->
+            </div>
 
 
-
-            <label class="uk-form-label t-small">
-              <input type="checkbox" checked="checked">
+            <!--<label style="opacity: 1;" class="uk-form-label t-small">
+              <input type="checkbox" >
               <span class="checkmark"></span>
             </label>
 
 
-            <input type="checkbox" name="privacy">
+            <input style="opacity: 1;" 
+             type="checkbox" name="privacy" checked="checked">-->
 
 
 
 
 
-            <label class="uk-form-label t-small" for="check_privacy">
+            <!--<label class="uk-form-label t-small" for="check_privacy">
                 <a target="_blank" href="#">Confermo la lettura dell'informativa sulla privacy e acconsento al trattamento dei dati personali.*</a>
                 <br>
-                            </label>
+                            </label>-->
             </div>
         
        
