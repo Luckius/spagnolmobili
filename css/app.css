@@ -20941,7 +20941,7 @@ div.header {
   border-top: 1px solid #eeeeee;
   position: relative;
   z-index: 1;
-  background-color: #F7F7F7; }
+  background-color: #1F1F1F; }
   .footer .container-fluid-menu {
     padding-left: calc(80px + 15px); }
     @media (max-width: 1220px) {
@@ -21707,7 +21707,7 @@ div.header {
 }
 .global ul a:hover{
   opacity: 0.8;
-  color: #000;
+  color: #fff;
 }
 .global .social{
   width: 100%;
@@ -21749,6 +21749,7 @@ div.header {
     .global .curve{
       left: 5%;
       height: 70%;
+      background-color: #fefefe
     }
     .global h6{
       margin: 0 auto;
@@ -21761,7 +21762,41 @@ div.header {
     }
     .social{
       margin: 0 auto;
+      color: #fff;
+      border-top: 1px solid #1F1F1F;
     }
+
+    .global .social a{
+      border: 2px solid #fff;
+      color: #fff;
+    }
+
+    #col-sm-01 h6{
+      color: #fff;
+    }
+
+
+    #col-sm-02 h6{
+      color: #fff;
+    }
+
+
+
+    #col-sm-03 h6{
+      color: #fff;
+    }
+
+
+  .global ul a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+
+  }
+  .global ul a:hover{
+  opacity: 0.8;
+  color: #fff;
+  }
 }
 
 
@@ -21774,7 +21809,7 @@ div.header {
 .global{
   /*padding: 50px;*/
   /*color: #f0f9ff;*/
-  color: #000;
+  color: #fff;
   margin-top: 80px;
   background-color: #fefefe
   /*background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Ftechbeasts.com%2Fwp-content%2Fuploads%2F2016%2F05%2Fmountain_nature_elegant_wallpaper_3f.jpg&f=1&nofb=1);*/
@@ -21809,14 +21844,14 @@ div.header {
   margin-bottom: 0;
 }
 .global ul a{
-  color: #000;
+  color: #fff;
   text-decoration: none;
   transition: 0.3s;
 
 }
 .global ul a:hover{
   opacity: 0.8;
-  color: #000;
+  color: #fff;
 }
 .global .social{
   width: 100%;
@@ -21824,7 +21859,7 @@ div.header {
   text-align: center;
   padding: 40px;
   padding-bottom: 0px;
-  border-top: 1px solid #fefefe;
+  border-top: 1px solid #1F1F1F;
   margin-top: 50px;
   position: absolute;
   top: -5%;
@@ -21837,10 +21872,10 @@ div.header {
   line-height: 39px;
   display: inline-block;
   border-radius: 50%;
-  border: 2px solid #000;
+  border: 2px solid #fff;
   box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.4);
   margin: 10px;
-  color: #000;
+  color: #fff;
   opacity: 0.7;
   transition: 0.3s ease-in-out;
 
@@ -22019,7 +22054,7 @@ slider */
   padding: 20px;
   position: absolute;
   /*right: 1150px;*/
-  left: 1%;
+  left: -2.5%;
 
 
 }
@@ -22217,6 +22252,19 @@ slider */
     text-align: left;
     padding-top: 20px;
   }
+
+
+  .header-items2{
+   color: white;
+   margin-left: 2px; 
+   padding: 20px;
+   position: absolute;
+   left: 1%;
+   display: none;
+
+  }
+
+
 }
 
 
