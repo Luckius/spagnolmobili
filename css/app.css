@@ -22099,6 +22099,17 @@ slider */
     padding-top: 20px;
     }
 
+
+    .header-items2{
+        color: white;
+        margin-left: 2px; 
+        padding: 20px;
+        position: absolute;
+        /*right: 1150px;*/
+        left: 0%;
+
+    }
+
 }
 
 
