@@ -575,8 +575,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                                                     <li>
                                         <a href="https://www.facebook.com/novamobili" target="_blank" class="fab fa-facebook-f"></a>
                                     </li>
-                                                                                                    <li>
-                                        <a href="https://it.pinterest.com/novamobili0299/" target="_blank" class="fab fa-pinterest-p"></a>
+                                    <a href="" target="_blank" class="fa fa-twitter"></a>
                                     </li>
                                                                                                     <li>
                                         <a href="https://www.linkedin.com/company/battistella-company/" target="_blank" class="fab fa-linkedin-in"></a>
@@ -1906,12 +1905,12 @@ N° REA: TV 185064                    </p>
             <span class="edgtf-social-icon-widget fa fa-instagram    "></span>        </a>
     
         <a class="edgtf-social-icon-widget-holder edgtf-icon-has-hover" style="color: #ffffff;;font-size: 14px;margin: 0px 5px 0px 5px;" href="http://www.pinterest.com/gruppotomasella/" target="_blank">
-            <span class="edgtf-social-icon-widget  social_pinterest   "></span>        </a>
+            <span class="fa fa-twitter"></span></a>
     
         <a class="edgtf-social-icon-widget-holder edgtf-icon-has-hover" style="color: #ffffff;;font-size: 14px;margin: 0px 10px 0px 5px;" href="https://www.youtube.com/user/TomasellaGroup" target="_blank">
             <span class="edgtf-social-icon-widget fa fa-youtube-play    "></span>        </a>
-      <!--<div class="widget edgtf-separator-widget">
-        <div class="edgtf-separator-holder clearfix  edgtf-separator-center edgtf-separator-normal">
+      <!--<div class="widget edgtf-separator-widget">fa fa-twitter
+        <div class="edgtf-separator-holder clearfix  edgtf-separator-center edgtf-separator-normal">edgtf-social-icon-widget social_pinterest
         <div class="edgtf-separator" style="border-color: #ffffff;border-style: solid;width: 1px;border-bottom-width: 0px;margin-top: 0px;margin-bottom: 0px"></div>
       </div>
     </div>-->
@@ -2309,12 +2308,16 @@ N° REA: TV 185064                    </p>
                         <p class="paragraph-2 margin--bottom-45">T <a href="tel:+3904389868">+39 0438 9868</a><br> F <a href="tel:+390438986999">+39 0438 986 999</a></p>
                     </div>
                 </div>
+                <!--">btn btn--second | btn btn--second openContacts1-->
                 <div class="row">
                     <div class="col-6 align-center">
-                        <a href="https://www.google.it/maps/place/SpagnolGroup+-+Mobil+Srl/@45.870612,12.0757166,17z/data=!3m1!4b1!4m5!3m4!1s0x4779227c00527cd1:0x8b23e4774052195c!8m2!3d45.8706076!4d12.0779152" target="_blank" class="btn btn--second">Directions</a>
+                        <a href="https://www.google.it/maps/place/SpagnolGroup+-+Mobil+Srl/@45.870612,12.0757166,17z/data=!3m1!4b1!4m5!3m4!1s0x4779227c00527cd1:0x8b23e4774052195c!8m2!3d45.8706076!4d12.0779152" target="_blank" class="btn btn-lined">Directions<span class="span1"></span></a>
                     </div>
                     <div class="col-6 align-center">
-                        <a onclick="showhide()" class="btn btn--second openContacts1" data-fromcontact="Novamobili spa">Contact us<span class="span1"></span></a>
+
+                        <a id="contact-btn" onclick="showhide()" class="btn btn-lined">Contact Us<span class="span1"></span></a>
+
+                        <!--<a onclick="showhide()" class="btn btn-lined" data-fromcontact="Novamobili spa">Contact us<span class="span1"></span></a>-->
                     </div>
                 </div>
             </div>
@@ -2336,8 +2339,7 @@ N° REA: TV 185064                    </p>
             <div class="field">
                 <label class="discard placeholder uk-form-label" for="name">Name *</label>
                 <input wire:model.defer="name" id="name" type="text" class="uk-input " name="name" value="" autocomplete="name">
-                
-                
+                        
                                     
             </div>
             <div class="field">
@@ -2362,13 +2364,10 @@ N° REA: TV 185064                    </p>
                 <input wire:model.defer="country" id="country" type="text" class="uk-input " name="country" value="" autocomplete="country">
                             </div>
 
-
             <div class="field" for="phone">
                 <label class="discard placeholder uk-form-label">City*</label>
                 <input wire:model.defer="phone" id="phone" type="text" class="uk-input " name="phone" value="" autocomplete="phone">
                 
-
-
                 <div class="field" for="phone">
                 <label class="discard placeholder uk-form-label">Province*</label>
                 <input wire:model.defer="phone" id="phone" type="text" class="uk-input " name="phone" value="" autocomplete="phone">
@@ -2386,18 +2385,13 @@ N° REA: TV 185064                    </p>
                 
                             </div>
 
-
-
             <div class="field" for="phone">
                 <!--<input wire:model.defer="phone" id="phone" type="text" class="uk-input " name="phone" value="" autocomplete="phone">-->
                 <label class="discard placeholder uk-form-label"></label>
-
-        
             <div class="field">
                 <!--<textarea wire:model.defer="message" id="message" class="uk-textarea " name="message" autocomplete="message"></textarea>-->
-                <label class="discard placeholder uk-form-label" for="message"></label>
-                
-                            </div>
+                <label class="discard placeholder uk-form-label" for="message"></label>   
+            </div>
             
             <!--<div class="field info uk-width-1-1 uk-margin-top">
                 <label class="uk-form-label">* campi obbligatori</label>
@@ -2449,7 +2443,7 @@ N° REA: TV 185064                    </p>
                 background-color: #1F1F1F;color: #fff;
                 border: 1px solid transparent;margin-top: 20px;
                 " 
-                type="submit" class="btn btn--second">Invia</button>
+                type="submit" class="btn btn-lined">Invia<span class="span1"></span></button>
             </div>
         </fieldset>
     </form>
