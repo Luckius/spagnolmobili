@@ -22126,6 +22126,17 @@ slider */
   }
 
 
+  .header-items2{
+      color: white;
+      margin-left: 2px; 
+      padding: 20px;
+      position: absolute;
+      /*right: 1150px;*/
+      left: -1.4%;
+
+    }
+
+
   .edgtf-position-right-inner1{
     position: relative;
     left: 1500px;
