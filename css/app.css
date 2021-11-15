@@ -21819,6 +21819,7 @@ div.header {
   font-weight: 500;
   opacity: 0.8;
   font-size: 16px;
+  color: #fff;
 }
 @media (max-width: 767px) {
 
@@ -21993,6 +21994,7 @@ div.header {
   font-weight: 500;
   opacity: 0.8;
   font-size: 16px;
+
 }
 
 }
