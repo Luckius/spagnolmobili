@@ -21876,6 +21876,20 @@ div.header {
   opacity: 0.8;
   color: #fff;
   }
+
+  #adress{
+    text-align: left;
+  }
+
+  #phones{
+    text-align: left;
+    padding: 0;
+  }
+
+  #phones-cont{
+
+  }
+
 }
 
 
