@@ -21585,6 +21585,27 @@ div.header {
 }
 
 
+
+.btn-lined1 {
+    background: none;
+    border: 4px solid #000;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 20px 35px;
+    font-size: 16px;
+    transition-property: all, transform, background;
+    transition-duration: 0.2s, 0.2s, 0.2s;
+    transition-delay: 0.2s, 0s, 0.3s;
+    line-height: 1em;
+    overflow: hidden;
+    position: relative;
+    color: #000;
+    margin-top: 50px;
+    z-index: 1;
+    
+}
+
+
 #showBtn{
   text-align: center;
   align-items: center;
@@ -21620,7 +21641,42 @@ div.header {
   .btn-lined{
      display: none;
   }
+
+  .btn-lined1{
+     display: block;
+     margin-left: 20%;
+     margin-right: 16%;
+  }
+
+  .span1 {
+      position: absolute;
+      height: 570px;
+      width: 570px;
+      background-color: black;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      z-index: -1;
+      opacity: 0;
+  }
+
+
+  #direct-div{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+
 }
+
+
+@media screen and (min-width: 700px){
+  #scarica{
+    margin-left: 60%;
+  }
+}
+
 
 
 
@@ -21632,12 +21688,25 @@ div.header {
 }
 
 
+.btn-lined1:hover .span1{
+    animation: button_animation 1s ease;
+
+}
+
+
 #contact-btn:hover{
   color: #fff;
 }
 
 
 .btn-lined:hover {
+    color: #fff;
+    background-color: #000;
+
+}
+
+
+.btn-lined1:hover {
     color: #fff;
     background-color: #000;
 
@@ -21759,13 +21828,16 @@ div.header {
       background-color: #fefefe
     }
     .global h6{
-      margin: 0 auto;
+      margin: 0px auto;
       text-align: center;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin-left: 30%
+      margin-right:30%;
+      
     }
     .global ul{
-      text-align: center;
+      text-align: left;
+      margin-left: 30%;
+      margin-bottom: 10%;
     }
     .social{
       margin: 0 auto;
@@ -22132,7 +22204,7 @@ slider */
       padding: 20px;
       position: absolute;
       /*right: 1150px;*/
-      left: -1.4%;
+      left: -1.5%;
 
     }
 
@@ -22310,6 +22382,7 @@ slider */
 }
 
 
+
 #menu-div{
   position: absolute;
   left: 25%;
@@ -22322,11 +22395,43 @@ slider */
 }
 
 
+@media screen and (max-width: 700px){
+  /*#contact-l-title{
+    margin-top: 30%;
+  }*/
+  #contact-title{
+    margin-top: 1%;
+  }
+
+  #direct-btn{
+    display: block;
+    visibility: visible;
+
+  }
+
+  #contact-l-title{
+    margin-top: -200px;
+    margin-bottom: 2px;
+  }
+
+  #contacth1{
+    height: 50px;
+  }
+
+
+  #direct-div{
+  }
+
+}
+
+
+
 #contact-l-title{
   background-color: #F7F7F7;
   font-family: 'Fantasy';
   font-weight: bold;
   background: #F7F7F7;
+  margin-top: 100px;
 
 }
 
