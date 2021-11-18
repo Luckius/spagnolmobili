@@ -22559,6 +22559,12 @@ slider */
 }
 
 
+@media screen and (min-width: 800px){
+    #contacth1{
+      padding-bottom: 100px;
+  }
+}
+
 @media screen and (max-width: 700px){
   /*#contact-l-title{
     margin-top: 30%;
@@ -22579,7 +22585,7 @@ slider */
   }
 
   #contacth1{
-    height: 50px;
+    height: 200px;
   }
 
 
@@ -22600,7 +22606,7 @@ slider */
 }
 
 #contacth1{
-  height: 200px;
+  height: 100px;
   padding-top: 7%;
   font-weight: bold;
 }
