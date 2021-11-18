@@ -333,9 +333,45 @@
     text-decoration: underline;
   }
 
-  #download-line:hover{
+
+#download-line {
+  display: inline-block;
+  position: relative;
+  color: green;
+}
+
+#download-line:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: green;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+
+#download-line:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+  /*#download-line:hover{
     text-decoration: underline;
+    color: black;
+    font-family: "FaktPro-Bold", sans-serif;
+
   }
+
+
+  #download-line{
+    color: green;
+    font-size: 1.1em;
+  }*/
 
 
   #scarica{
@@ -2417,6 +2453,7 @@ N° REA: TV 185064                    </p>
 
                         <div style="margin-top: 10px;" class="row margin--lr-0">
                             <div class="col-12">
+                                <p style="margin-bottom: 10px;" id="catalogy-word" class="heading-3">COLLEZIONE CAMERETTE</p>
                                 <p id="download-line" class="heading-3">Download</p>
                             </div>
                         </div>
@@ -2433,6 +2470,7 @@ N° REA: TV 185064                    </p>
 
                         <div style="margin-top: 10px;" class="row margin--lr-0">
                             <div class="col-12">
+                              <p style="margin-bottom: 10px;" id="catalogy-word" class="heading-3">CAMPIONARIO TESSUTI</p>
                                 <p id="download-line" class="heading-3">Download</p>
                             </div>
                         </div>
@@ -2449,6 +2487,7 @@ N° REA: TV 185064                    </p>
 
                         <div style="margin-top: 10px;" class="row margin--lr-0">
                             <div class="col-12">
+                              <p style="margin-bottom: 10px;" id="catalogy-word" class="heading-3">COLLEZIONE LIVING</p>
                                 <p id="download-line" class="heading-3">Download</p>
                             </div>
                         </div>
@@ -2465,6 +2504,7 @@ N° REA: TV 185064                    </p>
 
                         <div style="margin-top: 10px;" class="row margin--lr-0">
                             <div class="col-12">
+                              <p style="margin-bottom: 10px;" id="catalogy-word" class="heading-3">ARDECÒ - ARMADI E CABINE</p>
                                 <p id="download-line" class="heading-3">Download</p>
                             </div>
                         </div>
@@ -2481,6 +2521,7 @@ N° REA: TV 185064                    </p>
 
                         <div style="margin-top: 10px;" class="row margin--lr-0">
                             <div class="col-12">
+                              <p style="margin-bottom: 10px;" id="catalogy-word" class="heading-3">KIDS & YOUNG</p>
                                 <p id="download-line" class="heading-3">Download</p>
                             </div>
                         </div>

@@ -18432,7 +18432,8 @@ p.font-equal a {
   font-size: inherit; }
 
 .heading-3 {
-  font-size: 1.3em; }
+  font-size: 1.3em;
+   }
 
 [class*="paragraph-"] .ulIntoP {
   padding: 0;
@@ -21678,6 +21679,13 @@ div.header {
 }
 
 
+@media screen and (min-width: 1200px){
+  #scarica{
+    margin-left: 80%;
+  }
+}
+
+
 
 
 
@@ -22003,6 +22011,115 @@ div.header {
 
 
 
+@media(min-width: 1200px){
+
+  .row{
+    margin-left: 10px;
+  width: 100%;
+}
+.global{
+  /*padding: 50px;*/
+  /*color: #f0f9ff;*/
+  color: #fff;
+  margin-top: 80px;
+  background-color: #fefefe
+  /*background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Ftechbeasts.com%2Fwp-content%2Fuploads%2F2016%2F05%2Fmountain_nature_elegant_wallpaper_3f.jpg&f=1&nofb=1);*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+}
+.global .curve{
+  position: absolute;
+  top: 17%;
+  background: #fefefe;
+  opacity: 0.2;
+  /*width: 50%;*/
+  height: 38%;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+.global h6{
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 15%;
+}
+.global ul{
+  list-style-type: none;
+  line-height: 30px;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+.global ul a{
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+
+}
+.global ul a:hover{
+  opacity: 0.8;
+  color: #fff;
+}
+.global .social{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px;
+  padding-bottom: 0px;
+  border-top: 1px solid #1F1F1F;
+  margin-top: 50px;
+  position: absolute;
+  top: -5%;
+  left: 30%;
+}
+.global .social a{
+  font-size: 22px;
+  width: 45px;
+  height: 45px;
+  line-height: 39px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.4);
+  margin: 10px;
+  color: #FFF;
+  opacity: 0.7;
+  transition: 0.3s ease-in-out;
+
+  /**/
+
+}
+
+.social-menu{
+  margin-left: 20%;
+
+  align-items: left;
+}
+
+
+.global .social a:hover{
+  opacity: 0.9;
+  box-shadow: 0px 1px 3px 2px rgba(255, 255, 255, 0.9);
+}
+.global .copyright{
+  text-align: center;
+  padding-top: 24px;
+  font-weight: 500;
+  opacity: 0.8;
+  font-size: 16px;
+
+}
+
+}
+
+
+
+
+
 
 
 
@@ -22154,10 +22271,41 @@ slider */
 
 }
 
-.f-menu:hover{
+
+
+.f-menu {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+.f-menu:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+
+.f-menu:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
+
+
+/*.f-menu:hover{
   text-decoration: underline;
   color: black;
-}
+}*/
 
 .edgtf-position-right-inner2{
   position: absolute;
@@ -22426,7 +22574,7 @@ slider */
   }
 
   #contact-l-title{
-    margin-top: -200px;
+    margin-top: -100px;
     margin-bottom: 2px;
   }
 
@@ -22447,7 +22595,7 @@ slider */
   font-family: 'Fantasy';
   font-weight: bold;
   background: #F7F7F7;
-  margin-top: 100px;
+  margin-top: 30px;
 
 }
 

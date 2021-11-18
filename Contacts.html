@@ -257,7 +257,7 @@
         console.log(document.getElementById('cont-form').style.display);
 
         var x = document.getElementById("cont-form");
-        var speed = 2000;
+        var speed = 1000;
         var seconds = speed/1000;
         //if (!x.classList.contains("hide")) {
         if (x.style.display == "block") {
@@ -279,7 +279,7 @@
                 x.style.transition = "opacity "+seconds+"s ease";
                 x.style.opacity = 1;
             
-            }, 200);
+            }, 5);
         }else{
            
           //x.style.opacity = 1;
@@ -2608,7 +2608,7 @@ Aris3
 
 
         </div>
-        <p class="copyright"> &copy; Copyright All rights reserved. </p>
+        <p id="copyright" class="copyright"> &copy; Copyright All rights reserved. </p>
       <!--</div>-->
     </div>
 
