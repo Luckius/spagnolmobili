@@ -22549,12 +22549,12 @@ slider */
 
 #menu-div{
   position: absolute;
-  left: 25%;
+  left: 21.5%;
 }
 
 @media screen and (min-width: 1800px){
   #menu-div{
-    left: 30%
+    left: 26.5%
   }
 }
 
