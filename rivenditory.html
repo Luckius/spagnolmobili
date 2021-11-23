@@ -131,9 +131,197 @@
     </script>
 
 
+<style type="text/css">    
+        /* The container */
+    .container {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    /* Hide the browser's default checkbox */
+    .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    /* Create a custom checkbox */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #fff;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .container:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    .container input:checked ~ .checkmark {
+      background-color: #2196F3;
+      
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+
+    }
+
+    /* Show the checkmark when checked */
+    .container input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    /* Style the checkmark/indicator */
+    .container .checkmark:after {
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+
+    #cont-form {
+      opacity: 0;
+      transition: opacity 2s ease;
+      display: none;
+    }
+
+    /*#cont-form.hide {
+      opacity: 0;
+    }*/
+
+    .menu-title{
+        font-weight: bold;
+    }
+
+
+
+    input[type=checkbox] {
+    display:none;
+    }
+    input[type=checkbox] + label
+    {
+    background: #999;
+    height: 16px;
+    width: 16px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    }
+    input[type=checkbox]:checked + label
+    {
+    background: #0080FF;
+    text-decoration: line-through;
+    height: 16px;
+    width: 16px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    }
+    input[type=checkbox]:checked + label + label {
+        text-decoration: line-through;
+    }
+
+
+
+
+
+</style>
+
+
+<script type="text/javascript">
+    function showhide() {
+
+        console.log("display");
+        console.log(document.getElementById('cont-form').style.display);
+
+        var x = document.getElementById("cont-form");
+        var speed = 10;
+        var seconds = speed/1000;
+        //if (!x.classList.contains("hide")) {
+        if (x.style.display == "block") {
+          //x.classList.remove("hide");
+          x.style.transition = "opacity "+seconds+"s ease";
+          x.style.opacity = 0;
+          setTimeout(function() {
+                //x.classList.remove("hide");
+                //x.parentNode.removeChild(el);
+                x.style.display = 'none';
+            }, speed);
+          //removeFadeOut();
+        } else if(x.style.display == "none") {
+          x.style.display = 'block';
+          //x.style.opacity = 1;
+          setTimeout(function() {
+                //x.classList.remove("hide");
+                //x.parentNode.removeChild(el);
+                x.style.transition = "opacity "+seconds+"s ease";
+                x.style.opacity = 1;
+            
+            }, 5);
+        }else{
+           
+          //x.style.opacity = 1;
+          //console.log("atleast");
+          setTimeout(function() {
+                //x.classList.remove("hide");
+                //x.parentNode.removeChild(el);
+                x.style.transition = "opacity "+seconds+"s ease";
+                x.style.opacity = 1;
+                x.style.display = 'block';
+            
+            }, 1000); 
+        }
+
+        
+
+      }
+
+      
+
+//removeFadeOut(document.getElementById('test'), 2000);
+
+    function removeFadeOut() {
+        var speed = 2000;
+        var el = document.getElementById("cont-form");
+        var seconds = speed/1000;
+        el.style.transition = "opacity "+seconds+"s ease";
+        el.style.opacity = 0;
+        setTimeout(function() {
+            el.parentNode.removeChild(el);
+        }, speed);
+    }
+
+
+
+
+</script>
+
+
     
     </head>
-<body onload="slider()">
+<body>
 
 <!-- Google Tag Manager (noscript)
 
@@ -387,8 +575,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                                                     <li>
                                         <a href="https://www.facebook.com/novamobili" target="_blank" class="fab fa-facebook-f"></a>
                                     </li>
-                                                                                                    <li>
-                                        <a href="https://it.pinterest.com/novamobili0299/" target="_blank" class="fab fa-pinterest-p"></a>
+                                    <a href="" target="_blank" class="fa fa-twitter"></a>
                                     </li>
                                                                                                     <li>
                                         <a href="https://www.linkedin.com/company/battistella-company/" target="_blank" class="fab fa-linkedin-in"></a>
@@ -1718,12 +1905,12 @@ N° REA: TV 185064                    </p>
             <span class="edgtf-social-icon-widget fa fa-instagram    "></span>        </a>
     
         <a class="edgtf-social-icon-widget-holder edgtf-icon-has-hover" style="color: #ffffff;;font-size: 14px;margin: 0px 5px 0px 5px;" href="http://www.pinterest.com/gruppotomasella/" target="_blank">
-            <span class="fa fa-twitter"></span>        </a>
+            <span class="fa fa-twitter"></span></a>
     
         <a class="edgtf-social-icon-widget-holder edgtf-icon-has-hover" style="color: #ffffff;;font-size: 14px;margin: 0px 10px 0px 5px;" href="https://www.youtube.com/user/TomasellaGroup" target="_blank">
             <span class="edgtf-social-icon-widget fa fa-youtube-play    "></span>        </a>
-      <!--<div class="widget edgtf-separator-widget">
-        <div class="edgtf-separator-holder clearfix  edgtf-separator-center edgtf-separator-normal">
+      <!--<div class="widget edgtf-separator-widget">fa fa-twitter
+        <div class="edgtf-separator-holder clearfix  edgtf-separator-center edgtf-separator-normal">edgtf-social-icon-widget social_pinterest
         <div class="edgtf-separator" style="border-color: #ffffff;border-style: solid;width: 1px;border-bottom-width: 0px;margin-top: 0px;margin-bottom: 0px"></div>
       </div>
     </div>-->
@@ -1741,10 +1928,10 @@ N° REA: TV 185064                    </p>
 
     <div class="row isDesktop align-items-center">
         <div style="position: absolute;left: 1%;" class="col-2">
-            <a href="#">
+            <a href="index.html">
                 <!--<a href="">logo--black.svg logo--white.svg</a>-->
                 <img src="images/app/s-logo2.svg" height="300" class="isBlack1" />
-                <!--<img src="images/app/s-logo.svg" height="100" class="isWhite1" />-->
+                <!--<img src="images/app/s-logo.svg" height="30" class="isWhite" />-->
             </a>
         </div>
 
@@ -1757,13 +1944,13 @@ N° REA: TV 185064                    </p>
                     <a href="catalogh.html" class="menu-title">CATALOGHI</a>
                 </li>
                 <li class="menu-item">
-                    <a href="rivenditory.html" class="menu-title">RIVENDITORI</a>
+                    <a href="#" class="menu-title">RIVENDITORI</a>
                 </li>
                 <li class="menu-item">
                     <a href="#" class="menu-title">CHISIAMO</a>
                 </li>
                 <li class="menu-item">
-                    <a href="Contacts.html" class="menu-title">CONTATTI</a>
+                    <a href="#" class="menu-title">CONTATTI</a>
                 </li>
                 <!--<li class="menu-item">
                     <a href="en/configurator.html" class="menu-title">Configurator</a>
@@ -1798,7 +1985,7 @@ N° REA: TV 185064                    </p>
 
         <div class="col-8 align-center">
             <a href="index.html">
-                <img src="images/app/s-logo2.svg" height="22" class="" />
+                <img src="images/app/s-logo2.svg" height="30" class="" />
             </a>
         </div>
 
@@ -1812,171 +1999,7 @@ N° REA: TV 185064                    </p>
     </div>
 
 </header>
-<!--<div class="header">
-    <ul class="menu">
-        <li class="menu-has-submenu menu-item">
-            <ul class="menu-submenu menu-title-1">
-                <li class="menu-submenu-item row">
-                    
-                                            <ul class="col-2 ">
-                                                            
-                                                                <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="120">
-                                    <a href="en/wardrobes.html">Wardrobes</a>
-                                                                            <ul class="menu-submenu-item-single-list">
-                                                                                            <li>
-                                                    <a href="en/hinged-doors.html">
-                                                        Hinged door
-                                                    </a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="en/sliding-door.html">
-                                                        Sliding door
-                                                    </a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="en/flush-closing-sliding-door.html">
-                                                        Flush-closing sliding door
-                                                    </a>
-                                                </li>
-                                                                                    </ul>
-                                                                    </li>
-                                                                                            
-                                                                <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="150">
-                                    <a href="en/walk-in-closets.html">Walk-in closets</a>
-                                                                    </li>
-                                                                                            
-                                                                <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="180">
-                                    <a href="en/beds.html">Beds</a>
-                                                                    </li>
-                                                                                            
-                                                                <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="210">
-                                    <a href="en/drawer-units-and-bedside-tables.html">Drawer units and bedside tables</a>
-                                                                    </li>
-                                                                                            
-                                                                <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="240">
-                                    <a href="en/bookcases.html">Bookcases</a>
-                                                                    </li>
-                                                                                                                                                                                                                                                                                                </ul>
-                                            <ul class="col-2 offset-1">
-                                                                                                                                                                                                                                                                                                                                                                                                                
-                                                                <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="270">
-                                    <a href="en/sofas-and-armchairs.html">Sofas and armchairs</a>
-                                                                            <ul class="menu-submenu-item-single-list">
-                                                                                            <li>
-                                                    <a href="en/sofas.html">
-                                                        Sofas
-                                                    </a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="en/armchairs.html">
-                                                        Armchairs
-                                                    </a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="en/ottomans-and-floor-cushions.html">
-                                                        Ottomans and floor cushions
-                                                    </a>
-                                                </li>
-                                                                                    </ul>
-                                                                    </li>
-                                                                                            
-                                                                <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="300">
-                                    <a href="en/tables-and-chairs.html">Tables and chairs</a>
-                                                                            <ul class="menu-submenu-item-single-list">
-                                                                                            <li>
-                                                    <a href="en/tables.html">
-                                                        Tables
-                                                    </a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="en/extending-tables-2.html">
-                                                        Extending tables
-                                                    </a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="en/occasional-tables.html">
-                                                        Occasional Tables
-                                                    </a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="en/chairs.html">
-                                                        Chairs
-                                                    </a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="en/desks-and-console-tables.html">
-                                                        Desks and console tables
-                                                    </a>
-                                                </li>
-                                                                                    </ul>
-                                                                    </li>
-                                                                                                                                                        </ul>
-                                            <ul class="col-2 offset-1 border-right-grey">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-                                                                <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="330">
-                                    <a href="en/occasional-furniture.html">Occasional furniture</a>
-                                                                            <ul class="menu-submenu-item-single-list">
-                                                                                            <li>
-                                                    <a href="en/sideboards.html">
-                                                        Sideboards
-                                                    </a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="en/mirrors.html">
-                                                        Mirrors
-                                                    </a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="en/storage-units.html">
-                                                        Storage Units
-                                                    </a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="en/accessories.html">
-                                                        Accessories
-                                                    </a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="en/shelves.html">
-                                                        Shelves
-                                                    </a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="en/tv-panels-and-wall-panelling.html">
-                                                        TV panels and wall panelling
-                                                    </a>
-                                                </li>
-                                                                                    </ul>
-                                                                    </li>
-                                                                                    </ul>
-                    
-                                            <ul class="col-2 offset-1">
-                                                                                            <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="360">
-                                    <a href="en/bedroom.html">Bedroom</a>
-                                    
-                                </li>
-                                                                                                                            <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="390">
-                                    <a href="en/living-room.html">Living room</a>
-                                    
-                                </li>
-                                                                                             
-                                                            <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="420">
-                                    <a href="javascript: void(0);">Homes</a>
-                                    <ul class="menu-submenu-item-single-list">
-                                                                                    <li>
-                                                <a href="en/stories/penthouse-in-the-city.html">Penthouse in the city</a>
-                                            </li>
-                                                                                    <li>
-                                                <a href="en/stories/loft-in-the-hills.html">Loft in the hills</a>
-                                            </li>
-                                                                            </ul>
-                                </li>
-                                                    </ul>
-                                    </li>
-            </ul>
-        </li>
-    </ul>
-</div>-->
+
 
 <div class="row isMobile menuMobile">
     <div class="col-12">
@@ -1984,7 +2007,7 @@ N° REA: TV 185064                    </p>
             <div class="col-12">
                 <div class="row margin--top-50 margin--bottom-30">
                     <div class="col-10 offset-2 menuMobile-subMenu">
-                        <a href="index.html" class="menuMobile-item-1 menuMobile-toggleSubMenu menuMobile-toggleSubMenu-open">
+                        <a href="#" class="menuMobile-item-1 menuMobile-toggleSubMenu menuMobile-toggleSubMenu-open">
                             Home                        </a>
 
                         <!--<div class="menuMobileSubMenu">
@@ -2152,10 +2175,10 @@ N° REA: TV 185064                    </p>
                     <div class="col-10 offset-2">
                         <a href="#" class="menuMobile-item-1">ES</a>
                     </div>
-                    <div class="col-10 offset-2">
-                        <a href="en/catalogs.html" class="menuMobile-item-1">DE</a>
-                    </div>
                     <!--<div class="col-10 offset-2">
+                        <a href="en/catalogs.html" class="menuMobile-item-1">Downloads</a>
+                    </div>
+                    <div class="col-10 offset-2">
                         <a href="https://web.gruppobattistella.it/login" target="_blank" class="menuMobile-item-1">Restricted area</a>
                     </div>
                     <div class="col-10 offset-2">
@@ -2222,209 +2245,268 @@ N° REA: TV 185064                    </p>
 
           
      
+  <!-- start here -->
 
-
-
-    <div id="mContainer" class="container-fluid padding--lr-0 isHomepage">
-
-      <!--<div id="slideImg50" class="row row--1   row--first" style="background-image: url('uploads/sections/images/3/backg.jpg');">
-        </div>
-      -->
-        <img id="slideImg14" src="uploads/sections/images/3/backg.jpg">
-
-        <div style="text-align: center;position: relative;" id="slideImg20">
-          <!--<img style="width: 100%;height: 100%;" id="slideImg" src="uploads/sections/images/3/Timeline1.mov">-->
-          <video width= "100%" height="100%" autoplay muted loop id="myVideo">
-            <source src="uploads/sections/images/3/Timeline1.mp4" type="video/mp4">
-          </video>
-
-          
-
-
-
-          <div id="showBtn" class="col-12">  
-            
-            <a href="https://mpembed.com/show/?m=RWK9wL1QtWT&hr=0&filter=saturate&info=&copyright=MPEmbed" class="btn btn-lined">VIRTUAL TOUR SHOWROOM
-                <span class="span1"></span></a>
-          </div>
-
-
-
-        <!--<div id="radioNav" class="navigation">
-                <label onclick="changeImg()" id="radio1" for="radio1" class="navigation-btn">
-                </label>
-                <label onclick="changeImg()" id="radio2" for="radio2" class="navigation-btn">
-                </label>
-                <label onclick="changeImg()" id="radio3" for="radio3" class="navigation-btn">
-                </label>
-                <label onclick="changeImg()" id="radio4" for="radio4" class="navigation-btn">
-                </label>
-                <label onclick="changeImg()" id="radio5" for="radio5" class="navigation-btn">
-                </label>
-            </div>-->
-
-
-        </div>
-
-
-      </div>
-
-
-
-        <!--<img id="slideImg" src="uploads/sections/images/2/2c8b19833164c9ba5b25e6a59f83527e61cccd2d_l.png" />
-
-        <div class="col-12 padding--lr-0 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="300">
-            <a href="javascript: void(0);"  class="noGallery" >
-                <img id="slideImgs" src="uploads/sections/images/2/2c8b19833164c9ba5b25e6a59f83527e61cccd2d_l.png" />
+  <div class="row row--1     height--50-vh " style="background-image: url('uploads/sections/images/3/revendi1.png')">
+        <div class="col-12 padding--lr-0 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="300">
+            <a href="javascript: void(0);" class="noGallery">
+                <img src="uploads/sections/images/3/revendi1.png">
             </a>
         </div>
 
-        <div onclick=" location.href='https://www.novamobili.it/en/news/renew-the-experience-of-visiting-our-flagship-store' " class="row--hover" style="cursor: pointer">
-            
-        <div class="col-12">  
-            
-            <a href="#" class="btn btn-lined">VIRTUAL TOUR SHOWROOM
-                <span class="span1"></span></a>
-        </div>
-
-        </div>-->
         
-         <!--<div onclick=" location.href='https://www.novamobili.it/en/news/renew-the-experience-of-visiting-our-flagship-store' " class="row--hover" style="cursor: pointer">
-                    
-          <div class="col-12">
-                                                                                                        d
-          </div>-->
-        <!--</div>-->
+  </div>
 
-        
-  <div class="container">
-    <div class="row row--2">
-        <div class="col-lg-8 offset-lg-2 col-12 offset-0 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="500">
-                            <!--<h4 class="paragraph-4"><strong>featured</strong></h4>
-                                        <h3 class="heading-1">Extending tables</h3>-->
-                                        <p class="paragraph-2">SpagnolMobili presenta il nuovo catalogo Ardecò collection.</p>
-                                        <a href="en/extending-tables-2.html" class="btn btn--second waves-effect waves-light">SCOPRI</a>
-                    </div>
-        <div class="col-lg-8 offset-lg-2 col-12 offset-0 animated slideInUpSmallPre" data-animation="slideInUpSmall align-center" data-delay="700">
-                            <a href="javascript: void(0);"  class="noGallery" >
-                    <img src="uploads/sections/images/3/ardeco.jpg" />
-                    <!--<a href="">
-                    	<-- c473db6eff974034ba8d0f47d858033110754465_l -->
-                    </a>
-                    
-                </a>
-                    </div>
-    </div>
-</div>        
-    <!--<div class="container">
-    <div class="row row--3 align-items-center">
-        <div class="col-lg-4 offset-lg-1 col-12 offset-0 animated slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="300">
-                            <h4 class="paragraph-4"></h4>
-                                        <h3 class="paragraph-3"></h3>
-                                        <p>PROMOZIONE MATERASSO IN OMAGGIO<br></p>
-                                        <div class="clearfix"></div>
-                <a href="en/fly.html" class="btn btn--second waves-effect waves-light">Learn more</a>
-                    </div>
-        <div class="col-lg-6 offset-lg-1 col-12 offset-0 animated slideRightToLeftSmallPre" data-animation="slideRightToLeftSmall align-center" data-delay="700">
-                            <a href="javascript: void(0);"  class="noGallery" >
-                    <img src="uploads/sections/images/3/promuzione.jpg" />
-                    <img src="067f4df3c3e8b6b585c9a0429a9d9fa9ae618868_l
-                    	style="font-size:0.5em !important; text-transform:uppercase !important; display:block !important; padding-top:20px !important;"
 
-                    	">
 
-                </a>
+  <div class="row margin--bottom-70">
+            <div class="col-lg-6 offset-lg-3 col-12 offset-0">
+                <form method="" action="" id="formItaly" class="form form--stores col-lg-10 offset-lg-1 col-12 offset-0 margin--tb-30">
+                    <input type="hidden" name="_token" value="GLuDC5gnxmVLp6iZHL34zFD6hbVZF2hotrsArvYR">
+
+                    <input type="hidden" name="type" value="italy">
+
+                    <div class="row margin--bottom-50">
+                        <div class="col-12 align-center">
+                            <h2 class="heading-2 margin--bottom-50">Italy</h2>
+                            <p class="paragraph-2">Find Spagnoremobili in Italy.</p>
+                        </div>
                     </div>
-    </div>
-</div>-->       
-                    <div class="container">
-    <div class="row row--4 align-items-center">
-                    <div class="col-lg-6 col-12  margin--bottom-50-mobile  px-lg-5 px-6 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="300">
-                                    <h4 class="paragraph-4"><strong>News</strong></h4>
-                                                    <a href="javascript: void(0);"  class="noGallery" >
-                        <img src="uploads/sections/images/3/bonusM.jpg" />
-                    </a>
-                                                    <!--<p 
-													33030a7a946acc860494678c57ef8501006c81de_l
-                                                    class="paragraph-2">Novamobili presents the new Details catalogue.</p>
-                                                    <a href="en/news/the-new-details-catalogue-is-out-now.html" class="btn btn--second waves-effect waves-light">Discover</a>-->
-                            </div>
-                    <div class="col-lg-6 col-12  px-lg-5 px-6 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="300">
-                                    <h4 class="paragraph-4"><strong>BONUS MOBILI 2021</strong></h4>
-                        <!--<a href="javascript: void(0);"  class="noGallery" >
-                        <img src="uploads/sections/images/2/29a270b1898083fc197426accd9eeafe39f23ec0_l.jpg" />
-                    </a>-->
-                                                    <!--<p class="paragraph-2">How to organize your bookcase.</p>
-                                                    <a href="en/news/rethinking-spaces-by-giulia-torelli-lesson-3.html" class="btn btn--second waves-effect waves-light">Watch the tutorial</a>-->
-                            </div>
+
+                    <div class="row margin--bottom-50">
+                        <div class="col-12">
+                            <fieldset class="input-group">
+                                <div class="select-wrapper">
+                                  <!--<input class="select-dropdown dropdown-trigger" type="text" readonly="true" data-target="select-options-c1090d21-0133-5459-0856-0791b4571b1a" style="width: 171.75px;">-->
+                                  <ul id="select-options-c1090d21-0133-5459-0856-0791b4571b1a" class="dropdown-content select-dropdown" tabindex="0"><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a0" tabindex="0" class="selected"><span>Province*</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a1" tabindex="0"><span>Agrigento</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a2" tabindex="0"><span>Alessandria</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a3" tabindex="0"><span>Ancona</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a4" tabindex="0"><span>Aosta</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a5" tabindex="0"><span>Arezzo</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a6" tabindex="0"><span>Ascoli Piceno</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a7" tabindex="0"><span>Asti</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a8" tabindex="0"><span>Avellino</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a9" tabindex="0"><span>Bari</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a10" tabindex="0"><span>Barletta-Andria-Trani</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a11" tabindex="0"><span>Belluno</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a12" tabindex="0"><span>Benevento</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a13" tabindex="0"><span>Bergamo</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a14" tabindex="0"><span>Biella</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a15" tabindex="0"><span>Bologna</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a16" tabindex="0"><span>Bolzano</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a17" tabindex="0"><span>Brescia</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a18" tabindex="0"><span>Brindisi</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a19" tabindex="0"><span>Cagliari</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a20" tabindex="0"><span>Caltanissetta</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a21" tabindex="0"><span>Campobasso</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a22" tabindex="0"><span>Carbonia-Iglesias</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a23" tabindex="0"><span>Caserta</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a24" tabindex="0"><span>Catania</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a25" tabindex="0"><span>Catanzaro</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a26" tabindex="0"><span>Chieti</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a27" tabindex="0"><span>Como</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a28" tabindex="0"><span>Cosenza</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a29" tabindex="0"><span>Cremona</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a30" tabindex="0"><span>Crotone</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a31" tabindex="0"><span>Cuneo</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a32" tabindex="0"><span>Enna</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a33" tabindex="0"><span>Fermo</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a34" tabindex="0"><span>Ferrara</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a35" tabindex="0"><span>Firenze</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a36" tabindex="0"><span>Foggia</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a37" tabindex="0"><span>Forlì-Cesena</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a38" tabindex="0"><span>Frosinone</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a39" tabindex="0"><span>Genova</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a40" tabindex="0"><span>Gorizia</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a41" tabindex="0"><span>Grosseto</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a42" tabindex="0"><span>Imperia</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a43" tabindex="0"><span>Isernia</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a44" tabindex="0"><span>La Spezia</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a45" tabindex="0"><span>L'Aquila</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a46" tabindex="0"><span>Latina</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a47" tabindex="0"><span>Lecce</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a48" tabindex="0"><span>Lecco</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a49" tabindex="0"><span>Livorno</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a50" tabindex="0"><span>Lodi</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a51" tabindex="0"><span>Lucca</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a52" tabindex="0"><span>Macerata</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a53" tabindex="0"><span>Mantova</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a54" tabindex="0"><span>Massa-Carrara</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a55" tabindex="0"><span>Matera</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a56" tabindex="0"><span>Medio Campidano</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a57" tabindex="0"><span>Messina</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a58" tabindex="0"><span>Milano</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a59" tabindex="0"><span>Modena</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a60" tabindex="0"><span>Monza e della Brianza</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a61" tabindex="0"><span>Napoli</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a62" tabindex="0"><span>Novara</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a63" tabindex="0"><span>Nuoro</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a64" tabindex="0"><span>Ogliastra</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a65" tabindex="0"><span>Olbia-Tempio</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a66" tabindex="0"><span>Oristano</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a67" tabindex="0"><span>Padova</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a68" tabindex="0"><span>Palermo</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a69" tabindex="0"><span>Parma</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a70" tabindex="0"><span>Pavia</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a71" tabindex="0"><span>Perugia</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a72" tabindex="0"><span>Pesaro e Urbino</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a73" tabindex="0"><span>Pescara</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a74" tabindex="0"><span>Piacenza</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a75" tabindex="0"><span>Pisa</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a76" tabindex="0"><span>Pistoia</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a77" tabindex="0"><span>Pordenone</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a78" tabindex="0"><span>Potenza</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a79" tabindex="0"><span>Prato</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a80" tabindex="0"><span>Ragusa</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a81" tabindex="0"><span>Ravenna</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a82" tabindex="0"><span>Reggio Calabria</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a83" tabindex="0"><span>Reggio Emilia</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a84" tabindex="0"><span>Rieti</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a85" tabindex="0"><span>Rimini</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a86" tabindex="0"><span>Roma</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a87" tabindex="0"><span>Rovigo</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a88" tabindex="0"><span>Salerno</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a89" tabindex="0"><span>Sassari</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a90" tabindex="0"><span>Savona</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a91" tabindex="0"><span>Siena</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a92" tabindex="0"><span>Siracusa</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a93" tabindex="0"><span>Sondrio</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a94" tabindex="0"><span>Taranto</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a95" tabindex="0"><span>Teramo</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a96" tabindex="0"><span>Terni</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a97" tabindex="0"><span>Torino</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a98" tabindex="0"><span>Trapani</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a99" tabindex="0"><span>Trento</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a100" tabindex="0"><span>Treviso</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a101" tabindex="0"><span>Trieste</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a102" tabindex="0"><span>Udine</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a103" tabindex="0"><span>Varese</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a104" tabindex="0"><span>Venezia</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a105" tabindex="0"><span>Verbano-Cusio-Ossola</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a106" tabindex="0"><span>Vercelli</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a107" tabindex="0"><span>Verona</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a108" tabindex="0"><span>Vibo Valentia</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a109" tabindex="0"><span>Vicenza</span></li><li id="select-options-c1090d21-0133-5459-0856-0791b4571b1a110" tabindex="0"><span>Viterbo</span></li></ul><svg class="caret" version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 6 3.6" style="enable-background:new 0 0 6 3.6;" xml:space="preserve"><style type="text/css">.st0{fill:none;stroke:#000000;stroke-linecap:square;}</style><g transform="translate(-.5 -5.5)"><path class="st0" d="M1.5,6.3l2,2 M5.5,6.3l-2,2"></path></g></svg><select id="province" name="province" tabindex="-1">
+                                    <option value="">Province*</option>
+                                    <option value="AG">Agrigento</option>
+                                    <option value="AL">Alessandria</option>
+                                    <option value="AN">Ancona</option>
+                                    <option value="AO">Aosta</option>
+                                    <option value="AR">Arezzo</option>
+                                    <option value="AP">Ascoli Piceno</option>
+                                    <option value="AT">Asti</option>
+                                    <option value="AV">Avellino</option>
+                                    <option value="BA">Bari</option>
+                                    <option value="BT">Barletta-Andria-Trani</option>
+                                    <option value="BL">Belluno</option>
+                                    <option value="BN">Benevento</option>
+                                    <option value="BG">Bergamo</option>
+                                    <option value="BI">Biella</option>
+                                    <option value="BO">Bologna</option>
+                                    <option value="BZ">Bolzano</option>
+                                    <option value="BS">Brescia</option>
+                                    <option value="BR">Brindisi</option>
+                                    <option value="CA">Cagliari</option>
+                                    <option value="CL">Caltanissetta</option>
+                                    <option value="CB">Campobasso</option>
+                                    <option value="CI">Carbonia-Iglesias</option>
+                                    <option value="CE">Caserta</option>
+                                    <option value="CT">Catania</option>
+                                    <option value="CZ">Catanzaro</option>
+                                    <option value="CH">Chieti</option>
+                                    <option value="CO">Como</option>
+                                    <option value="CS">Cosenza</option>
+                                    <option value="CR">Cremona</option>
+                                    <option value="KR">Crotone</option>
+                                    <option value="CN">Cuneo</option>
+                                    <option value="EN">Enna</option>
+                                    <option value="FM">Fermo</option>
+                                    <option value="FE">Ferrara</option>
+                                    <option value="FI">Firenze</option>
+                                    <option value="FG">Foggia</option>
+                                    <option value="FC">Forlì-Cesena</option>
+                                    <option value="FR">Frosinone</option>
+                                    <option value="GE">Genova</option>
+                                    <option value="GO">Gorizia</option>
+                                    <option value="GR">Grosseto</option>
+                                    <option value="IM">Imperia</option>
+                                    <option value="IS">Isernia</option>
+                                    <option value="SP">La Spezia</option>
+                                    <option value="AQ">L'Aquila</option>
+                                    <option value="LT">Latina</option>
+                                    <option value="LE">Lecce</option>
+                                    <option value="LC">Lecco</option>
+                                    <option value="LI">Livorno</option>
+                                    <option value="LO">Lodi</option>
+                                    <option value="LU">Lucca</option>
+                                    <option value="MC">Macerata</option>
+                                    <option value="MN">Mantova</option>
+                                    <option value="MS">Massa-Carrara</option>
+                                    <option value="MT">Matera</option>
+                                    <option value="VS">Medio Campidano</option>
+                                    <option value="ME">Messina</option>
+                                    <option value="MI">Milano</option>
+                                    <option value="MO">Modena</option>
+                                    <option value="MB">Monza e della Brianza</option>
+                                    <option value="NA">Napoli</option>
+                                    <option value="NO">Novara</option>
+                                    <option value="NU">Nuoro</option>
+                                    <option value="OG">Ogliastra</option>
+                                    <option value="OT">Olbia-Tempio</option>
+                                    <option value="OR">Oristano</option>
+                                    <option value="PD">Padova</option>
+                                    <option value="PA">Palermo</option>
+                                    <option value="PR">Parma</option>
+                                    <option value="PV">Pavia</option>
+                                    <option value="PG">Perugia</option>
+                                    <option value="PU">Pesaro e Urbino</option>
+                                    <option value="PE">Pescara</option>
+                                    <option value="PC">Piacenza</option>
+                                    <option value="PI">Pisa</option>
+                                    <option value="PT">Pistoia</option>
+                                    <option value="PN">Pordenone</option>
+                                    <option value="PZ">Potenza</option>
+                                    <option value="PO">Prato</option>
+                                    <option value="RG">Ragusa</option>
+                                    <option value="RA">Ravenna</option>
+                                    <option value="RC">Reggio Calabria</option>
+                                    <option value="RE">Reggio Emilia</option>
+                                    <option value="RI">Rieti</option>
+                                    <option value="RN">Rimini</option>
+                                    <option value="RM">Roma</option>
+                                    <option value="RO">Rovigo</option>
+                                    <option value="SA">Salerno</option>
+                                    <option value="SS">Sassari</option>
+                                    <option value="SV">Savona</option>
+                                    <option value="SI">Siena</option>
+                                    <option value="SR">Siracusa</option>
+                                    <option value="SO">Sondrio</option>
+                                    <option value="TA">Taranto</option>
+                                    <option value="TE">Teramo</option>
+                                    <option value="TR">Terni</option>
+                                    <option value="TO">Torino</option>
+                                    <option value="TP">Trapani</option>
+                                    <option value="TN">Trento</option>
+                                    <option value="TV">Treviso</option>
+                                    <option value="TS">Trieste</option>
+                                    <option value="UD">Udine</option>
+                                    <option value="VA">Varese</option>
+                                    <option value="VE">Venezia</option>
+                                    <option value="VB">Verbano-Cusio-Ossola</option>
+                                    <option value="VC">Vercelli</option>
+                                    <option value="VR">Verona</option>
+                                    <option value="VV">Vibo Valentia</option>
+                                    <option value="VI">Vicenza</option>
+                                    <option value="VT">Viterbo</option>
+                                    </select></div>
+                            </fieldset>
+                        </div>
+                    </div>
+                   
+                    <div class="row">
+                        <div class="col-12 align-left">
+                            <p class="paragraph-1 errorForm"></p>
+                        </div>
+                    </div>
+
+                    <div class="row margin--top-50">
+                        <div class="col-12 align-center">
+                            <p class="paragraph-1">* required fields</p>
+                        </div>
+                    </div>
+
+
+                    <div class="row margin--top-20">
+                        <div class="col-12 align-center">
+                            <fieldset>
+                                <input type="submit" value="Search" class="btn btn--second">
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
             </div>
-</div>   
-
-
-
-
-<div class="container">
-    <div class="row row--3 align-items-center">
-        <div class="col-lg-4 offset-lg-1 col-12 offset-0 animated slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="300">
-                            <h4 class="paragraph-4"></h4>
-                                        <h3 class="paragraph-3"></h3>
-                                        <p>PROMOZIONE MATERASSO IN OMAGGIO<br></p>
-                                        <div class="clearfix"></div>
-                <!--<a href="en/fly.html" class="btn btn--second waves-effect waves-light">Learn more</a>-->
-                    </div>
-        <div class="col-lg-6 offset-lg-1 col-12 offset-0 animated slideRightToLeftSmallPre" data-animation="slideRightToLeftSmall align-center" data-delay="700">
-                            <a href="javascript: void(0);"  class="noGallery" >
-                    <img src="uploads/sections/images/3/promuzione.jpg" />
-                    <!--<img src="067f4df3c3e8b6b585c9a0429a9d9fa9ae618868_l
-                    	style="font-size:0.5em !important; text-transform:uppercase !important; display:block !important; padding-top:20px !important;"
-
-                    	">-->
-
-                </a>
-                    </div>
-    </div>
-</div> 
-
-
-
-
-
-
-                    <!--<div class="container" id="catalogue">
-        <div class="row row--5 align-items-center">
-            <div class="col-lg-8 offset-lg-2 col-12 offset-0 align-center">
-                                    <h4 class="paragraph-4 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="100"><strong>New Catalogue</strong></h4>
-                                                    <h3 class="heading-1 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="300">Details Collection</h3>
-                                                    <a href="javascript: void(0);"  class="noGallery" >
-                        <img src="uploads/sections/images/f/f41f2faa210b9b5d86026bb481f764920ce3e026_l.jpg" class="animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="800" />
-                    </a>
-                                                    <br>
-                    
-                    <a href="uploads/downloads/details-collection_20210222080356.pdf"  class="btn btn--first waves-effect waves-brown margin--bottom-50 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="700">downloads</a>
-                                                    <p class="paragraph-5 animated slideInUpSmallPre font-1_1" data-animation="slideInUpSmall" data-delay="900">Not what you're looking for? <a href="en/catalogs.html">View all catalogues</a></p>
-                            </div>
         </div>
-    </div>-->
-        
-        
 
-    <!--<div class="row">
-        <img src="uploads/launches/images/a/a8488aac7ae1f006f30bf5dba8e477afd30f5115_s.jpg" />
-        <p>this is image</p>
 
-        <img src="uploads/launches/images/a/a8488aac7ae1f006f30bf5dba8e477afd30f5115_s.jpg" />
-        <p>this is image</p>
 
-        <img src="uploads/launches/images/a/a8488aac7ae1f006f30bf5dba8e477afd30f5115_s.jpg" />
-        <p>this is image</p>
+        <div class="row row--1    " style="background-image: url('uploads/sections/images/3/revendi2.png')">
+        <div class="col-12 padding--lr-0 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="300">
+            <a href="javascript: void(0);" class="noGallery">
+                <img src="uploads/sections/images/3/revendi2.png">
+            </a>
+        </div> 
+        </div>
 
-    </div>-->
 
-        
-            
-    <!--<img style="height: 600px;width: 100%;" src="uploads/sections/images/3/gerlad11.png" />
 
-    <img style="height: 600px;width: 100%;" src="uploads/sections/images/3/Gr21.png" />-->
+
+        <div class="row padding--tb-70">
+            <div class="col-lg-6 offset-lg-3 col-12 offset-0">
+                <form method="" action="" id="formForeign" class="form _form2 form--stores col-lg-10 offset-lg-1 col-12 offset-0 margin--tb-30">
+                    <input type="hidden" name="_token" value="GLuDC5gnxmVLp6iZHL34zFD6hbVZF2hotrsArvYR">
+
+                    <input type="hidden" name="type" value="foreign">
+
+                    <div class="row margin--bottom-50">
+                        <div class="col-12 align-center">
+                            <h2 class="heading-2 margin--bottom-50">Rest of the world</h2>
+                            <p class="paragraph-2">Find SpagnoreMobile around the globe.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <fieldset class="input-group">
+                                <div class="select-wrapper">
+                                  <!--<input class="select-dropdown dropdown-trigger" type="text" readonly="true" data-target="select-options-55884461-ee5d-2e6a-f684-eba59707b79b" style="width: 193.075px;">-->
+                                  <ul id="select-options-55884461-ee5d-2e6a-f684-eba59707b79b" class="dropdown-content select-dropdown" tabindex="0"><li id="select-options-55884461-ee5d-2e6a-f684-eba59707b79b0" tabindex="0" class="selected"><span>Continent*</span></li><li id="select-options-55884461-ee5d-2e6a-f684-eba59707b79b1" tabindex="0"><span>Africa</span></li><li id="select-options-55884461-ee5d-2e6a-f684-eba59707b79b2" tabindex="0"><span>North America</span></li><li id="select-options-55884461-ee5d-2e6a-f684-eba59707b79b3" tabindex="0"><span>South America</span></li><li id="select-options-55884461-ee5d-2e6a-f684-eba59707b79b4" tabindex="0"><span>Asia</span></li><li id="select-options-55884461-ee5d-2e6a-f684-eba59707b79b5" tabindex="0"><span>Europe</span></li><li id="select-options-55884461-ee5d-2e6a-f684-eba59707b79b6" tabindex="0"><span>Oceania</span></li></ul><svg class="caret" version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 6 3.6" style="enable-background:new 0 0 6 3.6;" xml:space="preserve"><style type="text/css">.st0{fill:none;stroke:#000000;stroke-linecap:square;}</style><g transform="translate(-.5 -5.5)"><path class="st0" d="M1.5,6.3l2,2 M5.5,6.3l-2,2"></path></g></svg><select id="continent" name="continent" tabindex="-1">
+                                    <option value="">Continent*</option>
+                                    <option value="africa">Africa</option>
+                                    <option value="north_america">North America</option>
+                                    <option value="south_america">South America</option>
+                                    <option value="asia">Asia</option>
+                                    <option value="europe">Europe</option>
+                                    <option value="oceania">Oceania</option>
+                                    </select></div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <fieldset class="input-group">
+                                <div class="select-wrapper">
+                                  <!--<input class="select-dropdown dropdown-trigger" type="text" readonly="true" data-target="select-options-20f814e6-1378-1408-2989-f8942a4cb333" style="width: 164.025px;">-->
+                                  <ul id="select-options-20f814e6-1378-1408-2989-f8942a4cb333" class="dropdown-content select-dropdown" tabindex="0"><li id="select-options-20f814e6-1378-1408-2989-f8942a4cb3330" tabindex="0" class="selected"><span>Country*</span></li></ul><svg class="caret" version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 6 3.6" style="enable-background:new 0 0 6 3.6;" xml:space="preserve"><style type="text/css">.st0{fill:none;stroke:#000000;stroke-linecap:square;}</style><g transform="translate(-.5 -5.5)"><path class="st0" d="M1.5,6.3l2,2 M5.5,6.3l-2,2"></path></g></svg><select id="state" name="state" tabindex="-1">
+                                    <option value="">Country*</option>
+                                </select></div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 align-left">
+                            <p class="paragraph-1 errorForm"></p>
+                        </div>
+                    </div>
+
+                    <div class="row margin--top-50">
+                        <div class="col-12 align-center">
+                            <p class="paragraph-1">* required fields</p>
+                        </div>
+                    </div>
+
+                    <div class="row margin--top-20">
+                        <div class="col-12 align-center">
+                            <fieldset>
+                                <input type="submit" value="Search" class="btn btn--second">
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- end -->
+
+
+
         
 
     <script type="text/javascript">
@@ -2467,6 +2549,13 @@ N° REA: TV 185064                    </p>
         slideImg.src  = images[i];//"url("+myimage+")";//images[i];
         i++;
         //setTimeout("slider()",6000);
+Aris3
+0658 394 534
+0734 313 265
+0742 094 718
+0692 512 396
+0692 512 298
+
       }*/
 
 
@@ -2486,10 +2575,11 @@ N° REA: TV 185064                    </p>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="global">
-      <!--<div class="curve1"></div>-->
-      <!--<div class="container1">-->
+      <!--<div class="curve"></div>
+      <div class="container">-->
         <div class="row">
           
+
 
           <div id="col-sm-01" class="col-sm-6 col-md-2">
               <h6>PRODOTTI</h6>
@@ -2520,7 +2610,6 @@ N° REA: TV 185064                    </p>
               </ul>
           </div>
 
-    
         
             <!--<div id="col-sm-04" class="col-md-6 col-md-3">
             <h6 id="f-logo" >SPAGNOLMOBILI</h6>
@@ -2538,240 +2627,19 @@ N° REA: TV 185064                    </p>
             <!--<a href="#"><i class="fa fa-snapchat-ghost"></i> </a>-->
             <a href="#"><i class="fa fa-instagram"></i> </a>
             <a href="#"><i class="fa fa-google-plus"></i> </a>
-            </div>
+        </div>
           </div>
 
 
         </div>
-        <p class="copyright"> &copy; Copyright All rights reserved. </p>
+        <p id="copyright" class="copyright"> &copy; Copyright All rights reserved. </p>
       <!--</div>-->
     </div>
 
 
-
-    <!--<div class="container-fluid container-fluid-menu background--color-brown-2 zIndex1">
-        <div class="row margin--lr-0">
-            <div class="col-lg-2 offset-lg-0 col-10 offset-2">
-                <ul class="menu">
-                    <li class="menu-item">
-                        <a href="en/designers.html" class="menu-title">RIVENDITORI</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="en/stores.html" class="menu-title">VIRTUAL SHOWROOM</a>
-                    </li>
-                    
-                    
-                </ul>
-            </div>
-
-            <div class="col-lg-2 offset-lg-0 col-10 offset-2">
-                <ul class="menu">
-                    <li class="menu-item">
-                        <a href="en/company.html" class="menu-title">AZIENDA</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="en/news.html" class="menu-title">NEWS</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="en/press.html" class="menu-title">CONTATTI</a>
-                    </li>
-                    
-                </ul>
-            </div>
-
-            <div class="col-lg-2 offset-lg-0 col-10 offset-2">
-                <ul class="menu">
-                    <li class="menu-item">
-                        <a href="en/catalogs.html" class="menu-title">
-                            PRODOTTI                        </a>
-                        <ul class="menu-submenu col-12">
-                            <li class="menu-submenu-item">
-                                <a href="en/catalogs.html">
-                                    CATALOGHI                                </a>
-                            </li>
-                            <li class="menu-submenu-item">
-                                <a href="en/data-sheets.html">
-                                    FINITURE                                </a>
-                            </li>
-                            <li class="menu-submenu-item">
-                                <a href="en/fabric-information.html">
-                                   CERTIFICAZIONI                              </a>
-                            </li>
-                           
-
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-2 offset-lg-4 col-10 offset-2">
-                <ul class="menu">
-                    <li class="menu-item margin--bottom-30">
-                        <ul class="menu-submenu col-12 padding--left-0">
-                            <li class="menu-submenu-item">
-                                <a href="en/privacy.html">
-                                 Mobil s.r.l. - SpagnolMobili
-								  </a>
-                            </li>
-                            <li class="menu-submenu-item">
-                                <a href="en/terms.html">
-                                Via Vidor, 1 - Mosnigo di Moriago (TV) - ITALY
-                                 <br>
-                                 </a>
-                            </li>
-                            <li class="menu-submenu-item">
-                                <a href="javascript: void(0);" class="openLegal">
-                                    Legal</a>
-                            </li>
-                            
-                                
-                                    
-                                
-                            
-                        </ul>
-                    </li>
-
-                    <li class="menu-item">
-                        <ul class="menu-submenu col-12 padding--left-0">
-                            <li class="menu-submenu-item">
-                                <a href="#" target="_blank">
-                                    designed by <span class="underline">Gelrad</span>                                </a>
-                            </li>
-                            <li class="menu-submenu-item">
-                                <form class="form2" action="#" method="post">
-                                    <fieldset class="-input-field -input-group-select underline">
-                                        <select id="locale-select" name="country">
-                                                                                            <option value="/it" >Italiano</option>
-                                                                                            <option value="/en"  selected >English</option>
-                                                                                            <option value="/fr" >Français</option>
-                                                                                            <option value="/de" >Deutsch</option>
-                                                                                            <option value="/es" >Español</option>
-                                                                                    </select>
-                                    </fieldset>
-                                </form>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid background--color-brown-2">
-        <div class="row align-items-center">
-            <div class="col-12 goToTop">
-               
-                <a href="javascript: void(0);" class="goTop"></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid border-top-grey padding--menu">
-        <div class="row isDesktopTablet margin--lr-0">
-            <div class="col-12">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-12 border-right-grey _padding--menu">
-                        <p class="infoCompany"><br> <a href="#" target="_blank"></a>
-                        	info.mobili@spagnol.it
-                        	| P.IVA 03329920262 | Privacy
-                        	Tel. +39.0438.89.11,
-                        	<br>Fax +39.0438.89.00.82</p>
-                    </div>
-
-                    <div class="col-lg-3 col-12 align-center border-right-grey padding--top-25 padding--bottom-20 border-tb-borderMenu-mobile">
-                        <div class="row">
-                            <div class="col-10 offset-2 align-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-12 padding--tb-25">
-                        <ul class="listSocial">
-                                                            <li>
-                                    <a href="#" target="_blank" class="fab fa-instagram"></a>
-                                </li>
-                                                                                        <li>
-                                    <a href="#" target="_blank" class="fab fa-facebook-f"></a>
-                                </li>
-                                                                                        <li>
-                                    <a href="#" target="_blank" class="fab fa-pinterest-p"></a>
-                                </li>
-                                                                                        <li>
-                                    <a href="#" target="_blank" class="fab fa-linkedin-in"></a>
-                                </li>
-                                                        
-                                
-                                    
-                                
-                            
-                                                            <li>
-                                    <a href="#" target="_blank" class="fab fa-youtube"></a>
-                                </li>
-                                                    </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row isMobileTablet">
-            <div class="col-12">
-                <div class="row align-items-center">
-                    <div class="col-lg-3 col-12 align-center border-bottom-borderMenu padding--tb-25 border-tb-borderMenu-mobile">
-                        <div class="row">
-                            <div class="col-10 offset-2 align-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-12 padding--tb-25 border-bottom-borderMenu">
-                        <ul class="listSocial">
-                                                            <li>
-                                    <a href="https://instagram.com/novamobili/" target="_blank" class="fab fa-instagram"></a>
-                                </li>
-                                                                                        <li>
-                                    <a href="https://www.facebook.com/novamobili" target="_blank" class="fab fa-facebook-f"></a>
-                                </li>
-                                                                                        <li>
-                                    <a href="https://it.pinterest.com/novamobili0299/" target="_blank" class="fab fa-pinterest-p"></a>
-                                </li>
-                                                                                        <li>
-                                    <a href="https://www.linkedin.com/company/battistella-company/" target="_blank" class="fab fa-linkedin-in"></a>
-                                </li>
-                                                        
-                                
-                                    
-                                
-                            
-                                                            <li>
-                                    <a href="https://www.youtube.com/user/NOVAMOBILI" target="_blank" class="fab fa-youtube"></a>
-                                </li>
-                                                    </ul>
-                    </div>
-
-                    <div class="col-lg-6 col-12 padding--menu">
-                        <p class="infoCompany">Spagnolmobili is a brand by <a href="https://www.battistellacompany.it/" target="_blank">Battistella Company</a><br>VAT reg. no. 02048780262</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
 </footer>
 
-<!--<div class="hidden cookie-policy row" id="footer-cookie-notice">
-    <div class="col-12">
-        <div class="row align-center">
-            <div class="col-12">
-                <p class="paragraph-1 margin--bottom-10">Questo sito utilizza cookie, anche di terze parti, per offrirti una migliore esperienza di navigazione e inviarti pubblicità e servizi in linea con le tue preferenze. Chiudendo questo banner o proseguendo nella navigazione cliccando al di fuori di esso acconsenti all'uso dei cookie. Per saperne di più o per modificare le tue preferenze sui cookie consulta la nostra Cookie Policy.</p>
-            </div>
-            <div class="col-12">
-                <a href="javascript: void(0);" class="btn btn-primary" id="cookie-accept">Accept</a>
-                <a href="en/privacy.html" target="_blank" class="btn btn-secondary">Learn more</a>
-            </div>
-        </div>
-    </div>
-</div>-->
+
     <div class="notifications-container">
         <div class="container">
             <div class="notification-track" id="notification-track">
