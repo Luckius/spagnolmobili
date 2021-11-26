@@ -22572,8 +22572,10 @@ slider */
 
 @media screen and (min-width: 1200px){
 
-    #direct-div{
-      height: 100%;
+    #footer{
+      position: fixed;
+      bottom: 0;
+      
   }
 }
 
