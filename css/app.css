@@ -22573,7 +22573,7 @@ slider */
 @media screen and (min-width: 1200px){
 
     #direct-div{
-      height: 1000px;
+      height: 1000%;
   }
 }
 
