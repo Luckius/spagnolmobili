@@ -21681,6 +21681,13 @@ div.header {
 
 @media screen and (min-width: 1200px){
   #scarica{
+    margin-left: 80%;
+  }
+}
+
+
+@media screen and (min-width: 1800px){
+  #scarica{
     margin-left: 100%;
   }
 }
@@ -22549,7 +22556,7 @@ slider */
 
 #menu-div{
   position: absolute;
-  left: 24.5%;
+  left: 26%;
 }
 
 @media screen and (min-width: 1800px){
