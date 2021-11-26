@@ -22564,19 +22564,14 @@ slider */
       padding-bottom: 100px;
   }
 
-    #direct-div{
-      height: 1000px;
-  }
 }
 
 
 @media screen and (min-width: 1200px){
-
-    #footer{
-      position: fixed;
-      bottom: 0;
-      
+  #contact-l-title{
+    margin-top: 20%;
   }
+    
 }
 
 
