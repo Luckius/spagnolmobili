@@ -22549,12 +22549,12 @@ slider */
 
 #menu-div{
   position: absolute;
-  left: 19.5%;
+  left: 24.5%;
 }
 
 @media screen and (min-width: 1800px){
   #menu-div{
-    left: 26.5%
+    left: 30.5%
   }
 }
 
@@ -22562,6 +22562,10 @@ slider */
 @media screen and (min-width: 800px){
     #contacth1{
       padding-bottom: 100px;
+  }
+
+    #direct-div{
+      height: 100%;
   }
 }
 
@@ -22589,8 +22593,7 @@ slider */
   }
 
 
-  #direct-div{
-  }
+
 
 }
 
