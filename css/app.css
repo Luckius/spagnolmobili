@@ -7388,7 +7388,7 @@ input[type=search].valid:not(.browser-default),
 input[type=search].valid:not(.browser-default):focus,
 textarea.materialize-textarea.valid,
 textarea.materialize-textarea.valid:focus, .select-wrapper.valid > input.select-dropdown {
-  border-bottom: 1px solid #4CAF50;
+  border-bottom: 1px solid #4CAF50;/*4CAF50*/
   box-shadow: 0 1px 0 0 #4CAF50; }
 
 input.invalid:not([type]), input.invalid:not([type]):focus,
@@ -21584,6 +21584,27 @@ div.header {
     z-index: 1;
     
 }
+
+
+
+.box-select {
+    background: none;
+    border: 4px solid #000;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding-top: 10px;
+    font-size: 16px;
+    transition-property: all, transform, background;
+    transition-duration: 0.2s, 0.2s, 0.2s;
+    transition-delay: 0.2s, 0s, 0.3s;
+    line-height: 1em;
+    position: relative;
+    color: #000;
+    /*margin-top: 50px;
+    z-index: 1;*/
+    
+}
+
 
 
 
