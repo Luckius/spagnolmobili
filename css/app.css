@@ -22604,14 +22604,14 @@ slider */
 
 
 @media screen and (min-width: 2100px){
-  .contact-l-title{
-    height: 5000px;
-    max-height: 5000px;
+  #contact-l-title{
+    height: 30%;
+    max-height: 100%;
   }
 
-  .direct-div{
-    height: 5000px;
-    max-height: 5000px;
+  #direct-div{
+    height: 30%;
+    max-height: 100%;
   }
 
 
