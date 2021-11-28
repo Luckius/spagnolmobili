@@ -22603,13 +22603,13 @@ slider */
 }
 
 
-@media screen and (min-width: 2000px){
+@media screen and (min-width: 2100px){
   .contact-l-title{
-    margin-top: 50%;
+    height: 50%;
   }
 
   .direct-div{
-    margin-top: 50%;
+    height: 50%;
   }
 
 
