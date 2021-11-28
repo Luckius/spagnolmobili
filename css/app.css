@@ -22605,13 +22605,11 @@ slider */
 
 @media screen and (min-width: 2100px){
   #contact-l-title{
-    height: 30%;
-    max-height: 100%;
+    height: 3000px;
   }
 
   #direct-div{
-    height: 30%;
-    max-height: 100%;
+    height: 3000px;
   }
 
 
