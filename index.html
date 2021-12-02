@@ -126,6 +126,12 @@
              console.log("color changed");
             }, 10000);
         }
+
+
+        function showSubMenu(){
+            document.getElementById("submenu-1").style.display = "block";
+            console.log("showMenuClicked");
+        }
        
 
     </script>
@@ -1819,23 +1825,65 @@ N° REA: TV 185064                    </p>
             <ul class="menu-submenu menu-title-1">
                 <li class="menu-submenu-item row">
                     
-                    <ul class="col-2 ">
+                    <ul id="menu-div1" class="col-2 ">
                                                             
                     <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="120">
-                        <a href="en/wardrobes.html">ZONA NOTTE</a>
+                        <a href="#">ZONA NOTTE</a>
                         <ul class="menu-submenu-item-single-list">
                         <a href="" style="margin-bottom: 300px;">
                                 
                         </a>
                     </li>
-                                                <li>
-                                                    <a href="en/sliding-door.html">
-                                                        
+                                                <!--<li style="margin-top: -3px;">
+                                                    <a href="">
+                                                        >>>>>>>
                                                     </a>
-                                                </li>
+                                                </li>-->
                                                 <li>
-                                                    <a href="en/sliding-door.html">
+                                                    <a onclick="showSubMenu()" id="amadi-1" href="#">
                                                         Armadi Battenti
+
+                                                        <!--start -->
+
+                                                            <ul id="submenu-1" class="menu-submenu-item-single-list">
+                                                                                            <li>
+                                                                <a href="en/sofas.html">
+                                                                    Ardeco
+                                                                </a>
+                                                            </li>
+                                                                                                        <li>
+                                                                <a href="en/armchairs.html">
+                                                                    immagine
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="en/ottomans-and-floor-cushions.html">
+                                                                    Vega night
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="en/ottomans-and-floor-cushions.html">
+                                                                    immagine
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="en/ottomans-and-floor-cushions.html">
+                                                                    Globo
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="en/ottomans-and-floor-cushions.html">
+                                                                    immagine
+                                                                </a>
+                                                            </li>
+
+                                                            </ul>
+
+                                                        <!-- end -->
+
                                                     </a>
                                                 </li>
                                                 <li>
@@ -1928,17 +1976,24 @@ N° REA: TV 185064                    </p>
                                                                                     </ul>
                                             </li>-->
                                                                                                                                                                                                                                                                                                 </ul>
-                                            <ul class="col-2 offset-1">
+                                            <ul id="menu-div2" class="col-2"><!--offset-1 -->
                                                                                                                                                                                                                                                                                                                                                                                                                 
                                                                 <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="270">
                                     <a href="en/sofas-and-armchairs.html">ZONA GIORNO</a>
                                                         <ul class="menu-submenu-item-single-list">
-                                                                                            <li>
+                                                <!--<li>
+                                                    <a href="en/sofas.html">
+                                                        >>>>>>>
+                                                    </a>
+                                                </li>-->
+
+                                                <li>
                                                     <a href="en/sofas.html">
                                                         Librerie
                                                     </a>
                                                 </li>
-                                                                                            <li>
+
+                                                <li>
                                                     <a href="en/armchairs.html">
                                                         Elementi Universali e
                                                     </a>
@@ -1989,12 +2044,19 @@ N° REA: TV 185064                    </p>
                                                                                     </ul>
                                             </li>-->
                                                                                                                                                         </ul>
-                                            <ul class="col-2 offset-1 border-right-grey">
+                                            <ul id="menu-div3" class="col-2"><!-- offset-1 border-right-grey -->
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
                                                                 <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="330">
                                     <a href="en/occasional-furniture.html">KIDS</a>
-                                                                            <ul class="menu-submenu-item-single-list">
-                                                                                            <li>
+                                            <ul class="menu-submenu-item-single-list">
+                                                <!--<li>
+                                                    <a href="en/sideboards.html">
+                                                        >>>>>>>
+                                                    </a>
+                                                </li>-->
+
+
+                                                <li>
                                                     <a href="en/sideboards.html">
                                                         Camerette
                                                     </a>
@@ -2030,12 +2092,21 @@ N° REA: TV 185064                    </p>
 
 
 
-                                                <ul class="col-2 offset-1 border-right-grey">
+                                                <ul id="menu-div4" class="col-2"><!--
+                                                offset-1 border-right-grey -->
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
                                                                 <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="330">
                                     <a href="en/occasional-furniture.html">COMPLEMENTI</a>
                                             <ul class="menu-submenu-item-single-list">
-                                                                                            <li>
+                                                <!--<li>
+                                                    <a href="en/sideboards.html">
+                                                        >>>>>>>
+                                                    </a>
+                                                </li>-->
+
+
+
+                                                <li>
                                                     <a href="en/sideboards.html">
                                                         Boiserie
                                                     </a>

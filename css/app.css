@@ -22722,7 +22722,52 @@ input[type=submit]:hover {
 
 
 
+#submenu-1{
+  display: none;
+}
 
+#menu-div1:hover{
+  background-color: #B8B8B8;
+}
+
+#menu-div2:hover{
+  background-color: #EBEBEB;
+}
+
+
+#menu-div3:hover{
+  background-color: #F5E9B5;
+}
+
+
+#menu-div4:hover{
+  background-color: #FFEDE6;
+}
+
+
+#menu-div1{
+  padding-top: 40px;
+  margin-left: 3%;
+
+}
+
+#menu-div2{
+  padding-top: 40px;
+  margin-left: 3%;
+  
+}
+
+#menu-div3{
+  padding-top: 40px;
+  margin-left: 3%;
+  
+}
+
+#menu-div4{
+  padding-top: 40px;
+  margin-left: 3%;
+  
+}
 
 
 
