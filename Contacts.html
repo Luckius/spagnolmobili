@@ -126,6 +126,21 @@
              console.log("color changed");
             }, 10000);
         }
+
+
+
+        function showSubMenu(){
+            if(document.getElementById('submenu-1').style.display == "block"){
+                document.getElementById("submenu-1").style.display = "none";
+                console.log("showMenuClicked");
+            }else{
+                document.getElementById("submenu-1").style.display = "block";
+                console.log("showMenuClicked");
+            }
+            
+
+        }
+
        
 
     </script>
@@ -2001,6 +2016,356 @@ N° REA: TV 185064                    </p>
 </header>
 
 
+
+
+
+<div class="header">
+    <ul class="menu">
+        <li class="menu-has-submenu menu-item">
+            <ul style="height: 100%;" class="menu-submenu menu-title-1">
+                <li id="submenu-menu" class="menu-submenu-item row">      
+                <ul id="menu-div1" class="col-20">
+                                 
+                    <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="120">
+                        <a id="menu-link" href="#">ZONA NOTTE</a>
+                        <ul class="menu-submenu-item-single-list">
+                        <!--<a href="" style="margin-bottom: 300px;">
+                                
+                        </a>-->
+                    </li>
+                                                <!--<li>
+                                                    <a href="">
+                                                        >>>>>>>
+                                                    </a>
+                                                </li>-->
+
+                                                <li>
+                                                    <a onclick="showSubMenu()" id="amadi-1" href="#">
+                                                        Armadi Battenti
+
+                                                        <!--start -->
+
+                                                            <ul id="submenu-1" class="menu-submenu-item-single-list">
+                                                            <li>
+                                                                <a href="en/sofas.html">
+                                                                    Ardeco
+                                                                </a>
+                                                            </li>
+                                                            
+                                                            <li>
+                                                                <a href="en/ottomans-and-floor-cushions.html">
+                                                                    Vega night
+                                                                </a>
+                                                            </li>
+
+                                                        
+
+                                                            <li>
+                                                                <a href="en/ottomans-and-floor-cushions.html">
+                                                                    Globo
+                                                                </a>
+                                                            </li>
+
+                                                            
+
+                                                            </ul>
+
+                                                        <!-- end -->
+
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Armadi Scorrevoli
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Sistema Pipe
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Cabine Armadio
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Letti
+                                                    </a>
+                                                </li>
+
+
+                                                <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Comò e Comodini
+                                                    </a>
+                                                </li>
+
+
+                                                <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Chiusure Scorrevoli
+                                                    </a>
+                                                </li>
+
+
+                                                </ul>
+                                                    </li>
+                                                                                            
+                                    <!--<li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="150">
+                                    <a href="en/walk-in-closets.html">Walk-in closets</a>
+                                    </li>
+                                                                                            
+                                    <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="180">
+                                    <a href="en/beds.html">Beds</a>
+                                                                    </li>
+                                                                                            
+                                                                <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="210">
+                                    <a href="en/drawer-units-and-bedside-tables.html">Drawer units and bedside tables</a>
+                                                                    </li>
+                                                                                            
+                                                                <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="240">
+                                    <a href="en/bookcases.html">Bookcases</a>
+                                                                    </li>-->
+
+
+
+                                    <!--<li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="300">
+                                    <a href="en/tables-and-chairs.html">ARDECO’</a>
+                                                                            <ul class="menu-submenu-item-single-list">
+                                                                                            <li>
+                                                    <a href="en/tables.html">
+                                                        immagine
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="en/extending-tables-2.html">
+                                                        Vega night
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="en/occasional-tables.html">
+                                                        Globo
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="en/chairs.html">
+                                                        immagine
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="en/desks-and-console-tables.html">
+                                                       immagine
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                            </li>-->
+                                                                                                                                                                                                                                                                                                </ul>
+                                    <ul id="menu-div2" class="col-20"><!--offset-1 -->
+                                                                                                                                                                                                                                                                                                                                                                                                                
+                                        <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="270">
+                                    <a id="menu-link" href="#">ZONA GIORNO</a>
+                                                        <ul class="menu-submenu-item-single-list">
+                                                <!--<li>
+                                                    <a href="en/sofas.html">
+                                                        >>>>>>>
+                                                    </a>
+                                                </li>-->
+
+                                                <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Librerie
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Elementi Universali e
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Pensili
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Madie
+                                                    </a>
+                                                </li>
+
+                                                </ul>
+                                                    </li>
+                                                                                            
+                                    <!--<li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="300">
+                                    <a href="en/tables-and-chairs.html">ARDECO’</a>
+                                                                            <ul class="menu-submenu-item-single-list">
+                                                                                            <li>
+                                                    <a href="en/tables.html">
+                                                        Tables
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="en/extending-tables-2.html">
+                                                        Extending tables
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="en/occasional-tables.html">
+                                                        Occasional Tables
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="en/chairs.html">
+                                                        Chairs
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="en/desks-and-console-tables.html">
+                                                        Desks and console tables
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                            </li>-->
+                                                                                                                                                        </ul>
+                                    <ul id="menu-div3" class="col-20"><!-- offset-1 border-right-grey -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                            <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="330">
+                                    <a id="menu-link" href="#">KIDS</a>
+                                            <ul class="menu-submenu-item-single-list">
+                                                <!--<li>
+                                                    <a href="en/sideboards.html">
+                                                        >>>>>>>
+                                                    </a>
+                                                </li>-->
+
+
+                                                <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Camerette
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a id="submenu-main" href="">
+                                                        Letti
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a id="submenu-main" href="">
+                                                        Letti a castello
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Scrittoi
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Sistema Pipe
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Comò e Comodini
+                                                    </a>
+                                                </li>
+                                                 </ul>
+                                                    </li>
+                                                </ul>
+
+
+
+                                                <ul id="menu-div4" class="col-20"><!--
+                                                offset-1 border-right-grey -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="330">
+                                    <a id="menu-link" href="#">COMPLEMENTI</a>
+                                            <ul class="menu-submenu-item-single-list">
+                                                <!--<li>
+                                                    <a href="en/sideboards.html">
+                                                        >>>>>>>
+                                                    </a>
+                                                </li>-->
+
+
+
+                                                <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Boiserie
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Mensole
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Pouf e Poltrone
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Sedie
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a id="submenu-main" href="#">
+                                                        Tavoli e Tavolini
+                                                    </a>
+                                                </li>
+                                                <!--<li>
+                                                    <a href="en/tv-panels-and-wall-panelling.html">
+                                                        Comò e Comodini
+                                                    </a>
+                                                </li>-->
+                                                 </ul>
+                                                    </li>
+                                                </ul>
+
+                    
+                                            <!--<ul class="col-2 offset-1">
+                                                                                            <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="360">
+                                    <a href="en/bedroom.html">COMPLEMENTI</a>
+                                    
+                                </li>
+
+
+                            
+                                                                                                        ass="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="390">
+                                    <a href="en/living-room.html">Boiserie</a>
+                                    
+                                </li>
+                                                                                             
+                                <li class="animated2 menu-submenu-item-single animatedIsOpen slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="420">
+                                    <a href="javascript: void(0);">Homes</a>
+                                    <ul class="menu-submenu-item-single-list">
+                                                                                    <li>
+                                                <a href="en/stories/penthouse-in-the-city.html">Penthouse in the city</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="en/stories/loft-in-the-hills.html">Loft in the hills</a>
+                                            </li>
+                                    </ul>
+                                </li>
+                                                    </ul>-->
+                                    </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!-- end -->
+
+
+
+
+
+
 <div class="row isMobile menuMobile">
     <div class="col-12">
         <div class="row border-bottom-borderMenu">
@@ -2283,17 +2648,7 @@ N° REA: TV 185064                    </p>
 </div>-->
 
 
-    <div id="direct-div"> <!--<class="container-fluid padding--lr-0 padding--top-header">-->
-        <!--<div style="margin-bottom: 3%;"> 
-            <div class="col-12 align-center">
-                <h4 class="heading-3 margin--bottom-25"></h4>
-                <h2 class="heading-2" style="margin-top: 3%;font-weight: bold;
-                    font-size: 60px;">
-                    <img style="margin-bottom: 20px;" src="images/app/s-logo2.svg" height="60">S.R.L
-                </h2>
-
-            </div>
-        </div>-->
+    <div id="direct-div"> 
 
         <div class="row margin--bottom-90">
             <div class="col-lg-6 offset-lg-3 col-12 offset-0">
@@ -2311,7 +2666,7 @@ N° REA: TV 185064                    </p>
                         <p id="phones" class="paragraph-2 margin--bottom-45">T <a href="tel:+3904389868">+39 0438 9868</a><br> F <a href="tel:+39043898699">+39 0438 9869</a></p>
                     </div>
                 </div>
-                <!--">btn btn--second | btn btn--second openContacts1-->
+            
                 <div id="direct-btn" class="row">
                     <div id="direct-btn" class="col-6 align-center">
                         <a href="https://www.google.it/maps/place/SpagnolGroup+-+Mobil+Srl/@45.870612,12.0757166,17z/data=!3m1!4b1!4m5!3m4!1s0x4779227c00527cd1:0x8b23e4774052195c!8m2!3d45.8706076!4d12.0779152" target="_blank" class="btn btn-lined1">Directions<span class="span1"></span></a>
@@ -2320,24 +2675,8 @@ N° REA: TV 185064                    </p>
 
                         <a id="contact-btn" onclick="showhide()" class="btn btn-lined1">Contact<span class="span1"></span></a>
 
-                        <!--<a onclick="showhide()" class="btn btn-lined" data-fromcontact="Novamobili spa">Contact us<span class="span1"></span></a>-->
                     </div>
                 </div>
-
-
-                <!--<div id="direct-btn" class="row">
-                    <div id="direct-btn" class="col-6 align-center">
-                        <a href="https://www.google.it/maps/place/SpagnolGroup+-+Mobil+Srl/@45.870612,12.0757166,17z/data=!3m1!4b1!4m5!3m4!1s0x4779227c00527cd1:0x8b23e4774052195c!8m2!3d45.8706076!4d12.0779152" target="_blank" class="btn btn--second">Directions</a>
-                    </div>
-                    <div id="direct-btn" class="col-6 align-center">
-
-                        <a id="contact-btn" onclick="showhide()" class="btn btn--second openContacts1">Contact Us</a>
-
-                    </div>
-                </div>-->
-
-
-
 
 
             </div>
@@ -2392,11 +2731,7 @@ N° REA: TV 185064                    </p>
                 <label class="discard placeholder uk-form-label">Province*</label>
                 <input wire:model.defer="phone" id="phone" type="text" class="uk-input " name="phone" value="" autocomplete="phone">
                 
-            <!--<div class="field" for="city">
-                <label class="discard placeholder uk-form-label">Città</label>
-                <input wire:model.defer="city" id="city" type="text" class="uk-input " name="city" value="" autocomplete="city">
-                
-                            </div>-->
+            
             
             <div class="field" for="district">
                 <label class="discard placeholder uk-form-label">Request*</label>
@@ -2406,34 +2741,17 @@ N° REA: TV 185064                    </p>
                             </div>
 
             <div class="field" for="phone">
-                <!--<input wire:model.defer="phone" id="phone" type="text" class="uk-input " name="phone" value="" autocomplete="phone">-->
+          
                 <label class="discard placeholder uk-form-label"></label>
             <div class="field">
-                <!--<textarea wire:model.defer="message" id="message" class="uk-textarea " name="message" autocomplete="message"></textarea>-->
+              
                 <label class="discard placeholder uk-form-label" for="message"></label>   
             </div>
             
-            <!--<div class="field info uk-width-1-1 uk-margin-top">
-                <label class="uk-form-label">* campi obbligatori</label>
-            </div>-->
 
             <div class="field info uk-margin-top-large">
 
-            <!--<input style="display: block;visibility: visible;opacity: 1;" wire:model.defer="check_privacy" id="check_privacy" type="checkbox" class="uk-checkbox  custom_checkbox" name="check_privacy" value="1">-->
-
-            
-            <!--<div class="box">
-            <input type='checkbox' name='thing' value='valuable' id="thing"/>
-            <label for="thing"></label>
-            <label>Confermo la lettura dell'informativa sulla privacy e acconsento al trattamento dei dati personali.*</label>-->
-            <!--<br>
-            <input type='checkbox' name='thing1' value='valuable2' id="thing1"/><label for="thing1"></label> <label>free the slaves</label>
-            <br>
-            <input type='checkbox' name='thing2' value='valuable3' id="thing2"/><label for="thing2"></label> <label>train my dragons</label>
-            <br>
-            <input type='checkbox' name='thing3' value='valuable4' id="thing3"/><label for="thing3"></label> <label>cross the narrow sea</label>
-            <br>
-            <input type='checkbox' name='thing4' value='valuable5' id="thing4"/><label for="thing4"></label> <label>become Queen of Westeros</label>-->
+     
             </div>
 
 
@@ -2443,18 +2761,6 @@ N° REA: TV 185064                    </p>
               Confermo la lettura dell'informativa sulla privacy e acconsento al trattamento dei dati personali.*
             </label>
 
-
-            <!--<input style="opacity: 1;display: block;visibility: visible;" 
-             type="checkbox" name="privacy">-->
-
-
-
-
-
-            <!--<label class="uk-form-label t-small" for="check_privacy">
-                <a target="_blank" href="#">Confermo la lettura dell'informativa sulla privacy e acconsento al trattamento dei dati personali.*</a>
-                <br>
-                            </label>-->
             </div>
         
        
@@ -2474,19 +2780,15 @@ N° REA: TV 185064                    </p>
         </div>
             </div>
         </div>
-
-        <!-- start end-->
-
-        <!-- end -->
-
-
-        
-
         
 
     </div>
 
-
+<!--<div class="field" for="city">
+                <label class="discard placeholder uk-form-label">Città</label>
+                <input wire:model.defer="city" id="city" type="text" class="uk-input " name="city" value="" autocomplete="city">
+                
+                            </div>-->
         
 
     <script type="text/javascript">
