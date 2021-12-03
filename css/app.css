@@ -22812,12 +22812,72 @@ input[type=submit]:hover {
 
 #submenu-main{
   font-size: 15px;
+  text-decoration: none;
 }
 
 #amadi-1{
   font-size: 15px;
+  text-decoration: none;
 
 }
+
+/* line */
+
+#submenu-main {
+  display: inline-block;
+  position: relative;
+  color: black;
+}
+
+#submenu-main:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+
+#submenu-main:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
+
+#amadi-1 {
+  display: inline-block;
+  position: relative;
+  color: black;
+}
+
+#amadi-1:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+
+#amadi-1:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
 
 
 /*#submenu-menu{ 
