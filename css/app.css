@@ -22747,27 +22747,80 @@ input[type=submit]:hover {
 
 #menu-div1{
   padding-top: 40px;
-  
+  width: 20%;
+  max-width: 30%;
+  margin-left: 0px;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+
 }
 
 #menu-div2{
   padding-top: 40px;
+  width: 25%;
+  max-width: 30%;
+  margin-left: 0%;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  
+
  
 }
 
 #menu-div3{
   padding-top: 40px;
+  width: 20%;
+  max-width: 30%;
+  margin-left: 0%;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+
+
  
 }
 
 #menu-div4{
   padding-top: 40px;
+  width: 25%;
+  max-width: 30%;
+  margin-left: 0%;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
   
 }
 
 
+#menu-link{
+  font-size: 30px;
+}
 
-/* drop down menu*/
+
+#submenu-menu{
+  width: 100%;
+
+}
+
+
+#submenu-main{
+  font-size: 15px;
+}
+
+#amadi-1{
+  font-size: 15px;
+}
+
+
+#submenu-menu{
+  right: 0px;
+  margin-left: -40px;
+  
+  
+}
+
+/* drop down menu
+border-style: solid;
+*/
 
 
 
