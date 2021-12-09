@@ -22285,6 +22285,7 @@ slider */
 .header2{
   background: black;
    height: 50px;
+   z-index: 0;
 
 }
 
