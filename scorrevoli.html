@@ -128,6 +128,7 @@
         }
 
 
+
         function showSubMenu(){
             if(document.getElementById('submenu-1').style.display == "block"){
                 document.getElementById("submenu-1").style.display = "none";
@@ -139,6 +140,7 @@
             
 
         }
+
        
 
     </script>
@@ -257,155 +259,90 @@
     }
 
 
-  .maxWidth {
-    max-width: 1800px;
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(100% - 60px);
-  }
+    .heading-7{
+      font-size: 50px;
+
+    }
+    .paragraph-2{
+      font-size: 23px;
+    }
+
+    #heading-01{
+      font-size: 23px;
+    }
+
+
+    #col-h{
+      font-size: 15px;
+    }
+
+
+    #img:hover{
+      max-height: 100%;
+    }
 
 
 
-#contacth11{
-  /*height: 200px;*/
-  padding-top: 3%;
-  font-size: 20px;
-  margin-left: 3%;
-}
+    #mynav{
+      z-index: 0;
+      margin-top: 4%;
+      
+    }
 
 
-
-  #menu1 {
-      direction: rtl;
-      font-family: tahoma;
-      font-size: 11px;
-      white-space:nowrap;
-  }
-
-  #menu1 li {
-      display: inline-block;
-      float: right;
-      color: #000;
-      /*background: #fff;
-      background: rgba(255, 255, 255, 0.5);
-      -webkit-border-radius: 2px;
-      -moz-border-radius: 2px;
-      border-radius: 2px;*/
-  }
-
-  #menu1 li.active {
-      background: #666;
-      background: rgba(0, 0, 0, 0.5);
-      color: #fff;
-  }
-
-  #menu1 li a {
-      /*text-decoration: underline;*/
-      color: #000;
-  }
-
-    #menu1 li a:hover {
-      text-decoration: underline;
-      color: #000;
-  }
-
-
-
-  #menu1 li.active a:hover {
-      color: #fff;
-      text-decoration: underline;
-  }
-
-  #menu1 li:hover {
-      background: rgba(255, 255, 255, 0.8);
-  }
-
-  #menu1 li a,
-  #menu1 li.active a {
-      padding: 9px 18px;
-      display: inline-block;
-  }
-
-  #menu1 li.active a {
-      color: #fff;
-  }
-
-  #menu_section {
-      position: absolute;
-      left: 0;
-      /*height: 58px;
-      z-index: 70;
-      width: 100%;
-      padding: 0;*/
-      margin-left: 15%;
-      margin-top: 3%;
-  }
-
-
-  #menu-line:hover{
-    text-decoration: underline;
-  }
-
-
-#download-line {
-  display: inline-block;
-  position: relative;
-  color: green;
-}
-
-#download-line:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: green;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-
-#download-line:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-
-  /*#download-line:hover{
-    text-decoration: underline;
-    color: black;
-    font-family: "FaktPro-Bold", sans-serif;
-
-  }
-
-
-  #download-line{
-    color: green;
-    font-size: 1.1em;
-  }*/
-
-
-  #scarica{
-    font-size: 54px;
-    text-align: center;
-    align-items: center;
     
-  }
+    footer{
+      margin-left: 0%;
+    }
+
+
+    @media screen and (max-width: 700px){
+      .row{
+        width: 100%;
+        margin-left: 12%;
+      }
+      img{
+        width: 100%;
+      }
+    }
+
+
 
 
 </style>
 
 
 <script type="text/javascript">
+
+  /*window.onscroll = function (e) {  
+    // called when the window is scrolled. 
+    document.getElementById("mynav").style.margin = "-4% 0 0 0";
+
+  }
+
+  function addMarg(){
+    document.getElementById("mynav").style.margin = "4% 0 0 0";
+  }
+
+
+
+  $(document).scroll(function() { 
+     if($(window).scrollTop() === 0) {
+        alert("is on top");
+       //$(".menu").hide();
+       addMarg();
+       
+     }
+  });*/
+
+
     function showhide() {
 
         console.log("display");
         console.log(document.getElementById('cont-form').style.display);
 
         var x = document.getElementById("cont-form");
-        var speed = 2000;
+        var speed = 10;
         var seconds = speed/1000;
         //if (!x.classList.contains("hide")) {
         if (x.style.display == "block") {
@@ -427,7 +364,7 @@
                 x.style.transition = "opacity "+seconds+"s ease";
                 x.style.opacity = 1;
             
-            }, 200);
+            }, 5);
         }else{
            
           //x.style.opacity = 1;
@@ -500,7 +437,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </div>
 
-<!--<div class="nav">
+<!--
+<div class="nav">
     <div class="nav_relative">
         <div class="nav_search">
             <a href="#" class="openSearch">
@@ -510,8 +448,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="nav_close closeNav"></div>
 
-            </div>
-</div>-->
+      </div>
+</div>
+-->
 
 <div class="search">
     <div class="closest closeSearch">
@@ -564,16 +503,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <div class="col-12 margin--top-20">
                                                                                     <h4 class="search-title margin--bottom-20">NEWS</h4>
                                                                                                                             <h3 class="search-text">Details Collection</h3>
-                                    </div>
+                                                                            </div>
                                 </div>
                             </a>
-                            <a href="en/federica-biasi.html" class="col-lg-4 col-12 search-item animated2 animatedIsOpen slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="300">
-                                <img src="uploads/launches/images/6/698d022860daea86db50e4f7b7284cd0dc2700bc_s.jpg" />
-                              <div class="row margin--lr-0">
+                                                    <a href="en/federica-biasi.html" class="col-lg-4 col-12 search-item animated2 animatedIsOpen slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="300">
+                                                                    <img src="uploads/launches/images/6/698d022860daea86db50e4f7b7284cd0dc2700bc_s.jpg" />
+                                                                <div class="row margin--lr-0">
                                     <div class="col-12 margin--top-20">
-                                      <h4 class="search-title margin--bottom-20">designer</h4>
+                                                                                    <h4 class="search-title margin--bottom-20">designer</h4>
                                                                                                                             <h3 class="search-text">Federica Biasi</h3>
-                                          </div>
+                                                                            </div>
                                 </div>
                             </a>
                                             </div>
@@ -679,22 +618,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <div class="col-lg-10 offset-lg-1 col-12 offset-0">
                         <div class="row _lancioImg">
                             <div class="col-12">
-                              <h6>featured</h6>
-                                </div>
+                                                                    <h6>featured</h6>
+                                                            </div>
                             <div class="col-12">
                                 <div class="relative-2 display-inline-block">
-                                  <img src="uploads/launches/images/7/71539bc229287e8294fd26be04b92906fc79d6b4.jpg" />
+                                                                            <img src="uploads/launches/images/7/71539bc229287e8294fd26be04b92906fc79d6b4.jpg" />
                                     
-                                        <h4 class="heading-5 _color-white">Discover the new catalogue Details collection</h4>
+                                                                            <h4 class="heading-5 _color-white">Discover the new catalogue Details collection</h4>
                                                                     </div>
                             </div>
                             
                                 
+                                    
+                                
+                            
                             <div class="col-12">
-                              <a href="en/catalogs.html" class="btn btn--second waves-effect waves-light">
+                                                                    <a href="en/catalogs.html" class="btn btn--second waves-effect waves-light">
                                         learn more
                                     </a>
-                            </div>
+                                                            </div>
                         </div>
                     </div>
                             </div>
@@ -720,8 +662,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                                                     <li>
                                         <a href="https://www.facebook.com/novamobili" target="_blank" class="fab fa-facebook-f"></a>
                                     </li>
-                                                                                                    <li>
-                                        <a href="https://it.pinterest.com/novamobili0299/" target="_blank" class="fab fa-pinterest-p"></a>
+                                    <a href="" target="_blank" class="fa fa-twitter"></a>
                                     </li>
                                                                                                     <li>
                                         <a href="https://www.linkedin.com/company/battistella-company/" target="_blank" class="fab fa-linkedin-in"></a>
@@ -807,7 +748,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <fieldset class="input-group">
                                 <select id="form--contacts--country" name="country" required>
                                     <option value="">Country *</option>
-                                              <option value="AF">Afghanistan</option>
+                                                                            <option value="AF">Afghanistan</option>
                                                                             <option value="AX">Aland Islands</option>
                                                                             <option value="AL">Albania</option>
                                                                             <option value="DZ">Algeria</option>
@@ -2051,12 +1992,12 @@ N° REA: TV 185064                    </p>
             <span class="edgtf-social-icon-widget fa fa-instagram    "></span>        </a>
     
         <a class="edgtf-social-icon-widget-holder edgtf-icon-has-hover" style="color: #ffffff;;font-size: 14px;margin: 0px 5px 0px 5px;" href="http://www.pinterest.com/gruppotomasella/" target="_blank">
-            <span class="fa fa-twitter"></span>        </a>
+            <span class="fa fa-twitter"></span></a>
     
         <a class="edgtf-social-icon-widget-holder edgtf-icon-has-hover" style="color: #ffffff;;font-size: 14px;margin: 0px 10px 0px 5px;" href="https://www.youtube.com/user/TomasellaGroup" target="_blank">
             <span class="edgtf-social-icon-widget fa fa-youtube-play    "></span>        </a>
-      <!--<div class="widget edgtf-separator-widget">
-        <div class="edgtf-separator-holder clearfix  edgtf-separator-center edgtf-separator-normal">
+      <!--<div class="widget edgtf-separator-widget">fa fa-twitter
+        <div class="edgtf-separator-holder clearfix  edgtf-separator-center edgtf-separator-normal">edgtf-social-icon-widget social_pinterest
         <div class="edgtf-separator" style="border-color: #ffffff;border-style: solid;width: 1px;border-bottom-width: 0px;margin-top: 0px;margin-bottom: 0px"></div>
       </div>
     </div>-->
@@ -2087,7 +2028,7 @@ N° REA: TV 185064                    </p>
                     <a href="javascript: void(0);" id="menu-title" class="menu-title" data-menu="menu-title-1">PRODOTTI</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-title">CATALOGHI</a>
+                    <a href="catalogh.html" class="menu-title">CATALOGHI</a>
                 </li>
                 <li class="menu-item">
                     <a href="rivenditory.html" class="menu-title">RIVENDITORI</a>
@@ -2096,7 +2037,7 @@ N° REA: TV 185064                    </p>
                     <a href="#" class="menu-title">CHI SIAMO</a>
                 </li>-->
                 <li class="menu-item">
-                    <a href="Contacts.html" class="menu-title">CONTATTI</a>
+                    <a href="#" class="menu-title">CONTATTI</a>
                 </li>
                 <!--<li class="menu-item">
                     <a href="en/configurator.html" class="menu-title">Configurator</a>
@@ -2147,6 +2088,20 @@ N° REA: TV 185064                    </p>
 </header>
 
 
+
+
+<div id="mynav" class="nav">
+    <div class="nav_relative">
+        <!--<div class="nav_search">
+            <a href="#" class="openSearch">
+                <img src="images/app/search.svg" width="25" height="25" />
+            </a>
+        </div>-->
+
+        <div class="nav_close closeNav"></div>
+
+      </div>
+</div>
 
 
 
@@ -2208,7 +2163,7 @@ N° REA: TV 185064                    </p>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a id="submenu-main" href="scorrevoli.html">
+                                                    <a id="submenu-main" href="#">
                                                         Armadi Scorrevoli
                                                     </a>
                                                 </li>
@@ -2499,19 +2454,14 @@ N° REA: TV 185064                    </p>
 
 
 
-
-
-
-
-
 <div class="row isMobile menuMobile">
     <div class="col-12">
         <div class="row border-bottom-borderMenu">
             <div class="col-12">
                 <div class="row margin--top-50 margin--bottom-30">
                     <div class="col-10 offset-2 menuMobile-subMenu">
-                        <a href="javascript: void(0);" class="menuMobile-item-1 menuMobile-toggleSubMenu menuMobile-toggleSubMenu-open">
-                            Home                       </a>
+                        <a href="#" class="menuMobile-item-1 menuMobile-toggleSubMenu menuMobile-toggleSubMenu-open">
+                            Home                        </a>
 
                         <!--<div class="menuMobileSubMenu">
                             <div class="row margin--top-50 margin--bottom-30">
@@ -2653,7 +2603,7 @@ N° REA: TV 185064                    </p>
                         <a href="Contacts.html" class="menuMobile-item-1">Contati</a>
                     </div>
                     <div class="col-10 offset-2">
-                        <a href="#" class="menuMobile-item-1">Revenditory</a>
+                        <a href="#" class="menuMobile-item-1">Revinditory</a>
                     </div>
                 </div>
 
@@ -2686,7 +2636,7 @@ N° REA: TV 185064                    </p>
                     </div>
                     <div class="col-10 offset-2">
                                                     <a href="en/auth/login.html" class="menuMobile-item-1">Configurations archive</a>
-                                            </div>
+                                            </div>-->
                 </div>
 
                 <div class="row">
@@ -2746,166 +2696,478 @@ N° REA: TV 185064                    </p>
     </div>
 </div>
 
-          
-
-
-
+    
 
      
 
-      <!--<div class="" id="menu_section">
-        <ul id="menu1">
-            <li data-menuanchor="firstPage">
-              <a id="menu-line" href="#firstPage">First Slide</a></li>
-            <li data-menuanchor="secondPage">
-              <a href="#secondPage">Second Slide</a></li>
-            </ul>
-        </div>-->
+  <!-- start content-->
+<div style="margin-top: -10%;" class="container-fluid padding--lr-0 padding--top-header">
 
-
-        <div style="margin-top: -120px;" class="container">
-            <div class="row row--7 align-items-center">
-                <div class="col-xl-5 col-lg-6 col-12 px-4 align-left animated slideLeftToRightSmallPre slideLeftToRightSmall justAnimate" data-animation="slideLeftToRightSmall" data-delay="400">
-                <h3 id="scarica" class="heading-1">SCARICA</h3>
-                </div>
-                <div class="col-xl-5 col-lg-5 col-10 offset-xl-2 offset-lg-1 offset-1 padding--lr-0 px-2 animated slideRightToLeftSmallPre align-center slideRightToLeftSmall justAnimate" data-animation="slideRightToLeftSmall" data-delay="600">
-                            </div>
-            </div>
-        </div>
-
-
-      <div style="text-align: center;" class="container conteiner_filters margin--bottom-0">
-        <div style="margin-top: -50px;" class="row">
-            <div class="col-12">
-                <ul class="list">
-                    <li><a style="font-size: 16px;" href="#" class="heading-5 active">Catalogues</a></li>
-                    <li><a style="font-size: 16px;" href="#" class="heading-5">Technical data sheets</a></li>
-                    <li><a style="font-size: 16px;" href="#" class="heading-5">Fabric information</a></li>
-                    <li><a style="font-size: 16px;" href="#" class="heading-5">3DS files</a></li>
-                    <li><a style="font-size: 16px;" href="#" class="heading-5">Certifications</a></li>
-                    <li><a style="font-size: 16px;" href="#" class="heading-5">Press kit</a></li>
-                </ul>
-            </div>
-        </div>
-      </div>
-
-
-      <div style="background-color: #EBEBEB;padding-top: 1%;">
-
-      <div style="margin-bottom: 100px;" >
-
-        <!--<div  class="container">
-          <h1 id="contacth11" >
-              CATALOGHI 
-          </h1>
-
-
-          <h5 style="margin-left: 3%;margin-top: 10px;font-size: 17px;">
-          Consulta i cataloghi Spagnol e scopri l'ampia gamma di mobili di design, camerette, armadi, librerie e soluzioni per arredare la tua casa.
-          </h5>
-
-      </div>-->
+<div style="margin-left: 17%; max-width: 100%;" class="container">
+<div class="row row--7 align-items-center">
+<div class="col-xl-5 col-lg-6 col-12 px-4 align-left animated slideLeftToRightSmallPre slideLeftToRightSmall justAnimate" data-animation="slideLeftToRightSmall" data-delay="400">
+<h1 style="font-size: 60px;" class="heading-7">Amardi Scorrevoli</h1>
+<p class="paragraph-2 ">Prodotti Scorrevoli.</p>
+</div>
+</div>
+</div>  
 
 
 
-      </div>
+<div style="margin-left: 20%" class="container container_item_list border-0">
+
+<div class="row">
+<a href="#" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img width="400" height="300" src="./uploads/products/images/1/CentraleSito.jpg" alt="armadi ad anta battente design">
 
 
+<img height="400" width="400" src="./uploads/products/images/1/Centralefrontale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Vico&amp;u=https://www.novamobili.it/it/vico&amp;picture=https://www.novamobili.it/uploads/products/images/f/fbb0a4270421e2f33ed99bcaf2cce418edc9f91c_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/vico&amp;media=https://www.novamobili.it/uploads/products/images/f/fbb0a4270421e2f33ed99bcaf2cce418edc9f91c_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/vico&amp;title=Vico&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/vico', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Centrale Sito</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</a>
 
+<a href="https://www.novamobili.it/it/perry" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img width="400" height="300" src="./uploads/products/images/1/DuoSito.jpg" alt="armadi ad anta battente design">
 
-  <div style="margin-left: 10%;" class="row ">
-              <a href="http://www.spagnolmobili.it/download/ac561d81257209b3fb072b03fd87bac0" target="_blank" class="col-6 col-md-4 col-lg-2 px-2 margin--bottom-100 item_list">
-                        <div class="row item_list_image">
-                            <div class="col-12">
-                                <img src="uploads/sections/images/3/cat1.jpg" class="animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="300">
+<!-- Axel Mansardato -->
 
-                                <div class="hoverDownload hoverDownload2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 44" id="el_4SOn3QfDp"><style>@-webkit-keyframes el_YUpiq-xKgQ_bf-1gGPZw_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@keyframes  el_YUpiq-xKgQ_bf-1gGPZw_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@-webkit-keyframes el_9xIwOoBCdW_CDyl3b5hd_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@keyframes  el_9xIwOoBCdW_CDyl3b5hd_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@-webkit-keyframes el_lA6gc0CgwB_arbFQI6iW_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}@keyframes  el_lA6gc0CgwB_arbFQI6iW_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}@-webkit-keyframes el_lwNId3ZnX__S8SfrLPa2_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}@keyframes  el_lwNId3ZnX__S8SfrLPa2_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}#el_4SOn3QfDp *{-webkit-animation-duration: 1s;animation-duration: 1s;-webkit-animation-play-state: running;animation-play-state: running;-webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);animation-timing-function: cubic-bezier(0, 0, 1, 1);}#el_ohACArKgr6{fill: none;stroke: #ffff;stroke-miterlimit: 10;}#el_lwNId3ZnX_{fill: none;stroke: #ffff;stroke-miterlimit: 10;fill-rule: evenodd;}#el_lA6gc0CgwB{fill: none;stroke: #ffff;stroke-miterlimit: 10;}#el_9xIwOoBCdW{fill: none;stroke: #ffff;stroke-miterlimit: 10;fill-rule: evenodd;}#el_YUpiq-xKgQ{fill: none;stroke: #ffff;stroke-miterlimit: 10;}#el_lwNId3ZnX__S8SfrLPa2{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);-webkit-animation-timing-function: cubic-bezier(0, 0, 0.58, 1);animation-timing-function: cubic-bezier(0, 0, 0.58, 1);}#el_4SOn3QfDp:hover #el_lwNId3ZnX__S8SfrLPa2{-webkit-animation-name: el_lwNId3ZnX__S8SfrLPa2_Animation;animation-name: el_lwNId3ZnX__S8SfrLPa2_Animation;}#el_lA6gc0CgwB_arbFQI6iW{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);-webkit-animation-timing-function: cubic-bezier(0, 0, 0.58, 1);animation-timing-function: cubic-bezier(0, 0, 0.58, 1);}#el_4SOn3QfDp:hover #el_lA6gc0CgwB_arbFQI6iW{-webkit-animation-name: el_lA6gc0CgwB_arbFQI6iW_Animation;animation-name: el_lA6gc0CgwB_arbFQI6iW_Animation;}#el_9xIwOoBCdW_CDyl3b5hd{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);-webkit-animation-timing-function: cubic-bezier(0.42, 0, 1, 1);animation-timing-function: cubic-bezier(0.42, 0, 1, 1);}#el_4SOn3QfDp:hover #el_9xIwOoBCdW_CDyl3b5hd{-webkit-animation-name: el_9xIwOoBCdW_CDyl3b5hd_Animation;animation-name: el_9xIwOoBCdW_CDyl3b5hd_Animation;}#el_YUpiq-xKgQ_bf-1gGPZw{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);-webkit-animation-timing-function: cubic-bezier(0.42, 0, 1, 1);animation-timing-function: cubic-bezier(0.42, 0, 1, 1);}#el_4SOn3QfDp:hover #el_YUpiq-xKgQ_bf-1gGPZw{-webkit-animation-name: el_YUpiq-xKgQ_bf-1gGPZw_Animation;animation-name: el_YUpiq-xKgQ_bf-1gGPZw_Animation;}</style><defs></defs><title>Risorsa 2</title><g id="el_YeYw_PokKr" data-name="Livello 2"><g id="el_NoV7WxKRxd" data-name="Livello 1"><path d="M.5,34v9a.5.5,0,0,0,.5.5H34a.5.5,0,0,0,.5-.5V34" id="el_ohACArKgr6"></path><g id="el_lwNId3ZnX__S8SfrLPa2" data-animator-group="true" data-animator-type="0"><path d="M5.5,17.5,17.15,29.06a.5.5,0,0,0,.7,0L29.5,17.5" id="el_lwNId3ZnX_"></path></g><g id="el_lA6gc0CgwB_arbFQI6iW" data-animator-group="true" data-animator-type="0"><line x1="17.5" y1="29" x2="17.5" id="el_lA6gc0CgwB"></line></g><g id="el_9xIwOoBCdW_CDyl3b5hd" data-animator-group="true" data-animator-type="0"><path d="M5.5,17.5,17.15,29.06a.5.5,0,0,0,.7,0L29.5,17.5" id="el_9xIwOoBCdW"></path></g><g id="el_YUpiq-xKgQ_bf-1gGPZw" data-animator-group="true" data-animator-type="0"><line x1="17.5" y1="29" x2="17.5" id="el_YUpiq-xKgQ"></line></g></g></g><script>(function(){var a=document.querySelector('#el_4SOn3QfDp'),b=a.querySelectorAll('style'),c=function(d){b.forEach(function(f){var g=f.textContent;g&amp;&amp;(f.textContent=g.replace(/transform-box:[^;\r\n]*/gi,'transform-box: '+d))})};c('initial'),window.requestAnimationFrame(function(){return c('fill-box')})})();</script></svg>                                </div>
-                            </div>
-                        </div>
-
-                        <div style="margin-top: 10px;" class="row margin--lr-0">
-                            <div class="col-12">
-                                <p style="margin-bottom: 10px;" id="catalogy-word" class="heading-3">COLLEZIONE CAMERETTE</p>
-                                <p id="download-line" class="heading-3">Download</p>
-                            </div>
-                        </div>
-                    </a>
-                      <a href="http://www.spagnolmobili.it/download/09ef96abe068f909f0f2d43ff42ebb2e" target="_blank" class="col-6 col-md-4 col-lg-2 px-2 margin--bottom-100 item_list">
-                        <div class="row item_list_image">
-                            <div class="col-12">
-                                <img src="uploads/sections/images/3/cat2.jpg" class="animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="300">
-
-                                <div class="hoverDownload hoverDownload2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 44" id="el_4SOn3QfDp"><style>@-webkit-keyframes el_YUpiq-xKgQ_bf-1gGPZw_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@keyframes  el_YUpiq-xKgQ_bf-1gGPZw_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@-webkit-keyframes el_9xIwOoBCdW_CDyl3b5hd_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@keyframes  el_9xIwOoBCdW_CDyl3b5hd_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@-webkit-keyframes el_lA6gc0CgwB_arbFQI6iW_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}@keyframes  el_lA6gc0CgwB_arbFQI6iW_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}@-webkit-keyframes el_lwNId3ZnX__S8SfrLPa2_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}@keyframes  el_lwNId3ZnX__S8SfrLPa2_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}#el_4SOn3QfDp *{-webkit-animation-duration: 1s;animation-duration: 1s;-webkit-animation-play-state: running;animation-play-state: running;-webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);animation-timing-function: cubic-bezier(0, 0, 1, 1);}#el_ohACArKgr6{fill: none;stroke: #ffff;stroke-miterlimit: 10;}#el_lwNId3ZnX_{fill: none;stroke: #ffff;stroke-miterlimit: 10;fill-rule: evenodd;}#el_lA6gc0CgwB{fill: none;stroke: #ffff;stroke-miterlimit: 10;}#el_9xIwOoBCdW{fill: none;stroke: #ffff;stroke-miterlimit: 10;fill-rule: evenodd;}#el_YUpiq-xKgQ{fill: none;stroke: #ffff;stroke-miterlimit: 10;}#el_lwNId3ZnX__S8SfrLPa2{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);-webkit-animation-timing-function: cubic-bezier(0, 0, 0.58, 1);animation-timing-function: cubic-bezier(0, 0, 0.58, 1);}#el_4SOn3QfDp:hover #el_lwNId3ZnX__S8SfrLPa2{-webkit-animation-name: el_lwNId3ZnX__S8SfrLPa2_Animation;animation-name: el_lwNId3ZnX__S8SfrLPa2_Animation;}#el_lA6gc0CgwB_arbFQI6iW{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);-webkit-animation-timing-function: cubic-bezier(0, 0, 0.58, 1);animation-timing-function: cubic-bezier(0, 0, 0.58, 1);}#el_4SOn3QfDp:hover #el_lA6gc0CgwB_arbFQI6iW{-webkit-animation-name: el_lA6gc0CgwB_arbFQI6iW_Animation;animation-name: el_lA6gc0CgwB_arbFQI6iW_Animation;}#el_9xIwOoBCdW_CDyl3b5hd{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);-webkit-animation-timing-function: cubic-bezier(0.42, 0, 1, 1);animation-timing-function: cubic-bezier(0.42, 0, 1, 1);}#el_4SOn3QfDp:hover #el_9xIwOoBCdW_CDyl3b5hd{-webkit-animation-name: el_9xIwOoBCdW_CDyl3b5hd_Animation;animation-name: el_9xIwOoBCdW_CDyl3b5hd_Animation;}#el_YUpiq-xKgQ_bf-1gGPZw{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);-webkit-animation-timing-function: cubic-bezier(0.42, 0, 1, 1);animation-timing-function: cubic-bezier(0.42, 0, 1, 1);}#el_4SOn3QfDp:hover #el_YUpiq-xKgQ_bf-1gGPZw{-webkit-animation-name: el_YUpiq-xKgQ_bf-1gGPZw_Animation;animation-name: el_YUpiq-xKgQ_bf-1gGPZw_Animation;}</style><defs></defs><title>Risorsa 2</title><g id="el_YeYw_PokKr" data-name="Livello 2"><g id="el_NoV7WxKRxd" data-name="Livello 1"><path d="M.5,34v9a.5.5,0,0,0,.5.5H34a.5.5,0,0,0,.5-.5V34" id="el_ohACArKgr6"></path><g id="el_lwNId3ZnX__S8SfrLPa2" data-animator-group="true" data-animator-type="0"><path d="M5.5,17.5,17.15,29.06a.5.5,0,0,0,.7,0L29.5,17.5" id="el_lwNId3ZnX_"></path></g><g id="el_lA6gc0CgwB_arbFQI6iW" data-animator-group="true" data-animator-type="0"><line x1="17.5" y1="29" x2="17.5" id="el_lA6gc0CgwB"></line></g><g id="el_9xIwOoBCdW_CDyl3b5hd" data-animator-group="true" data-animator-type="0"><path d="M5.5,17.5,17.15,29.06a.5.5,0,0,0,.7,0L29.5,17.5" id="el_9xIwOoBCdW"></path></g><g id="el_YUpiq-xKgQ_bf-1gGPZw" data-animator-group="true" data-animator-type="0"><line x1="17.5" y1="29" x2="17.5" id="el_YUpiq-xKgQ"></line></g></g></g><script>(function(){var a=document.querySelector('#el_4SOn3QfDp'),b=a.querySelectorAll('style'),c=function(d){b.forEach(function(f){var g=f.textContent;g&amp;&amp;(f.textContent=g.replace(/transform-box:[^;\r\n]*/gi,'transform-box: '+d))})};c('initial'),window.requestAnimationFrame(function(){return c('fill-box')})})();</script></svg>                                </div>
-                            </div>
-                        </div>
-
-                        <div style="margin-top: 10px;" class="row margin--lr-0">
-                            <div class="col-12">
-                              <p style="margin-bottom: 10px;" id="catalogy-word" class="heading-3">CAMPIONARIO TESSUTI</p>
-                                <p id="download-line" class="heading-3">Download</p>
-                            </div>
-                        </div>
-                    </a>
-                      <a href="http://www.spagnolmobili.it/download/40d75612fc305bbd10687de605a59c49" target="_blank" class="col-6 col-md-4 col-lg-2 px-2 margin--bottom-100 item_list">
-                        <div class="row item_list_image">
-                            <div class="col-12">
-                                <img src="uploads/sections/images/3/cat3.jpg" class="animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="300">
-
-                                <div class="hoverDownload hoverDownload2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 44" id="el_4SOn3QfDp"><style>@-webkit-keyframes el_YUpiq-xKgQ_bf-1gGPZw_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@keyframes  el_YUpiq-xKgQ_bf-1gGPZw_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@-webkit-keyframes el_9xIwOoBCdW_CDyl3b5hd_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@keyframes  el_9xIwOoBCdW_CDyl3b5hd_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@-webkit-keyframes el_lA6gc0CgwB_arbFQI6iW_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}@keyframes  el_lA6gc0CgwB_arbFQI6iW_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}@-webkit-keyframes el_lwNId3ZnX__S8SfrLPa2_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}@keyframes  el_lwNId3ZnX__S8SfrLPa2_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}#el_4SOn3QfDp *{-webkit-animation-duration: 1s;animation-duration: 1s;-webkit-animation-play-state: running;animation-play-state: running;-webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);animation-timing-function: cubic-bezier(0, 0, 1, 1);}#el_ohACArKgr6{fill: none;stroke: #ffff;stroke-miterlimit: 10;}#el_lwNId3ZnX_{fill: none;stroke: #ffff;stroke-miterlimit: 10;fill-rule: evenodd;}#el_lA6gc0CgwB{fill: none;stroke: #ffff;stroke-miterlimit: 10;}#el_9xIwOoBCdW{fill: none;stroke: #ffff;stroke-miterlimit: 10;fill-rule: evenodd;}#el_YUpiq-xKgQ{fill: none;stroke: #ffff;stroke-miterlimit: 10;}#el_lwNId3ZnX__S8SfrLPa2{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);-webkit-animation-timing-function: cubic-bezier(0, 0, 0.58, 1);animation-timing-function: cubic-bezier(0, 0, 0.58, 1);}#el_4SOn3QfDp:hover #el_lwNId3ZnX__S8SfrLPa2{-webkit-animation-name: el_lwNId3ZnX__S8SfrLPa2_Animation;animation-name: el_lwNId3ZnX__S8SfrLPa2_Animation;}#el_lA6gc0CgwB_arbFQI6iW{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);-webkit-animation-timing-function: cubic-bezier(0, 0, 0.58, 1);animation-timing-function: cubic-bezier(0, 0, 0.58, 1);}#el_4SOn3QfDp:hover #el_lA6gc0CgwB_arbFQI6iW{-webkit-animation-name: el_lA6gc0CgwB_arbFQI6iW_Animation;animation-name: el_lA6gc0CgwB_arbFQI6iW_Animation;}#el_9xIwOoBCdW_CDyl3b5hd{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);-webkit-animation-timing-function: cubic-bezier(0.42, 0, 1, 1);animation-timing-function: cubic-bezier(0.42, 0, 1, 1);}#el_4SOn3QfDp:hover #el_9xIwOoBCdW_CDyl3b5hd{-webkit-animation-name: el_9xIwOoBCdW_CDyl3b5hd_Animation;animation-name: el_9xIwOoBCdW_CDyl3b5hd_Animation;}#el_YUpiq-xKgQ_bf-1gGPZw{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);-webkit-animation-timing-function: cubic-bezier(0.42, 0, 1, 1);animation-timing-function: cubic-bezier(0.42, 0, 1, 1);}#el_4SOn3QfDp:hover #el_YUpiq-xKgQ_bf-1gGPZw{-webkit-animation-name: el_YUpiq-xKgQ_bf-1gGPZw_Animation;animation-name: el_YUpiq-xKgQ_bf-1gGPZw_Animation;}</style><defs></defs><title>Risorsa 2</title><g id="el_YeYw_PokKr" data-name="Livello 2"><g id="el_NoV7WxKRxd" data-name="Livello 1"><path d="M.5,34v9a.5.5,0,0,0,.5.5H34a.5.5,0,0,0,.5-.5V34" id="el_ohACArKgr6"></path><g id="el_lwNId3ZnX__S8SfrLPa2" data-animator-group="true" data-animator-type="0"><path d="M5.5,17.5,17.15,29.06a.5.5,0,0,0,.7,0L29.5,17.5" id="el_lwNId3ZnX_"></path></g><g id="el_lA6gc0CgwB_arbFQI6iW" data-animator-group="true" data-animator-type="0"><line x1="17.5" y1="29" x2="17.5" id="el_lA6gc0CgwB"></line></g><g id="el_9xIwOoBCdW_CDyl3b5hd" data-animator-group="true" data-animator-type="0"><path d="M5.5,17.5,17.15,29.06a.5.5,0,0,0,.7,0L29.5,17.5" id="el_9xIwOoBCdW"></path></g><g id="el_YUpiq-xKgQ_bf-1gGPZw" data-animator-group="true" data-animator-type="0"><line x1="17.5" y1="29" x2="17.5" id="el_YUpiq-xKgQ"></line></g></g></g><script>(function(){var a=document.querySelector('#el_4SOn3QfDp'),b=a.querySelectorAll('style'),c=function(d){b.forEach(function(f){var g=f.textContent;g&amp;&amp;(f.textContent=g.replace(/transform-box:[^;\r\n]*/gi,'transform-box: '+d))})};c('initial'),window.requestAnimationFrame(function(){return c('fill-box')})})();</script></svg>                                </div>
-                            </div>
-                        </div>
-
-                        <div style="margin-top: 10px;" class="row margin--lr-0">
-                            <div class="col-12">
-                              <p style="margin-bottom: 10px;" id="catalogy-word" class="heading-3">COLLEZIONE LIVING</p>
-                                <p id="download-line" class="heading-3">Download</p>
-                            </div>
-                        </div>
-                    </a>
-                      <a href="http://www.spagnolmobili.it/download/4e660aebc1057e6bb6b721b3f29cb5c7" target="_blank" class="col-6 col-md-4 col-lg-2 px-2 margin--bottom-100 item_list">
-                        <div class="row item_list_image">
-                            <div class="col-12">
-                                <img src="uploads/sections/images/3/cat4.jpg" class="animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="300">
-
-                                <div class="hoverDownload hoverDownload2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 44" id="el_4SOn3QfDp"><style>@-webkit-keyframes el_YUpiq-xKgQ_bf-1gGPZw_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@keyframes  el_YUpiq-xKgQ_bf-1gGPZw_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@-webkit-keyframes el_9xIwOoBCdW_CDyl3b5hd_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@keyframes  el_9xIwOoBCdW_CDyl3b5hd_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@-webkit-keyframes el_lA6gc0CgwB_arbFQI6iW_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}@keyframes  el_lA6gc0CgwB_arbFQI6iW_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}@-webkit-keyframes el_lwNId3ZnX__S8SfrLPa2_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}@keyframes  el_lwNId3ZnX__S8SfrLPa2_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}#el_4SOn3QfDp *{-webkit-animation-duration: 1s;animation-duration: 1s;-webkit-animation-play-state: running;animation-play-state: running;-webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);animation-timing-function: cubic-bezier(0, 0, 1, 1);}#el_ohACArKgr6{fill: none;stroke: #ffff;stroke-miterlimit: 10;}#el_lwNId3ZnX_{fill: none;stroke: #ffff;stroke-miterlimit: 10;fill-rule: evenodd;}#el_lA6gc0CgwB{fill: none;stroke: #ffff;stroke-miterlimit: 10;}#el_9xIwOoBCdW{fill: none;stroke: #ffff;stroke-miterlimit: 10;fill-rule: evenodd;}#el_YUpiq-xKgQ{fill: none;stroke: #ffff;stroke-miterlimit: 10;}#el_lwNId3ZnX__S8SfrLPa2{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);-webkit-animation-timing-function: cubic-bezier(0, 0, 0.58, 1);animation-timing-function: cubic-bezier(0, 0, 0.58, 1);}#el_4SOn3QfDp:hover #el_lwNId3ZnX__S8SfrLPa2{-webkit-animation-name: el_lwNId3ZnX__S8SfrLPa2_Animation;animation-name: el_lwNId3ZnX__S8SfrLPa2_Animation;}#el_lA6gc0CgwB_arbFQI6iW{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);-webkit-animation-timing-function: cubic-bezier(0, 0, 0.58, 1);animation-timing-function: cubic-bezier(0, 0, 0.58, 1);}#el_4SOn3QfDp:hover #el_lA6gc0CgwB_arbFQI6iW{-webkit-animation-name: el_lA6gc0CgwB_arbFQI6iW_Animation;animation-name: el_lA6gc0CgwB_arbFQI6iW_Animation;}#el_9xIwOoBCdW_CDyl3b5hd{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);-webkit-animation-timing-function: cubic-bezier(0.42, 0, 1, 1);animation-timing-function: cubic-bezier(0.42, 0, 1, 1);}#el_4SOn3QfDp:hover #el_9xIwOoBCdW_CDyl3b5hd{-webkit-animation-name: el_9xIwOoBCdW_CDyl3b5hd_Animation;animation-name: el_9xIwOoBCdW_CDyl3b5hd_Animation;}#el_YUpiq-xKgQ_bf-1gGPZw{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);-webkit-animation-timing-function: cubic-bezier(0.42, 0, 1, 1);animation-timing-function: cubic-bezier(0.42, 0, 1, 1);}#el_4SOn3QfDp:hover #el_YUpiq-xKgQ_bf-1gGPZw{-webkit-animation-name: el_YUpiq-xKgQ_bf-1gGPZw_Animation;animation-name: el_YUpiq-xKgQ_bf-1gGPZw_Animation;}</style><defs></defs><title>Risorsa 2</title><g id="el_YeYw_PokKr" data-name="Livello 2"><g id="el_NoV7WxKRxd" data-name="Livello 1"><path d="M.5,34v9a.5.5,0,0,0,.5.5H34a.5.5,0,0,0,.5-.5V34" id="el_ohACArKgr6"></path><g id="el_lwNId3ZnX__S8SfrLPa2" data-animator-group="true" data-animator-type="0"><path d="M5.5,17.5,17.15,29.06a.5.5,0,0,0,.7,0L29.5,17.5" id="el_lwNId3ZnX_"></path></g><g id="el_lA6gc0CgwB_arbFQI6iW" data-animator-group="true" data-animator-type="0"><line x1="17.5" y1="29" x2="17.5" id="el_lA6gc0CgwB"></line></g><g id="el_9xIwOoBCdW_CDyl3b5hd" data-animator-group="true" data-animator-type="0"><path d="M5.5,17.5,17.15,29.06a.5.5,0,0,0,.7,0L29.5,17.5" id="el_9xIwOoBCdW"></path></g><g id="el_YUpiq-xKgQ_bf-1gGPZw" data-animator-group="true" data-animator-type="0"><line x1="17.5" y1="29" x2="17.5" id="el_YUpiq-xKgQ"></line></g></g></g><script>(function(){var a=document.querySelector('#el_4SOn3QfDp'),b=a.querySelectorAll('style'),c=function(d){b.forEach(function(f){var g=f.textContent;g&amp;&amp;(f.textContent=g.replace(/transform-box:[^;\r\n]*/gi,'transform-box: '+d))})};c('initial'),window.requestAnimationFrame(function(){return c('fill-box')})})();</script></svg>                                </div>
-                            </div>
-                        </div>
-
-                        <div style="margin-top: 10px;" class="row margin--lr-0">
-                            <div class="col-12">
-                              <p style="margin-bottom: 10px;" id="catalogy-word" class="heading-3">ARDECÒ - ARMADI E CABINE</p>
-                                <p id="download-line" class="heading-3">Download</p>
-                            </div>
-                        </div>
-                    </a>
-                      <a href="http://www.spagnolmobili.it/download/279bad5efcb0c2b7dc66c55cef22df33" target="_blank" class="col-6 col-md-4 col-lg-2 px-2 margin--bottom-100 item_list">
-                        <div class="row item_list_image">
-                            <div class="col-12">
-                                <img src="uploads/sections/images/3/cat5.jpg" class="animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="300">
-
-                                <div class="hoverDownload hoverDownload2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 44" id="el_4SOn3QfDp"><style>@-webkit-keyframes el_YUpiq-xKgQ_bf-1gGPZw_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@keyframes  el_YUpiq-xKgQ_bf-1gGPZw_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@-webkit-keyframes el_9xIwOoBCdW_CDyl3b5hd_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@keyframes  el_9xIwOoBCdW_CDyl3b5hd_Animation{0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}30%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}100%{-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}}@-webkit-keyframes el_lA6gc0CgwB_arbFQI6iW_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}@keyframes  el_lA6gc0CgwB_arbFQI6iW_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}@-webkit-keyframes el_lwNId3ZnX__S8SfrLPa2_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}@keyframes  el_lwNId3ZnX__S8SfrLPa2_Animation{30%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}60%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}0%{-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);}100%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}}#el_4SOn3QfDp *{-webkit-animation-duration: 1s;animation-duration: 1s;-webkit-animation-play-state: running;animation-play-state: running;-webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);animation-timing-function: cubic-bezier(0, 0, 1, 1);}#el_ohACArKgr6{fill: none;stroke: #ffff;stroke-miterlimit: 10;}#el_lwNId3ZnX_{fill: none;stroke: #ffff;stroke-miterlimit: 10;fill-rule: evenodd;}#el_lA6gc0CgwB{fill: none;stroke: #ffff;stroke-miterlimit: 10;}#el_9xIwOoBCdW{fill: none;stroke: #ffff;stroke-miterlimit: 10;fill-rule: evenodd;}#el_YUpiq-xKgQ{fill: none;stroke: #ffff;stroke-miterlimit: 10;}#el_lwNId3ZnX__S8SfrLPa2{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);-webkit-animation-timing-function: cubic-bezier(0, 0, 0.58, 1);animation-timing-function: cubic-bezier(0, 0, 0.58, 1);}#el_4SOn3QfDp:hover #el_lwNId3ZnX__S8SfrLPa2{-webkit-animation-name: el_lwNId3ZnX__S8SfrLPa2_Animation;animation-name: el_lwNId3ZnX__S8SfrLPa2_Animation;}#el_lA6gc0CgwB_arbFQI6iW{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, -50px);transform: translate(0px, -50px);-webkit-animation-timing-function: cubic-bezier(0, 0, 0.58, 1);animation-timing-function: cubic-bezier(0, 0, 0.58, 1);}#el_4SOn3QfDp:hover #el_lA6gc0CgwB_arbFQI6iW{-webkit-animation-name: el_lA6gc0CgwB_arbFQI6iW_Animation;animation-name: el_lA6gc0CgwB_arbFQI6iW_Animation;}#el_9xIwOoBCdW_CDyl3b5hd{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);-webkit-animation-timing-function: cubic-bezier(0.42, 0, 1, 1);animation-timing-function: cubic-bezier(0.42, 0, 1, 1);}#el_4SOn3QfDp:hover #el_9xIwOoBCdW_CDyl3b5hd{-webkit-animation-name: el_9xIwOoBCdW_CDyl3b5hd_Animation;animation-name: el_9xIwOoBCdW_CDyl3b5hd_Animation;}#el_YUpiq-xKgQ_bf-1gGPZw{-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;transform-box: fill-box;-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);-webkit-animation-timing-function: cubic-bezier(0.42, 0, 1, 1);animation-timing-function: cubic-bezier(0.42, 0, 1, 1);}#el_4SOn3QfDp:hover #el_YUpiq-xKgQ_bf-1gGPZw{-webkit-animation-name: el_YUpiq-xKgQ_bf-1gGPZw_Animation;animation-name: el_YUpiq-xKgQ_bf-1gGPZw_Animation;}</style><defs></defs><title>Risorsa 2</title><g id="el_YeYw_PokKr" data-name="Livello 2"><g id="el_NoV7WxKRxd" data-name="Livello 1"><path d="M.5,34v9a.5.5,0,0,0,.5.5H34a.5.5,0,0,0,.5-.5V34" id="el_ohACArKgr6"></path><g id="el_lwNId3ZnX__S8SfrLPa2" data-animator-group="true" data-animator-type="0"><path d="M5.5,17.5,17.15,29.06a.5.5,0,0,0,.7,0L29.5,17.5" id="el_lwNId3ZnX_"></path></g><g id="el_lA6gc0CgwB_arbFQI6iW" data-animator-group="true" data-animator-type="0"><line x1="17.5" y1="29" x2="17.5" id="el_lA6gc0CgwB"></line></g><g id="el_9xIwOoBCdW_CDyl3b5hd" data-animator-group="true" data-animator-type="0"><path d="M5.5,17.5,17.15,29.06a.5.5,0,0,0,.7,0L29.5,17.5" id="el_9xIwOoBCdW"></path></g><g id="el_YUpiq-xKgQ_bf-1gGPZw" data-animator-group="true" data-animator-type="0"><line x1="17.5" y1="29" x2="17.5" id="el_YUpiq-xKgQ"></line></g></g></g><script>(function(){var a=document.querySelector('#el_4SOn3QfDp'),b=a.querySelectorAll('style'),c=function(d){b.forEach(function(f){var g=f.textContent;g&amp;&amp;(f.textContent=g.replace(/transform-box:[^;\r\n]*/gi,'transform-box: '+d))})};c('initial'),window.requestAnimationFrame(function(){return c('fill-box')})})();</script></svg>                                </div>
-                            </div>
-                        </div>
-
-                        <div style="margin-top: 10px;" class="row margin--lr-0">
-                            <div class="col-12">
-                              <p style="margin-bottom: 10px;" id="catalogy-word" class="heading-3">KIDS & YOUNG</p>
-                                <p id="download-line" class="heading-3">Download</p>
-                            </div>
-                        </div>
-                    </a>
-                            </div>
+<img height="400" width="400" src="./uploads/products/images/1/Duofrontale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Perry&amp;u=https://www.novamobili.it/it/perry&amp;picture=https://www.novamobili.it/uploads/products/images/2/23100ff0c6a3ff506b054b97c1b7ccc1819bd0ef_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/perry&amp;media=https://www.novamobili.it/uploads/products/images/2/23100ff0c6a3ff506b054b97c1b7ccc1819bd0ef_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/perry&amp;title=Perry&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/perry', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Duo Sito</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</div>
+</a>
 
 
 
 
-    </div>
+<div class="row">
+  <a href="https://www.novamobili.it/it/liberty" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="./uploads/products/images/1/FormaSito.JPG" alt="armadi ad anta battente design">
 
+
+<img height="400" width="400" src="./uploads/products/images/1/Formafrontale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Liberty&amp;u=https://www.novamobili.it/it/liberty&amp;picture=https://www.novamobili.it/uploads/products/images/0/Axel mansardato SC.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/liberty&amp;media=https://www.novamobili.it/uploads/products/images/0/Axel mansardato SC.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/liberty&amp;title=Liberty&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/liberty', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Forma Sito</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</a>                                                                                
+<a href="#" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="./uploads/products/images/1/Forte1Sito.JPG" alt="armadi ad anta battente design">
+
+
+<img height="400" width="400" src="./uploads/products/images/1/Forte1frontale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Alfa&amp;u=https://www.novamobili.it/it/alfa&amp;picture=https://www.novamobili.it/uploads/products/images/4/42f15ed71a0dae78df4c430ce6a15afe62c0d6b4_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/alfa&amp;media=https://www.novamobili.it/uploads/products/images/4/42f15ed71a0dae78df4c430ce6a15afe62c0d6b4_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/alfa&amp;title=Alfa&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/alfa', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Forte 1 Sito</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</a>                                                                  </div>
+
+
+<div class="row">
+  <a href="https://www.novamobili.it/it/gola" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="./uploads/products/images/1/Forte2Sito.jpg" alt="armadi ad anta battente design">
+
+
+<img height="400" width="400" src="./uploads/products/images/1/Forte2laterale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Gola&amp;u=https://www.novamobili.it/it/gola&amp;picture=https://www.novamobili.it/uploads/products/images/e/e05bccbe93482d77893430f87a6edf3ab6dfbc7c_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/gola&amp;media=https://www.novamobili.it/uploads/products/images/e/e05bccbe93482d77893430f87a6edf3ab6dfbc7c_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/gola&amp;title=Gola&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/gola', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Forte 2 Sito</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</a>                                                                                <a href="https://www.novamobili.it/it/crystal" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="./uploads/products/images/1/JOINT.jpg" alt="armadi ad anta battente design">
+
+
+<img height="400" width="400" src="./uploads/products/images/1/Jointfrontale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Crystal&amp;u=https://www.novamobili.it/it/crystal&amp;picture=https://www.novamobili.it/uploads/products/images/b/bd882be7c6eda7971aa197a778994deff36100fb_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/crystal&amp;media=https://www.novamobili.it/uploads/products/images/b/bd882be7c6eda7971aa197a778994deff36100fb_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/crystal&amp;title=Crystal&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/crystal', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Joint</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</a>
+<a href="https://www.novamobili.it/it/gola-con-cassettiera-esterna" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="./uploads/products/images/1/TelainoT0.jpg" alt="armadi ad anta battente design">
+
+
+<img height="400" width="400" src="./uploads/products/images/1/TelainoT0frontale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Gola+con+cassettiera+esterna&amp;u=https://www.novamobili.it/it/gola-con-cassettiera-esterna&amp;picture=https://www.novamobili.it/uploads/products/images/1/18d82701fa7ed849ce47e260745318dcdd59c8eb_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/gola-con-cassettiera-esterna&amp;media=https://www.novamobili.it/uploads/products/images/1/18d82701fa7ed849ce47e260745318dcdd59c8eb_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/gola-con-cassettiera-esterna&amp;title=Gola+con+cassettiera+esterna&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/gola-con-cassettiera-esterna', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Telaino T0</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</a>                                                                               <a href="https://www.novamobili.it/it/plisse" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="./uploads/products/images/1/TelinoT1Sito.JPG" alt="armadi ad anta battente design">
+
+
+<img height="400" width="400" src="./uploads/products/images/1/TelainoT1lateraleaperta.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Pliss%C3%A9&amp;u=https://www.novamobili.it/it/plisse&amp;picture=https://www.novamobili.it/uploads/products/images/d/d9b5530161d94b7ef3ecac40d90494013417d0cb_m.jpg&amp;description=Tormena+-+Neadesign','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/plisse&amp;media=https://www.novamobili.it/uploads/products/images/d/d9b5530161d94b7ef3ecac40d90494013417d0cb_m.jpg&amp;description=Tormena+-+Neadesign','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/plisse&amp;title=Pliss%C3%A9&amp;summary=Tormena+-+Neadesign&amp;source=https://www.novamobili.it/it/plisse', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Telino T1 Sito</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</a> 
+
+
+ <a href="https://www.novamobili.it/it/unika" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="./uploads/products/images/1/TelainoT2.JPG" alt="armadi ad anta battente design">
+
+
+<img height="400" width="400" src="./uploads/products/images/1/TelainoT2laterale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Unika&amp;u=https://www.novamobili.it/it/unika&amp;picture=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/unika&amp;media=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/unika&amp;title=Unika&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/unika', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Telaino T2</h3>
+<h4 id="heading-02">Spagnol Omega</h4>
+</div>
+</div>
+</a> 
+
+
+
+ <a href="https://www.novamobili.it/it/unika" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="./uploads/products/images/1/WidowSito.JPG" alt="armadi ad anta battente design">
+
+
+<img height="400" width="400" src="./uploads/products/images/1/Windowfrontale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Unika&amp;u=https://www.novamobili.it/it/unika&amp;picture=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/unika&amp;media=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/unika&amp;title=Unika&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/unika', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Widow Sito</h3>
+<h4 id="heading-02">Spagnol Omega</h4>
+</div>
+</div>
+</a> 
+
+
+<!-- end -->
+<!--
+<a href="https://www.novamobili.it/it/alfa-intono" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="uploads/products/images/0/System 1 SIto.jpg" alt="armadi ad anta battente design">
+
+
+<img height="400" width="400" src="uploads/products/images/0/System 1 frontale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Alfa+Intono&amp;u=https://www.novamobili.it/it/alfa-intono&amp;picture=https://www.novamobili.it/uploads/products/images/f/f3e9c16d22777e687b27ea4994eec97f908de188_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/alfa-intono&amp;media=https://www.novamobili.it/uploads/products/images/f/f3e9c16d22777e687b27ea4994eec97f908de188_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/alfa-intono&amp;title=Alfa+Intono&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/alfa-intono', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">System 1 SIto</h3>
+<h4 id="heading-02">Spagnol System</h4>
+</div>
+</div>
+</a>
+
+
+
+
+<a href="https://www.novamobili.it/it/alfa-curvo" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="uploads/products/images/0/Telaino T1 Bat.jpg" alt="armadi ad anta battente design">
+
+
+<img height="400" width="400" src="uploads/products/images/0/Telaino T1 frontale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Alfa+Curvo&amp;u=https://www.novamobili.it/it/alfa-curvo&amp;picture=https://www.novamobili.it/uploads/products/images/3/37afbce50138657e7ec80f8f1e4ee5f7d925bf82_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/alfa-curvo&amp;media=https://www.novamobili.it/uploads/products/images/3/37afbce50138657e7ec80f8f1e4ee5f7d925bf82_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/alfa-curvo&amp;title=Alfa+Curvo&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/alfa-curvo', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Telaino T1 frontale</h3>
+<h4 id="heading-02">Spagnol Telaino</h4>
+</div>
+</div>
+</a> 
+
+
+
+<a href="https://www.novamobili.it/it/alfa-curvo" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="uploads/products/images/0/Unica Bat Sito.jpg" alt="armadi ad anta battente design">
+
+
+<img height="400" width="400" src="uploads/products/images/0/Unica frontale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Alfa+Curvo&amp;u=https://www.novamobili.it/it/alfa-curvo&amp;picture=https://www.novamobili.it/uploads/products/images/3/37afbce50138657e7ec80f8f1e4ee5f7d925bf82_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/alfa-curvo&amp;media=https://www.novamobili.it/uploads/products/images/3/37afbce50138657e7ec80f8f1e4ee5f7d925bf82_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/alfa-curvo&amp;title=Alfa+Curvo&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/alfa-curvo', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Unica Bat Sito</h3>
+<h4 id="heading-02">Spagnol Unica</h4>
+</div>
+</div>
+</a> 
+
+
+
+
+
+<a href="https://www.novamobili.it/it/alfa-curvo" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="uploads/products/images/0/Unica Bat Sito.jpg" alt="armadi ad anta battente design">
+
+
+<img height="400" width="400" src="uploads/products/images/0/Unica frontale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Alfa+Curvo&amp;u=https://www.novamobili.it/it/alfa-curvo&amp;picture=https://www.novamobili.it/uploads/products/images/3/37afbce50138657e7ec80f8f1e4ee5f7d925bf82_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/alfa-curvo&amp;media=https://www.novamobili.it/uploads/products/images/3/37afbce50138657e7ec80f8f1e4ee5f7d925bf82_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/alfa-curvo&amp;title=Alfa+Curvo&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/alfa-curvo', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Unica frontale</h3>
+<h4 id="heading-02">Spagnol Unica</h4>
+</div>
+</div>
+</a>  
+
+
+
+
+
+
+
+
+<a href="https://www.novamobili.it/it/gola-con-pannello-porta-tv" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="uploads/products/images/0/Telaino T2 Bat.jpg" alt="armadi ad anta battente design">
+
+
+<img height="400" width="400" src="uploads/products/images/0/Telaino T2 frontale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Gola+con+pannello+porta+TV&amp;u=https://www.novamobili.it/it/gola-con-pannello-porta-tv&amp;picture=https://www.novamobili.it/uploads/products/images/c/c1d7cf5669430f53ce3e243bc8d6002459c9f2b7_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/gola-con-pannello-porta-tv&amp;media=https://www.novamobili.it/uploads/products/images/c/c1d7cf5669430f53ce3e243bc8d6002459c9f2b7_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/gola-con-pannello-porta-tv&amp;title=Gola+con+pannello+porta+TV&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/gola-con-pannello-porta-tv', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Telaino T2 Bat</h3>
+<h4 id="heading-02">Spagnol Telaino</h4>
+</div>
+</div>
+</a></div>
+</div>
+</div>-->
+
+
+
+
+
+  <!-- end content -->
 
         
 
@@ -3032,7 +3294,7 @@ Aris3
 
 
         </div>
-        <p class="copyright"> &copy; Copyright All rights reserved. </p>
+        <p id="copyright" class="copyright"> &copy; Copyright All rights reserved. </p>
       <!--</div>-->
     </div>
 
