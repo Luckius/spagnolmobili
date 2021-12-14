@@ -147,13 +147,16 @@
     <script type="text/javascript">
 
         const userAction = async () => {
-          const response = await fetch('https://heyzine.com/api1/rest?pdf=http://www.pdf995.com/samples/pdf.pdf&k=1bfa964f663d66fa');
+          const response = await fetch('https://heyzine.com/api1/async?pdf=https://heyzine.com/admin/view?n=db83ae3c0fa0ccc7137df58b03a1523cc6215da3.pdf&k=1bfa964f663d66fa');
           const myJson = await response.json(); //extract JSON from the http response
           // do something with myJson
-          console.log(myJson);
-          alert(myJson.pdf);
-          document.getElementById('mybookImg').src = myJson.thumbnail;
+          //console.log(myJson);
+          //document.getElementById('mybookImg').src = myJson.thumbnail;
+          //$("#flipbook").load(myJson.url);
+          
         }
+
+        
 
     </script>
 
@@ -1868,22 +1871,19 @@ N° REA: TV 185064                    </p>
 
                                                             <ul id="submenu-1" class="menu-submenu-item-single-list">
                                                             <li>
-                                                                <a href="adeco.html">
-                                                                    Ardeco
+                                                                <a href="adeco.html">Ardeco
                                                                 </a>
                                                             </li>
                                                             
                                                             <li>
-                                                                <a href="en/ottomans-and-floor-cushions.html">
-                                                                    Vega night
+                                                                <a href="en/ottomans-and-floor-cushions.html">Vega night
                                                                 </a>
                                                             </li>
 
                                                         
 
                                                             <li>
-                                                                <a href="en/ottomans-and-floor-cushions.html">
-                                                                    Globo
+                                                                <a href="en/ottomans-and-floor-cushions.html">Globo
                                                                 </a>
                                                             </li>
 
@@ -2511,31 +2511,24 @@ N° REA: TV 185064                    </p>
                                         SCOPRI</a>-->
                                         <a id="contact-btn" class="btn btn-lined1">SCOPRI<span class="span1"></span></a>
                     </div>
-        <div class="col-lg-8 offset-lg-2 col-12 offset-0 animated slideInUpSmallPre" data-animation="slideInUpSmall align-center" data-delay="700">
-                            <a id="mybook" href="javascript: void(0);"  class="noGallery" >
-                    <img id="mybookImg" src="uploads/sections/images/3/ardeco.jpg" />
-                    <!--<a href="">
-                    	<-- c473db6eff974034ba8d0f47d858033110754465_l -->
-
-                <!--<script type="text/javascript"
-                src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <script
-                type="text/javascript"
-                src="https://cdn.heyzine.com/release/jquery.pdfflipbook.3.js"></script>
-
-                <script type="text/javascript">
-                    $('a').pdfFlipbook({ key: '1bfa964f663d66fa' });
-                </script>-->
 
 
-
-
-
-                    </a>
-                    
-                </a>
-                    </div>
+        <div id="flipbook" class="col-lg-8 offset-lg-2 col-12 offset-0 animated slideInUpSmallPre" data-animation="slideInUpSmall align-center" data-delay="700">
+            <a id="mybook" href="javascript: void(0);"  class="noGallery" >
+            <!--<img id="mybookImg" src="uploads/sections/images/3/ardeco.jpg" />-->        
+            </a>
+            </a>
+        </div>
     </div>
-</div>        
+
+    <iframe allowfullscreen="allowfullscreen" scrolling="no" class="fp-iframe" src="https://heyzine.com/flip-book/db83ae3c0f.html#page/1" style="border: 1px solid lightgray; width: 100%; height: 500px;"></iframe>
+
+</div>
+
+
+    
+
+
     <!--<div class="container">
     <div class="row row--3 align-items-center">
         <div class="col-lg-4 offset-lg-1 col-12 offset-0 animated slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="300">
