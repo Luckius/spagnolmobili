@@ -144,11 +144,25 @@
     </script>
 
 
+    <script type="text/javascript">
+
+        const userAction = async () => {
+          const response = await fetch('https://heyzine.com/api1/rest?pdf=http://www.pdf995.com/samples/pdf.pdf&k=1bfa964f663d66fa');
+          const myJson = await response.json(); //extract JSON from the http response
+          // do something with myJson
+          console.log(myJson);
+          alert(myJson.pdf);
+          document.getElementById('mybookImg').src = myJson.thumbnail;
+        }
+
+    </script>
+
+
     
     </head>
 <body onload="slider()">
 
-<!-- Google Tag Manager (noscript)
+<!-- Google Tag Manager (noscript) slider()
 
  -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCXV85L"
@@ -2499,7 +2513,7 @@ N° REA: TV 185064                    </p>
                     </div>
         <div class="col-lg-8 offset-lg-2 col-12 offset-0 animated slideInUpSmallPre" data-animation="slideInUpSmall align-center" data-delay="700">
                             <a id="mybook" href="javascript: void(0);"  class="noGallery" >
-                    <img src="uploads/sections/images/3/ardeco.jpg" />
+                    <img id="mybookImg" src="uploads/sections/images/3/ardeco.jpg" />
                     <!--<a href="">
                     	<-- c473db6eff974034ba8d0f47d858033110754465_l -->
 
@@ -2675,6 +2689,7 @@ N° REA: TV 185064                    </p>
         //setTimeout("slider()",6000);
       }*/
 
+      userAction();
 
     </script>
 
