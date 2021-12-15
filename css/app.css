@@ -22374,7 +22374,7 @@ slider */
     }
 
     #scarica-div{
-      margin-top: 10px;
+      margin-top: 200px;
     }
 
     #catalogy-div{
@@ -22387,6 +22387,17 @@ slider */
       max-width: 100%;
       width: 100%;
     }
+
+
+    #boxImg{
+    height: 900px;
+    width: 900px;
+  }
+
+  #boxImg2{
+    height: 900px;
+    width: 900px;
+  }
 
 
 }
