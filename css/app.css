@@ -22392,11 +22392,13 @@ slider */
     #boxImg{
     height: 533px;
     width: 800px;
+    margin-left: -100px;
   }
 
   #boxImg2{
     height: 533px;
     width: 800px;
+    margin-left: -100px;
   }
 
 
