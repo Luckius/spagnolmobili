@@ -22387,17 +22387,18 @@ slider */
 
   #amadi-head0{
     margin-top: 80px;
+    margin-left: -100%;
     
   }
 
   #amadi-head{
     margin-top: 80px;
-    margin-left: -100px;
+    margin-left: -100%;
   }
 
   #img-box{
     margin-top: 80px;
-    margin-left: -100px;
+    margin-left: -100%;
   }
 
 
