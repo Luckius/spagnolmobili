@@ -22387,13 +22387,13 @@ slider */
 
   #amadi-head0{
     margin-top: 80px;
-    margin-left: -7%;
+    /*margin-left: 7%;*/
     
   }
 
   #amadi-head{
     margin-top: 80px;
-    margin-left: 0%;
+    margin-left: 7%;
   }
 
   #img-box{
@@ -22402,7 +22402,7 @@ slider */
   }
 
   #a-footer{
-    margin-left: 7%;
+    /*margin-left: 7%;*/
   }
 
 
