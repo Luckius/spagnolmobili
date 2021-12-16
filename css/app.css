@@ -22146,12 +22146,6 @@ div.header {
 
 
 
-
-
-
-
-
-
 /* css for slide navigation */
 .navigation {
     position: absolute;
@@ -22205,14 +22199,6 @@ slider */
 #radio5:checked~.first {
     margin-left: -80%;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -22326,9 +22312,6 @@ slider */
 }
 
 
-
-
-
 /*.f-menu:hover{
   text-decoration: underline;
   color: black;
@@ -22403,14 +22386,20 @@ slider */
 
 
   #amadi-head0{
-    margin-top: 80px;
+    margin-top: 800px;
     
+  }
+
+  #amadi-head{
+
+  }
+
+  #img-box{
+
   }
 
 
 }
-
-
 
 
 
