@@ -20576,7 +20576,7 @@ div.header {
       .subMenuProducts .select-wrapper .select-dropdown.dropdown-content {
         min-width: 180px; }
   .subMenuProducts.isScrollDown {
-    top: 0px;
+    top: -40px;
     border-top: 0; }
   .subMenuProducts.viewConfig .subMenuProductsList.otherButton li.first {
     float: none; }
@@ -20627,6 +20627,7 @@ div.header {
     .subMenuProducts {
       padding-left: 15px;
       padding-right: 15px;
+
       top: 59px;
       background-color: #fff; } }
 
@@ -22390,7 +22391,7 @@ slider */
 
   #amadi-head{
     margin-top: 80px;
-    margin-left: 3%;
+    margin-left: -3%;
   }
 
   #img-box{
@@ -22905,6 +22906,9 @@ input[type=submit]:hover {
 }
 
 
+.subMenuProducts.isScrollUp{
+  
+}
 
 
 
