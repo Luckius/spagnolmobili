@@ -22374,21 +22374,18 @@ slider */
 
   #boxImg{
     height: 533px;
-    width: 800px;
-    
+    width: 800px; 
   }
 
   #boxImg2{
     height: 533px;
     width: 800px;
-    
   }
 
 
   #amadi-head0{
     margin-top: 80px;
     /*margin-left: 7%;*/
-    
   }
 
   #amadi-head{
@@ -22398,7 +22395,7 @@ slider */
 
   #img-box{
     margin-top: 80px;
-    /*margin-left: -7%;*/
+    margin-left: -20%;
   }
 
   #a-footer{
