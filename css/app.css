@@ -22395,11 +22395,13 @@ slider */
 
   #img-box{
     margin-top: 80px;
-    margin-left: -20%;
+    margin-left: -100%;
   }
 
   #a-footer{
     /*margin-left: 7%;*/
+    margin-bottom: 0px;
+    position: fixed;
   }
 
 
