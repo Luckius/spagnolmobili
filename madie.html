@@ -141,7 +141,21 @@
 
         }
 
-       
+
+
+
+        function showSubMenu2(){
+            if(document.getElementById('submenu-2').style.display == "block"){
+                document.getElementById("submenu-2").style.display = "none";
+                console.log("showMenuClicked");
+            }else{
+                document.getElementById("submenu-2").style.display = "block";
+                console.log("showMenuClicked");
+            }
+            
+
+        }
+  
 
     </script>
 
@@ -2182,14 +2196,34 @@ N° REA: TV 185064                    </p>
                                                 </li>
 
                                                 <li>
-                                                    <a id="submenu-main" href="#">
+                                                    <a onclick="showSubMenu2()" id="submenu-main" href="#">
                                                         Letti
+
+                                                        <!--start -->
+
+                                                            <ul id="submenu-2" class="menu-submenu-item-single-list">
+                                                            <li>
+                                                                <a href="lettiimbotiti.html">Leti imbotiti
+                                                                </a>
+                                                            </li>
+                                                            
+                                                            <li>
+                                                                <a href="lettilegino.html">Letti legino
+                                                                </a>
+                                                            </li>
+
+                                                            
+
+                                                            </ul>
+
+                                                        <!-- end -->
+
                                                     </a>
                                                 </li>
 
 
                                                 <li>
-                                                    <a id="submenu-main" href="#">
+                                                    <a id="submenu-main" href="comodine.html">
                                                         Comò e Comodini
                                                     </a>
                                                 </li>
