@@ -128,6 +128,7 @@
         }
 
 
+
         function showSubMenu(){
             if(document.getElementById('submenu-1').style.display == "block"){
                 document.getElementById("submenu-1").style.display = "none";
@@ -139,33 +140,331 @@
             
 
         }
+
        
 
     </script>
 
 
-    <script type="text/javascript">
+<style type="text/css">    
+        /* The container */
+    .container {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
 
-        const userAction = async () => {
-          const response = await fetch('https://heyzine.com/api1/async?pdf=https://heyzine.com/admin/view?n=db83ae3c0fa0ccc7137df58b03a1523cc6215da3.pdf&k=1bfa964f663d66fa');
-          const myJson = await response.json(); //extract JSON from the http response
-          // do something with myJson
-          //console.log(myJson);
-          //document.getElementById('mybookImg').src = myJson.thumbnail;
-          //$("#flipbook").load(myJson.url);
-          
+    /* Hide the browser's default checkbox */
+    .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    /* Create a custom checkbox */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #fff;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .container:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    .container input:checked ~ .checkmark {
+      background-color: #2196F3;
+      
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+
+    }
+
+    /* Show the checkmark when checked */
+    .container input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    /* Style the checkmark/indicator */
+    .container .checkmark:after {
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+
+    #cont-form {
+      opacity: 0;
+      transition: opacity 2s ease;
+      display: none;
+    }
+
+    /*#cont-form.hide {
+      opacity: 0;
+    }*/
+
+    .menu-title{
+        font-weight: bold;
+    }
+
+
+
+    input[type=checkbox] {
+    display:none;
+    }
+    input[type=checkbox] + label
+    {
+    background: #999;
+    height: 16px;
+    width: 16px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    }
+    input[type=checkbox]:checked + label
+    {
+    background: #0080FF;
+    text-decoration: line-through;
+    height: 16px;
+    width: 16px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    }
+    input[type=checkbox]:checked + label + label {
+        text-decoration: line-through;
+    }
+
+
+    .heading-7{
+      font-size: 50px;
+
+    }
+    .paragraph-2{
+      font-size: 23px;
+    }
+
+    #heading-01{
+      font-size: 23px;
+    }
+
+
+    #col-h{
+      font-size: 15px;
+    }
+
+
+    #img:hover{
+      max-height: 100%;
+    }
+
+
+
+    #mynav{
+      z-index: 0;
+      margin-top: 4%;
+      
+    }
+
+
+    
+    footer{
+      margin-left: 0%;
+    }
+
+
+    /*@media screen and (max-width: 700px){
+      .row{
+        width: 100%;
+        margin-left: 12%;
+      }
+      img{
+        width: 100%;
+      }
+    }
+
+
+    #img-box{
+      margin-left: 15%;
+    }*/
+
+  @media screen and (max-width: 512px){
+
+
+      #img-link{
+        margin-left: -3%;
+      }
+
+
+      #img-box{
+       
+        width: 100%; 
+        margin-left: -2%;
+        padding-left: -2%;
+      }
+
+
+      #img-link{
+        width: 100px;
+      }
+
+
+      #boxImg{
+        width: 140px;
+        height: 140px;
+      }
+
+      #heading-01{
+        font-size: 17px;
+        color: black;
+      }
+
+      #heading-02{
+        font-size: 15px;
+        color: black;
+      }
+
+      
+    }
+
+
+    #img-box{
+      max-width: 100%;
+      width: 100%; 
+      margin-left: 6%;
+    }
+
+
+    @media screen and (min-width: 2300px){
+      #img-box{
+        margin-left: 14%;
+      }
+    }
+
+
+</style>
+
+
+<script type="text/javascript">
+
+  /*window.onscroll = function (e) {  
+    // called when the window is scrolled. 
+    document.getElementById("mynav").style.margin = "-4% 0 0 0";
+
+  }
+
+  function addMarg(){
+    document.getElementById("mynav").style.margin = "4% 0 0 0";
+  }
+
+
+
+  $(document).scroll(function() { 
+     if($(window).scrollTop() === 0) {
+        alert("is on top");
+       //$(".menu").hide();
+       addMarg();
+       
+     }
+  });*/
+
+
+    function showhide() {
+
+        console.log("display");
+        console.log(document.getElementById('cont-form').style.display);
+
+        var x = document.getElementById("cont-form");
+        var speed = 10;
+        var seconds = speed/1000;
+        //if (!x.classList.contains("hide")) {
+        if (x.style.display == "block") {
+          //x.classList.remove("hide");
+          x.style.transition = "opacity "+seconds+"s ease";
+          x.style.opacity = 0;
+          setTimeout(function() {
+                //x.classList.remove("hide");
+                //x.parentNode.removeChild(el);
+                x.style.display = 'none';
+            }, speed);
+          //removeFadeOut();
+        } else if(x.style.display == "none") {
+          x.style.display = 'block';
+          //x.style.opacity = 1;
+          setTimeout(function() {
+                //x.classList.remove("hide");
+                //x.parentNode.removeChild(el);
+                x.style.transition = "opacity "+seconds+"s ease";
+                x.style.opacity = 1;
+            
+            }, 5);
+        }else{
+           
+          //x.style.opacity = 1;
+          //console.log("atleast");
+          setTimeout(function() {
+                //x.classList.remove("hide");
+                //x.parentNode.removeChild(el);
+                x.style.transition = "opacity "+seconds+"s ease";
+                x.style.opacity = 1;
+                x.style.display = 'block';
+            
+            }, 1000); 
         }
 
         
 
-    </script>
+      }
+
+      
+
+//removeFadeOut(document.getElementById('test'), 2000);
+
+    function removeFadeOut() {
+        var speed = 2000;
+        var el = document.getElementById("cont-form");
+        var seconds = speed/1000;
+        el.style.transition = "opacity "+seconds+"s ease";
+        el.style.opacity = 0;
+        setTimeout(function() {
+            el.parentNode.removeChild(el);
+        }, speed);
+    }
+
+
+
+
+</script>
 
 
     
     </head>
-<body onload="slider()">
+<body>
 
-<!-- Google Tag Manager (noscript) slider()
+<!-- Google Tag Manager (noscript)
 
  -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCXV85L"
@@ -194,7 +493,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </div>
 
-<!--<div class="nav">
+<!--
+<div class="nav">
     <div class="nav_relative">
         <div class="nav_search">
             <a href="#" class="openSearch">
@@ -204,8 +504,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="nav_close closeNav"></div>
 
-            </div>
-</div>-->
+      </div>
+</div>
+-->
 
 <div class="search">
     <div class="closest closeSearch">
@@ -417,8 +718,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                                                     <li>
                                         <a href="https://www.facebook.com/novamobili" target="_blank" class="fab fa-facebook-f"></a>
                                     </li>
-                                                                                                    <li>
-                                        <a href="https://it.pinterest.com/novamobili0299/" target="_blank" class="fab fa-pinterest-p"></a>
+                                    <a href="" target="_blank" class="fa fa-twitter"></a>
                                     </li>
                                                                                                     <li>
                                         <a href="https://www.linkedin.com/company/battistella-company/" target="_blank" class="fab fa-linkedin-in"></a>
@@ -1748,12 +2048,12 @@ N° REA: TV 185064                    </p>
             <span class="edgtf-social-icon-widget fa fa-instagram    "></span>        </a>
     
         <a class="edgtf-social-icon-widget-holder edgtf-icon-has-hover" style="color: #ffffff;;font-size: 14px;margin: 0px 5px 0px 5px;" href="http://www.pinterest.com/gruppotomasella/" target="_blank">
-            <span class="fa fa-twitter"></span>        </a>
+            <span class="fa fa-twitter"></span></a>
     
         <a class="edgtf-social-icon-widget-holder edgtf-icon-has-hover" style="color: #ffffff;;font-size: 14px;margin: 0px 10px 0px 5px;" href="https://www.youtube.com/user/TomasellaGroup" target="_blank">
             <span class="edgtf-social-icon-widget fa fa-youtube-play    "></span>        </a>
-      <!--<div class="widget edgtf-separator-widget">
-        <div class="edgtf-separator-holder clearfix  edgtf-separator-center edgtf-separator-normal">
+      <!--<div class="widget edgtf-separator-widget">fa fa-twitter
+        <div class="edgtf-separator-holder clearfix  edgtf-separator-center edgtf-separator-normal">edgtf-social-icon-widget social_pinterest
         <div class="edgtf-separator" style="border-color: #ffffff;border-style: solid;width: 1px;border-bottom-width: 0px;margin-top: 0px;margin-bottom: 0px"></div>
       </div>
     </div>-->
@@ -1774,7 +2074,7 @@ N° REA: TV 185064                    </p>
             <a href="index.html">
                 <!--<a href="">logo--black.svg logo--white.svg</a>-->
                 <img src="images/app/s-logo2.svg" height="300" class="isBlack1" />
-                <!--<img src="images/app/s-logo.svg" height="100" class="isWhite1" />-->
+                <!--<img src="images/app/s-logo.svg" height="30" class="isWhite" />-->
             </a>
         </div>
 
@@ -1790,10 +2090,10 @@ N° REA: TV 185064                    </p>
                     <a href="rivenditory.html" class="menu-title">RIVENDITORI</a>
                 </li>
                 <!--<li class="menu-item">
-                    <a href="#" class="menu-title">CHISIAMO</a>
+                    <a href="#" class="menu-title">CHI SIAMO</a>
                 </li>-->
                 <li class="menu-item">
-                    <a href="Contacts.html" class="menu-title">CONTATTI</a>
+                    <a href="#" class="menu-title">CONTATTI</a>
                 </li>
                 <!--<li class="menu-item">
                     <a href="en/configurator.html" class="menu-title">Configurator</a>
@@ -1828,7 +2128,7 @@ N° REA: TV 185064                    </p>
 
         <div class="col-8 align-center">
             <a href="index.html">
-                <img src="images/app/s-logo2.svg" height="22" class="" />
+                <img src="images/app/s-logo2.svg" height="30" class="" />
             </a>
         </div>
 
@@ -1842,6 +2142,22 @@ N° REA: TV 185064                    </p>
     </div>
 
 </header>
+
+
+
+
+<!--<div id="mynav" class="nav">
+    <div class="nav_relative">
+       
+
+        <div class="nav_close closeNav"></div>
+
+      </div>
+</div>-->
+
+
+
+
 
 <div class="header">
     <ul class="menu">
@@ -1896,7 +2212,7 @@ N° REA: TV 185064                    </p>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a id="submenu-main" href="scorrevoli.html">
+                                                    <a id="submenu-main" href="#">
                                                         Armadi Scorrevoli
                                                     </a>
                                                 </li>
@@ -1920,14 +2236,14 @@ N° REA: TV 185064                    </p>
 
 
                                                 <li>
-                                                    <a id="submenu-main" href="comodine.html">
+                                                    <a id="submenu-main" href="#">
                                                         Comò e Comodini
                                                     </a>
                                                 </li>
 
 
                                                 <li>
-                                                    <a id="submenu-main" href="chiesurescroveli.html">
+                                                    <a id="submenu-main" href="#">
                                                         Chiusure Scorrevoli
                                                     </a>
                                                 </li>
@@ -1997,7 +2313,7 @@ N° REA: TV 185064                    </p>
                                                 </li>-->
 
                                                 <li>
-                                                    <a id="submenu-main" href="Librerie.html">
+                                                    <a id="submenu-main" href="#">
                                                         Librerie
                                                     </a>
                                                 </li>
@@ -2014,7 +2330,7 @@ N° REA: TV 185064                    </p>
                                                 </li>
 
                                                 <li>
-                                                    <a id="submenu-main" href="madie.html">
+                                                    <a id="submenu-main" href="#">
                                                         Madie
                                                     </a>
                                                 </li>
@@ -2091,7 +2407,7 @@ N° REA: TV 185064                    </p>
                                                     </a>
                                                 </li>
                                                                                             <li>
-                                                    <a id="submenu-main" href="kidscomodine.html">
+                                                    <a id="submenu-main" href="#">
                                                         Comò e Comodini
                                                     </a>
                                                 </li>
@@ -2181,6 +2497,11 @@ N° REA: TV 185064                    </p>
     </ul>
 </div>
 <!-- end -->
+
+
+
+
+
 
 <div class="row isMobile menuMobile">
     <div class="col-12">
@@ -2332,19 +2653,18 @@ N° REA: TV 185064                    </p>
                                                                                             <div class="col-12 margin--bottom-20">
                                                     <a href="en/living-room.html" class="menuMobile-item-1-sub">Living room3</a>
                                                 </div>-->
-
                                                                                             <div class="col-12 margin--bottom-20">
-                                                    <!--<a href="en/configurator.html" class="menuMobile-item-1-sub">Configurator</a>-->
+                                                    <a href="en/configurator.html" class="menuMobile-item-1-sub">Configurator</a>
                                                 </div>
                                                                                     
                                                                                     <div class="col-12 margin--bottom-20">
                                                 <span class="menuMobile-item-1-sub">Homes</span>
                                                 <div class="row">
                                                                                                             <div class="col-10 col-offset-2">
-                                                            <!--<a href="en/stories/penthouse-in-the-city.html" class="menuMobile-item-2-sub">Penthouse in the city</a>-->
+                                                            <a href="en/stories/penthouse-in-the-city.html" class="menuMobile-item-2-sub">Penthouse in the city</a>
                                                         </div>
                                                                                                             <div class="col-10 col-offset-2">
-                                                            <!--<a href="en/stories/loft-in-the-hills.html" class="menuMobile-item-2-sub">Loft in the hills</a>-->
+                                                            <a href="en/stories/loft-in-the-hills.html" class="menuMobile-item-2-sub">Loft in the hills</a>
                                                         </div>
                                                                                                     </div>
                                             </div>
@@ -2462,220 +2782,895 @@ N° REA: TV 185064                    </p>
     </div>
 </div>
 
-          
-     
-
-
-
-    <div id="mContainer" class="container-fluid padding--lr-0 isHomepage">
-
-      <!--<div id="slideImg50" class="row row--1   row--first" style="background-image: url('uploads/sections/images/3/backg.jpg');">
-        </div>
-      -->
-        <img id="slideImg14" src="uploads/sections/images/3/backg.jpg">
-
-        <div style="text-align: center;position: relative;margin-top: -92px;" id="slideImg20">
-          <!--<img style="width: 100%;height: 100%;" id="slideImg" src="uploads/sections/images/3/Timeline1.mov">-->
-          <video width= "100%" height="100%" autoplay muted loop id="myVideo">
-            <source src="uploads/sections/images/3/Timeline1.mp4" type="video/mp4">
-          </video>
-
-          
-
-
-
-          <div id="showBtn" class="col-12">  
-            
-            <a href="https://mpembed.com/show/?m=RWK9wL1QtWT&hr=0&filter=saturate&info=&copyright=MPEmbed" class="btn btn-lined">VIRTUAL TOUR SHOWROOM
-                <span class="span1"></span></a>
-          </div>
-
-
-
-        <!--<div id="radioNav" class="navigation">
-                <label onclick="changeImg()" id="radio1" for="radio1" class="navigation-btn">
-                </label>
-                <label onclick="changeImg()" id="radio2" for="radio2" class="navigation-btn">
-                </label>
-                <label onclick="changeImg()" id="radio3" for="radio3" class="navigation-btn">
-                </label>
-                <label onclick="changeImg()" id="radio4" for="radio4" class="navigation-btn">
-                </label>
-                <label onclick="changeImg()" id="radio5" for="radio5" class="navigation-btn">
-                </label>
-            </div>-->
-
-
-        </div>
-
-
-      </div>
-
-
-
-        <!--<img id="slideImg" src="uploads/sections/images/2/2c8b19833164c9ba5b25e6a59f83527e61cccd2d_l.png" />
-
-        <div class="col-12 padding--lr-0 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="300">
-            <a href="javascript: void(0);"  class="noGallery" >
-                <img id="slideImgs" src="uploads/sections/images/2/2c8b19833164c9ba5b25e6a59f83527e61cccd2d_l.png" />
-            </a>
-        </div>
-
-        <div onclick=" location.href='https://www.novamobili.it/en/news/renew-the-experience-of-visiting-our-flagship-store' " class="row--hover" style="cursor: pointer">
-            
-        <div class="col-12">  
-            
-            <a href="#" class="btn btn-lined">VIRTUAL TOUR SHOWROOM
-                <span class="span1"></span></a>
-        </div>
-
-        </div>-->
-        
-         <!--<div onclick=" location.href='https://www.novamobili.it/en/news/renew-the-experience-of-visiting-our-flagship-store' " class="row--hover" style="cursor: pointer">
-                    
-          <div class="col-12">
-                                                                                                        d
-          </div>-->
-        <!--</div>-->
-
-        
-  <div class="container">
-    <div class="row row--2">
-        <div class="col-lg-8 offset-lg-2 col-12 offset-0 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="500">
-                            <!--<h4 class="paragraph-4"><strong>featured</strong></h4>
-                                        <h3 class="heading-1">Extending tables</h3>-->
-                                        <p class="paragraph-2">SpagnolMobili presenta il nuovo catalogo Ardecò collection.</p>
-                                        <!--<a href="en/extending-tables-2.html" class="btn btn--second waves-effect waves-light">
-                                        SCOPRI</a>-->
-                                        <a id="contact-btn" class="btn btn-lined1">SCOPRI<span class="span1"></span></a>
-                    </div>
-
-
-        <div id="flipbook" class="col-lg-8 offset-lg-2 col-12 offset-0 animated slideInUpSmallPre" data-animation="slideInUpSmall align-center" data-delay="700">
-            <a id="mybook" href="javascript: void(0);"  class="noGallery" >
-            <!--<img id="mybookImg" src="uploads/sections/images/3/ardeco.jpg" />-->        
-            </a>
-            </a>
-        </div>
-    </div>
-
-    <iframe allowfullscreen="allowfullscreen" scrolling="no" class="fp-iframe" src="https://heyzine.com/flip-book/db83ae3c0f.html#page/1" style="border: 1px solid lightgray; width: 100%; height: 500px;"></iframe>
-
-</div>
-
-
     
 
+     
 
-    <!--<div class="container">
-    <div class="row row--3 align-items-center">
-        <div class="col-lg-4 offset-lg-1 col-12 offset-0 animated slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="300">
-                            <h4 class="paragraph-4"></h4>
-                                        <h3 class="paragraph-3"></h3>
-                                        <p>PROMOZIONE MATERASSO IN OMAGGIO<br></p>
-                                        <div class="clearfix"></div>
-                <a href="en/fly.html" class="btn btn--second waves-effect waves-light">Learn more</a>
-                    </div>
-        <div class="col-lg-6 offset-lg-1 col-12 offset-0 animated slideRightToLeftSmallPre" data-animation="slideRightToLeftSmall align-center" data-delay="700">
-                            <a href="javascript: void(0);"  class="noGallery" >
-                    <img src="uploads/sections/images/3/promuzione.jpg" />
-                    <img src="067f4df3c3e8b6b585c9a0429a9d9fa9ae618868_l
-                    	style="font-size:0.5em !important; text-transform:uppercase !important; display:block !important; padding-top:20px !important;"
+  <!-- start content-->
+<div id="amadi-head0" style="margin-top: -10%;" class="container-fluid padding--lr-0 padding--top-header">
 
-                    	">
-
-                </a>
-                    </div>
-    </div>
-</div>-->       
-                    <div class="container">
-    <div class="row row--4 align-items-center">
-                    <div class="col-lg-6 col-12  margin--bottom-50-mobile  px-lg-5 px-6 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="300">
-                                    <h4 class="paragraph-4"><strong>News</strong></h4>
-                                                    <a href="javascript: void(0);"  class="noGallery" >
-                        <img src="uploads/sections/images/3/bonusM.jpg" />
-                    </a>
-                                                    <!--<p 
-													33030a7a946acc860494678c57ef8501006c81de_l
-                                                    class="paragraph-2">Novamobili presents the new Details catalogue.</p>
-                                                    <a href="en/news/the-new-details-catalogue-is-out-now.html" class="btn btn--second waves-effect waves-light">Discover</a>-->
-                            </div>
-                    <div class="col-lg-6 col-12  px-lg-5 px-6 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="300">
-                                    <h4 class="paragraph-4"><strong>BONUS MOBILI 2021</strong></h4>
-                        <!--<a href="javascript: void(0);"  class="noGallery" >
-                        <img src="uploads/sections/images/2/29a270b1898083fc197426accd9eeafe39f23ec0_l.jpg" />
-                    </a>-->
-                                                    <!--<p class="paragraph-2">How to organize your bookcase.</p>
-                                                    <a href="en/news/rethinking-spaces-by-giulia-torelli-lesson-3.html" class="btn btn--second waves-effect waves-light">Watch the tutorial</a>-->
-                            </div>
-            </div>
-</div>   
+<div id="amadi-head" style="margin-left: 2%; max-width: 100%;" class="container">
+<div class="row row--7 align-items-center">
+<div class="col-xl-5 col-lg-6 col-12 px-4 align-left animated slideLeftToRightSmallPre slideLeftToRightSmall justAnimate" data-animation="slideLeftToRightSmall" data-delay="400">
+<h1 style="font-size: 50px;" class="heading-7">Commodine</h1>
+<p class="paragraph-2 ">Prodotti commodine.</p>
+</div>
+</div>
+</div>  
 
 
 
+<div style="max-width: 100%;width: 100%; margin-left: 6%;" id="img-box" class="container container_item_list border-0">
 
-<div class="container">
-    <div class="row row--3 align-items-center">
-        <div class="col-lg-4 offset-lg-1 col-12 offset-0 animated slideLeftToRightSmallPre" data-animation="slideLeftToRightSmall" data-delay="300">
-                            <h4 class="paragraph-4"></h4>
-                                        <h3 class="paragraph-3"></h3>
-                                        <p>PROMOZIONE MATERASSO IN OMAGGIO<br></p>
-                                        <div class="clearfix"></div>
-                <!--<a href="en/fly.html" class="btn btn--second waves-effect waves-light">Learn more</a>-->
-                    </div>
-        <div class="col-lg-6 offset-lg-1 col-12 offset-0 animated slideRightToLeftSmallPre" data-animation="slideRightToLeftSmall align-center" data-delay="700">
-                            <a href="javascript: void(0);"  class="noGallery" >
-                    <img src="uploads/sections/images/3/promuzione.jpg" />
-                    <!--<img src="067f4df3c3e8b6b585c9a0429a9d9fa9ae618868_l
-                    	style="font-size:0.5em !important; text-transform:uppercase !important; display:block !important; padding-top:20px !important;"
-
-                    	">-->
-
-                </a>
-                    </div>
-    </div>
-</div> 
+<div class="row">
+<a id="img-link" href="comodinealfa.html" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" width="400" height="300" src="./uploads/products/images/8/Comocomodiniconpiedino.jpg" alt="armadi ad anta battente design">
 
 
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/6/Principale Alfa.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Vico&amp;u=https://www.novamobili.it/it/vico&amp;picture=https://www.novamobili.it/uploads/products/images/f/fbb0a4270421e2f33ed99bcaf2cce418edc9f91c_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/vico&amp;media=https://www.novamobili.it/uploads/products/images/f/fbb0a4270421e2f33ed99bcaf2cce418edc9f91c_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/vico&amp;title=Vico&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/vico', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Centrale Sito</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</a>
+
+
+<a id="img-link" href="comodinegingol.html" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" width="400" height="300" src="./uploads/products/images/8/Comoecomodiniconruote.jpg" alt="armadi ad anta battente design">
+
+<!-- Axel Mansardato -->
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/6/PrincipaleGingol.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Perry&amp;u=https://www.novamobili.it/it/perry&amp;picture=https://www.novamobili.it/uploads/products/images/2/23100ff0c6a3ff506b054b97c1b7ccc1819bd0ef_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/perry&amp;media=https://www.novamobili.it/uploads/products/images/2/23100ff0c6a3ff506b054b97c1b7ccc1819bd0ef_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/perry&amp;title=Perry&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/perry', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Duo Sito</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</div>
+</a>
 
 
 
 
-                    <!--<div class="container" id="catalogue">
-        <div class="row row--5 align-items-center">
-            <div class="col-lg-8 offset-lg-2 col-12 offset-0 align-center">
-                                    <h4 class="paragraph-4 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="100"><strong>New Catalogue</strong></h4>
-                                                    <h3 class="heading-1 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="300">Details Collection</h3>
-                                                    <a href="javascript: void(0);"  class="noGallery" >
-                        <img src="uploads/sections/images/f/f41f2faa210b9b5d86026bb481f764920ce3e026_l.jpg" class="animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="800" />
-                    </a>
-                                                    <br>
-                    
-                    <a href="uploads/downloads/details-collection_20210222080356.pdf"  class="btn btn--first waves-effect waves-brown margin--bottom-50 animated slideInUpSmallPre" data-animation="slideInUpSmall" data-delay="700">downloads</a>
-                                                    <p class="paragraph-5 animated slideInUpSmallPre font-1_1" data-animation="slideInUpSmall" data-delay="900">Not what you're looking for? <a href="en/catalogs.html">View all catalogues</a></p>
-                            </div>
-        </div>
-    </div>-->
-        
-        
+<div class="row">
+  <a id="img-link" href="comodineline.html" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/8/Gingol.jpg" alt="armadi ad anta battente design">
 
-    <!--<div class="row">
-        <img src="uploads/launches/images/a/a8488aac7ae1f006f30bf5dba8e477afd30f5115_s.jpg" />
-        <p>this is image</p>
 
-        <img src="uploads/launches/images/a/a8488aac7ae1f006f30bf5dba8e477afd30f5115_s.jpg" />
-        <p>this is image</p>
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/6/PrincipaleLine.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Liberty&amp;u=https://www.novamobili.it/it/liberty&amp;picture=https://www.novamobili.it/uploads/products/images/0/Axel mansardato SC.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/liberty&amp;media=https://www.novamobili.it/uploads/products/images/0/Axel mansardato SC.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/liberty&amp;title=Liberty&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/liberty', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Forma Sito</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</a>                                                                                
+<a id="img-link" href="comodinemetro.html" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/8/Sky.jpg" alt="armadi ad anta battente design">
 
-        <img src="uploads/launches/images/a/a8488aac7ae1f006f30bf5dba8e477afd30f5115_s.jpg" />
-        <p>this is image</p>
 
-    </div>-->
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/6/Principale Metropolis.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Alfa&amp;u=https://www.novamobili.it/it/alfa&amp;picture=https://www.novamobili.it/uploads/products/images/4/42f15ed71a0dae78df4c430ce6a15afe62c0d6b4_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/alfa&amp;media=https://www.novamobili.it/uploads/products/images/4/42f15ed71a0dae78df4c430ce6a15afe62c0d6b4_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/alfa&amp;title=Alfa&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/alfa', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Forte 1 Sito</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</a>                                                                  </div>
 
-        
-            
-    <!--<img style="height: 600px;width: 100%;" src="uploads/sections/images/3/gerlad11.png" />
 
-    <img style="height: 600px;width: 100%;" src="uploads/sections/images/3/Gr21.png" />-->
+<div class="row">
+  <a id="img-link" href="comodineopen.html" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/8/Teddy.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/6/Principale Open.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Gola&amp;u=https://www.novamobili.it/it/gola&amp;picture=https://www.novamobili.it/uploads/products/images/e/e05bccbe93482d77893430f87a6edf3ab6dfbc7c_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/gola&amp;media=https://www.novamobili.it/uploads/products/images/e/e05bccbe93482d77893430f87a6edf3ab6dfbc7c_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/gola&amp;title=Gola&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/gola', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Forte 2 Sito</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</a>                                                                                
+
+
+<!--<a id="img-link" href="comodinesky.html" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/6/Sky.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/6/Principale Sky.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Crystal&amp;u=https://www.novamobili.it/it/crystal&amp;picture=https://www.novamobili.it/uploads/products/images/b/bd882be7c6eda7971aa197a778994deff36100fb_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/crystal&amp;media=https://www.novamobili.it/uploads/products/images/b/bd882be7c6eda7971aa197a778994deff36100fb_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/crystal&amp;title=Crystal&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/crystal', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Joint</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</a>
+
+
+
+<a id="img-link" href="comodineteddy.html" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/6/Teddy.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/6/Principale Teddy.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Crystal&amp;u=https://www.novamobili.it/it/crystal&amp;picture=https://www.novamobili.it/uploads/products/images/b/bd882be7c6eda7971aa197a778994deff36100fb_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/crystal&amp;media=https://www.novamobili.it/uploads/products/images/b/bd882be7c6eda7971aa197a778994deff36100fb_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/crystal&amp;title=Crystal&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/crystal', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Joint</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</a>
+
+
+
+
+
+<a id="img-link" href="comodinethai.html" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/6/Thai.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/6/Principale Thai.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Crystal&amp;u=https://www.novamobili.it/it/crystal&amp;picture=https://www.novamobili.it/uploads/products/images/b/bd882be7c6eda7971aa197a778994deff36100fb_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/crystal&amp;media=https://www.novamobili.it/uploads/products/images/b/bd882be7c6eda7971aa197a778994deff36100fb_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/crystal&amp;title=Crystal&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/crystal', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Joint</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</a>
+
+
+
+
+
+<a href="https://www.novamobili.it/it/gola-con-cassettiera-esterna" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/3/Mooby.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/3/Mooby principale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Gola+con+cassettiera+esterna&amp;u=https://www.novamobili.it/it/gola-con-cassettiera-esterna&amp;picture=https://www.novamobili.it/uploads/products/images/1/18d82701fa7ed849ce47e260745318dcdd59c8eb_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/gola-con-cassettiera-esterna&amp;media=https://www.novamobili.it/uploads/products/images/1/18d82701fa7ed849ce47e260745318dcdd59c8eb_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/gola-con-cassettiera-esterna&amp;title=Gola+con+cassettiera+esterna&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/gola-con-cassettiera-esterna', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Telaino T0</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</a>                                                                               <a href="https://www.novamobili.it/it/plisse" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/3/Prisma.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/3/Prisma Principale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Pliss%C3%A9&amp;u=https://www.novamobili.it/it/plisse&amp;picture=https://www.novamobili.it/uploads/products/images/d/d9b5530161d94b7ef3ecac40d90494013417d0cb_m.jpg&amp;description=Tormena+-+Neadesign','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/plisse&amp;media=https://www.novamobili.it/uploads/products/images/d/d9b5530161d94b7ef3ecac40d90494013417d0cb_m.jpg&amp;description=Tormena+-+Neadesign','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/plisse&amp;title=Pliss%C3%A9&amp;summary=Tormena+-+Neadesign&amp;source=https://www.novamobili.it/it/plisse', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Telino T1 Sito</h3>
+<h4 id="heading-02">Spagnol Axes</h4>
+</div>
+</div>
+</a> 
+
+
+ <a href="https://www.novamobili.it/it/unika" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/3/Tender.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/3/Tender Principale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Unika&amp;u=https://www.novamobili.it/it/unika&amp;picture=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/unika&amp;media=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/unika&amp;title=Unika&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/unika', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Telaino T2</h3>
+<h4 id="heading-02">Spagnol Omega</h4>
+</div>
+</div>
+</a> 
+
+
+
+
+<a href="https://www.novamobili.it/it/unika" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/3/Turca.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/3/Turca principale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Unika&amp;u=https://www.novamobili.it/it/unika&amp;picture=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/unika&amp;media=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/unika&amp;title=Unika&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/unika', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Widow Sito</h3>
+<h4 id="heading-02">Spagnol Omega</h4>
+</div>
+</div>
+</a> 
+
+
+
+
+
+<a href="https://www.novamobili.it/it/unika" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/2/Marilyn.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/2/Marilynprincipale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Unika&amp;u=https://www.novamobili.it/it/unika&amp;picture=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/unika&amp;media=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/unika&amp;title=Unika&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/unika', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Widow Sito</h3>
+<h4 id="heading-02">Spagnol Omega</h4>
+</div>
+</div>
+</a> 
+
+
+
+
+ <a href="https://www.novamobili.it/it/unika" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/2/NewLife.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/2/NewLifeprincipale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Unika&amp;u=https://www.novamobili.it/it/unika&amp;picture=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/unika&amp;media=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/unika&amp;title=Unika&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/unika', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Widow Sito</h3>
+<h4 id="heading-02">Spagnol Omega</h4>
+</div>
+</div>
+</a> 
+
+
+
+
+
+ <a href="https://www.novamobili.it/it/unika" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/2/Noa.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/2/NoaPrincipale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Unika&amp;u=https://www.novamobili.it/it/unika&amp;picture=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/unika&amp;media=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/unika&amp;title=Unika&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/unika', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Widow Sito</h3>
+<h4 id="heading-02">Spagnol Omega</h4>
+</div>
+</div>
+</a> 
+
+
+
+
+ <a href="https://www.novamobili.it/it/unika" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/2/Roger.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/2/Rogerprincipale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Unika&amp;u=https://www.novamobili.it/it/unika&amp;picture=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/unika&amp;media=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/unika&amp;title=Unika&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/unika', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Widow Sito</h3>
+<h4 id="heading-02">Spagnol Omega</h4>
+</div>
+</div>
+</a> 
+
+
+
+
+ <a href="https://www.novamobili.it/it/unika" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/2/Royal.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/2/Royalprincipale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Unika&amp;u=https://www.novamobili.it/it/unika&amp;picture=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/unika&amp;media=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/unika&amp;title=Unika&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/unika', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Widow Sito</h3>
+<h4 id="heading-02">Spagnol Omega</h4>
+</div>
+</div>
+</a> 
+
+
+
+ <a href="https://www.novamobili.it/it/unika" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/2/Spazio.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/2/Spazioprincipale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Unika&amp;u=https://www.novamobili.it/it/unika&amp;picture=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/unika&amp;media=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/unika&amp;title=Unika&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/unika', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Widow Sito</h3>
+<h4 id="heading-02">Spagnol Omega</h4>
+</div>
+</div>
+</a> 
+
+
+
+ <a href="https://www.novamobili.it/it/unika" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/2/Step.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/2/Stepprincipale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Unika&amp;u=https://www.novamobili.it/it/unika&amp;picture=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/unika&amp;media=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/unika&amp;title=Unika&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/unika', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Widow Sito</h3>
+<h4 id="heading-02">Spagnol Omega</h4>
+</div>
+</div>
+</a> 
+
+
+
+ <a href="https://www.novamobili.it/it/unika" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/2/Turca Gold.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/2/TurcaGoldprincipale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Unika&amp;u=https://www.novamobili.it/it/unika&amp;picture=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/unika&amp;media=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/unika&amp;title=Unika&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/unika', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Widow Sito</h3>
+<h4 id="heading-02">Spagnol Omega</h4>
+</div>
+</div>
+</a> 
+
+
+
+ <a href="https://www.novamobili.it/it/unika" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/2/TurcaLight.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/2/Turca Light principale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Unika&amp;u=https://www.novamobili.it/it/unika&amp;picture=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/unika&amp;media=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/unika&amp;title=Unika&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/unika', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Widow Sito</h3>
+<h4 id="heading-02">Spagnol Omega</h4>
+</div>
+</div>
+</a> 
+
+
+
+ <a href="https://www.novamobili.it/it/unika" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/2/Turca Over.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/2/Turca Over principale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Unika&amp;u=https://www.novamobili.it/it/unika&amp;picture=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/unika&amp;media=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/unika&amp;title=Unika&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/unika', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Widow Sito</h3>
+<h4 id="heading-02">Spagnol Omega</h4>
+</div>
+</div>
+</a> 
+
+
+
+
+
+ <a href="https://www.novamobili.it/it/unika" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="600">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img id="boxImg" height="300" width="400" src="./uploads/products/images/2/Turca Side.jpg" alt="armadi ad anta battente design">
+
+
+<img id="boxImg2" height="400" width="400" src="./uploads/products/images/2/Turca Side Principale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Unika&amp;u=https://www.novamobili.it/it/unika&amp;picture=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/unika&amp;media=https://www.novamobili.it/uploads/products/images/b/b259dc9f8cac986dc73d7715eb1a9568d458feb2_m.png&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/unika&amp;title=Unika&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/unika', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Widow Sito</h3>
+<h4 id="heading-02">Spagnol Omega</h4>
+</div>
+</div>
+</a> -->
+
+
+
+
+
+
+
+<!-- end -->
+<!--
+<a href="https://www.novamobili.it/it/alfa-intono" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="uploads/products/images/0/System 1 SIto.jpg" alt="armadi ad anta battente design">
+
+
+<img height="400" width="400" src="uploads/products/images/0/System 1 frontale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Alfa+Intono&amp;u=https://www.novamobili.it/it/alfa-intono&amp;picture=https://www.novamobili.it/uploads/products/images/f/f3e9c16d22777e687b27ea4994eec97f908de188_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/alfa-intono&amp;media=https://www.novamobili.it/uploads/products/images/f/f3e9c16d22777e687b27ea4994eec97f908de188_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/alfa-intono&amp;title=Alfa+Intono&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/alfa-intono', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">System 1 SIto</h3>
+<h4 id="heading-02">Spagnol System</h4>
+</div>
+</div>
+</a>
+
+
+
+
+<a href="https://www.novamobili.it/it/alfa-curvo" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="uploads/products/images/0/Telaino T1 Bat.jpg" alt="armadi ad anta battente design">
+
+
+<img height="400" width="400" src="uploads/products/images/0/Telaino T1 frontale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Alfa+Curvo&amp;u=https://www.novamobili.it/it/alfa-curvo&amp;picture=https://www.novamobili.it/uploads/products/images/3/37afbce50138657e7ec80f8f1e4ee5f7d925bf82_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/alfa-curvo&amp;media=https://www.novamobili.it/uploads/products/images/3/37afbce50138657e7ec80f8f1e4ee5f7d925bf82_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/alfa-curvo&amp;title=Alfa+Curvo&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/alfa-curvo', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Telaino T1 frontale</h3>
+<h4 id="heading-02">Spagnol Telaino</h4>
+</div>
+</div>
+</a> 
+
+
+
+<a href="https://www.novamobili.it/it/alfa-curvo" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="uploads/products/images/0/Unica Bat Sito.jpg" alt="armadi ad anta battente design">
+
+
+<img height="400" width="400" src="uploads/products/images/0/Unica frontale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Alfa+Curvo&amp;u=https://www.novamobili.it/it/alfa-curvo&amp;picture=https://www.novamobili.it/uploads/products/images/3/37afbce50138657e7ec80f8f1e4ee5f7d925bf82_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/alfa-curvo&amp;media=https://www.novamobili.it/uploads/products/images/3/37afbce50138657e7ec80f8f1e4ee5f7d925bf82_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/alfa-curvo&amp;title=Alfa+Curvo&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/alfa-curvo', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Unica Bat Sito</h3>
+<h4 id="heading-02">Spagnol Unica</h4>
+</div>
+</div>
+</a> 
+
+
+
+
+
+<a href="https://www.novamobili.it/it/alfa-curvo" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="uploads/products/images/0/Unica Bat Sito.jpg" alt="armadi ad anta battente design">
+
+
+<img height="400" width="400" src="uploads/products/images/0/Unica frontale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Alfa+Curvo&amp;u=https://www.novamobili.it/it/alfa-curvo&amp;picture=https://www.novamobili.it/uploads/products/images/3/37afbce50138657e7ec80f8f1e4ee5f7d925bf82_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/alfa-curvo&amp;media=https://www.novamobili.it/uploads/products/images/3/37afbce50138657e7ec80f8f1e4ee5f7d925bf82_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/alfa-curvo&amp;title=Alfa+Curvo&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/alfa-curvo', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Unica frontale</h3>
+<h4 id="heading-02">Spagnol Unica</h4>
+</div>
+</div>
+</a>  
+
+
+
+
+
+
+
+
+<a href="https://www.novamobili.it/it/gola-con-pannello-porta-tv" class="col-6 item_list px-2 animated slideInUpSmallPre slideInUpSmall justAnimate" data-animation="slideInUpSmall" data-delay="400">
+<div class="row margin--lr-0 item_list_image">
+<div class="col-12 padding--lr-0">
+<img height="300" width="400" src="uploads/products/images/0/Telaino T2 Bat.jpg" alt="armadi ad anta battente design">
+
+
+<img height="400" width="400" src="uploads/products/images/0/Telaino T2 frontale.jpg" class="item_list_image-hover" alt="armadi ad anta battente design">
+<ul class="listSocial">
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?title=Gola+con+pannello+porta+TV&amp;u=https://www.novamobili.it/it/gola-con-pannello-porta-tv&amp;picture=https://www.novamobili.it/uploads/products/images/c/c1d7cf5669430f53ce3e243bc8d6002459c9f2b7_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=580,height=325');" class="fab fa-facebook-f"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="window.open('http://www.pinterest.com/pin/create/button/?url=https://www.novamobili.it/it/gola-con-pannello-porta-tv&amp;media=https://www.novamobili.it/uploads/products/images/c/c1d7cf5669430f53ce3e243bc8d6002459c9f2b7_m.jpg&amp;description=Novamobili+studio','sharer','toolbar=0,status=0,width=450,height=300');" class="fab fa-pinterest-p"></span>
+</li>
+<li>
+<span href="javascript: void(0);" onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.novamobili.it/it/gola-con-pannello-porta-tv&amp;title=Gola+con+pannello+porta+TV&amp;summary=Novamobili+studio&amp;source=https://www.novamobili.it/it/gola-con-pannello-porta-tv', '', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=450')" class="fab fa-linkedin-in"></span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row margin--lr-0 margin--top-25">
+<div id="col-h" class="col-12">
+<h3 id="heading-01">Telaino T2 Bat</h3>
+<h4 id="heading-02">Spagnol Telaino</h4>
+</div>
+</div>
+</a></div>
+</div>
+</div>-->
+
+
+
+
+
+  <!-- end content -->
+
         
 
     <script type="text/javascript">
@@ -2718,9 +3713,15 @@ N° REA: TV 185064                    </p>
         slideImg.src  = images[i];//"url("+myimage+")";//images[i];
         i++;
         //setTimeout("slider()",6000);
+Aris3
+0658 394 534
+0734 313 265
+0742 094 718
+0692 512 396
+0692 512 298
+
       }*/
 
-      userAction();
 
     </script>
 
@@ -2738,10 +3739,11 @@ N° REA: TV 185064                    </p>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="global">
-      <!--<div class="curve1"></div>-->
-      <!--<div class="container1">-->
+      <!--<div class="curve"></div>
+      <div class="container">-->
         <div class="row">
           
+
 
           <div id="col-sm-01" class="col-sm-6 col-md-2">
               <h6>PRODOTTI</h6>
@@ -2772,7 +3774,6 @@ N° REA: TV 185064                    </p>
               </ul>
           </div>
 
-    
         
             <!--<div id="col-sm-04" class="col-md-6 col-md-3">
             <h6 id="f-logo" >SPAGNOLMOBILI</h6>
@@ -2790,240 +3791,19 @@ N° REA: TV 185064                    </p>
             <!--<a href="#"><i class="fa fa-snapchat-ghost"></i> </a>-->
             <a href="#"><i class="fa fa-instagram"></i> </a>
             <a href="#"><i class="fa fa-google-plus"></i> </a>
-            </div>
+        </div>
           </div>
 
 
         </div>
-        <p class="copyright"> &copy; Copyright All rights reserved. </p>
+        <p id="copyright" class="copyright"> &copy; Copyright All rights reserved. </p>
       <!--</div>-->
     </div>
 
 
-
-    <!--<div class="container-fluid container-fluid-menu background--color-brown-2 zIndex1">
-        <div class="row margin--lr-0">
-            <div class="col-lg-2 offset-lg-0 col-10 offset-2">
-                <ul class="menu">
-                    <li class="menu-item">
-                        <a href="en/designers.html" class="menu-title">RIVENDITORI</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="en/stores.html" class="menu-title">VIRTUAL SHOWROOM</a>
-                    </li>
-                    
-                    
-                </ul>
-            </div>
-
-            <div class="col-lg-2 offset-lg-0 col-10 offset-2">
-                <ul class="menu">
-                    <li class="menu-item">
-                        <a href="en/company.html" class="menu-title">AZIENDA</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="en/news.html" class="menu-title">NEWS</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="en/press.html" class="menu-title">CONTATTI</a>
-                    </li>
-                    
-                </ul>
-            </div>
-
-            <div class="col-lg-2 offset-lg-0 col-10 offset-2">
-                <ul class="menu">
-                    <li class="menu-item">
-                        <a href="en/catalogs.html" class="menu-title">
-                            PRODOTTI                        </a>
-                        <ul class="menu-submenu col-12">
-                            <li class="menu-submenu-item">
-                                <a href="en/catalogs.html">
-                                    CATALOGHI                                </a>
-                            </li>
-                            <li class="menu-submenu-item">
-                                <a href="en/data-sheets.html">
-                                    FINITURE                                </a>
-                            </li>
-                            <li class="menu-submenu-item">
-                                <a href="en/fabric-information.html">
-                                   CERTIFICAZIONI                              </a>
-                            </li>
-                           
-
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-2 offset-lg-4 col-10 offset-2">
-                <ul class="menu">
-                    <li class="menu-item margin--bottom-30">
-                        <ul class="menu-submenu col-12 padding--left-0">
-                            <li class="menu-submenu-item">
-                                <a href="en/privacy.html">
-                                 Mobil s.r.l. - SpagnolMobili
-								  </a>
-                            </li>
-                            <li class="menu-submenu-item">
-                                <a href="en/terms.html">
-                                Via Vidor, 1 - Mosnigo di Moriago (TV) - ITALY
-                                 <br>
-                                 </a>
-                            </li>
-                            <li class="menu-submenu-item">
-                                <a href="javascript: void(0);" class="openLegal">
-                                    Legal</a>
-                            </li>
-                            
-                                
-                                    
-                                
-                            
-                        </ul>
-                    </li>
-
-                    <li class="menu-item">
-                        <ul class="menu-submenu col-12 padding--left-0">
-                            <li class="menu-submenu-item">
-                                <a href="#" target="_blank">
-                                    designed by <span class="underline">Gelrad</span>                                </a>
-                            </li>
-                            <li class="menu-submenu-item">
-                                <form class="form2" action="#" method="post">
-                                    <fieldset class="-input-field -input-group-select underline">
-                                        <select id="locale-select" name="country">
-                                                                                            <option value="/it" >Italiano</option>
-                                                                                            <option value="/en"  selected >English</option>
-                                                                                            <option value="/fr" >Français</option>
-                                                                                            <option value="/de" >Deutsch</option>
-                                                                                            <option value="/es" >Español</option>
-                                                                                    </select>
-                                    </fieldset>
-                                </form>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid background--color-brown-2">
-        <div class="row align-items-center">
-            <div class="col-12 goToTop">
-               
-                <a href="javascript: void(0);" class="goTop"></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid border-top-grey padding--menu">
-        <div class="row isDesktopTablet margin--lr-0">
-            <div class="col-12">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-12 border-right-grey _padding--menu">
-                        <p class="infoCompany"><br> <a href="#" target="_blank"></a>
-                        	info.mobili@spagnol.it
-                        	| P.IVA 03329920262 | Privacy
-                        	Tel. +39.0438.89.11,
-                        	<br>Fax +39.0438.89.00.82</p>
-                    </div>
-
-                    <div class="col-lg-3 col-12 align-center border-right-grey padding--top-25 padding--bottom-20 border-tb-borderMenu-mobile">
-                        <div class="row">
-                            <div class="col-10 offset-2 align-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-12 padding--tb-25">
-                        <ul class="listSocial">
-                                                            <li>
-                                    <a href="#" target="_blank" class="fab fa-instagram"></a>
-                                </li>
-                                                                                        <li>
-                                    <a href="#" target="_blank" class="fab fa-facebook-f"></a>
-                                </li>
-                                                                                        <li>
-                                    <a href="#" target="_blank" class="fab fa-pinterest-p"></a>
-                                </li>
-                                                                                        <li>
-                                    <a href="#" target="_blank" class="fab fa-linkedin-in"></a>
-                                </li>
-                                                        
-                                
-                                    
-                                
-                            
-                                                            <li>
-                                    <a href="#" target="_blank" class="fab fa-youtube"></a>
-                                </li>
-                                                    </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row isMobileTablet">
-            <div class="col-12">
-                <div class="row align-items-center">
-                    <div class="col-lg-3 col-12 align-center border-bottom-borderMenu padding--tb-25 border-tb-borderMenu-mobile">
-                        <div class="row">
-                            <div class="col-10 offset-2 align-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-12 padding--tb-25 border-bottom-borderMenu">
-                        <ul class="listSocial">
-                                                            <li>
-                                    <a href="https://instagram.com/novamobili/" target="_blank" class="fab fa-instagram"></a>
-                                </li>
-                                                                                        <li>
-                                    <a href="https://www.facebook.com/novamobili" target="_blank" class="fab fa-facebook-f"></a>
-                                </li>
-                                                                                        <li>
-                                    <a href="https://it.pinterest.com/novamobili0299/" target="_blank" class="fab fa-pinterest-p"></a>
-                                </li>
-                                                                                        <li>
-                                    <a href="https://www.linkedin.com/company/battistella-company/" target="_blank" class="fab fa-linkedin-in"></a>
-                                </li>
-                                                        
-                                
-                                    
-                                
-                            
-                                                            <li>
-                                    <a href="https://www.youtube.com/user/NOVAMOBILI" target="_blank" class="fab fa-youtube"></a>
-                                </li>
-                                                    </ul>
-                    </div>
-
-                    <div class="col-lg-6 col-12 padding--menu">
-                        <p class="infoCompany">Spagnolmobili is a brand by <a href="https://www.battistellacompany.it/" target="_blank">Battistella Company</a><br>VAT reg. no. 02048780262</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
 </footer>
 
-<!--<div class="hidden cookie-policy row" id="footer-cookie-notice">
-    <div class="col-12">
-        <div class="row align-center">
-            <div class="col-12">
-                <p class="paragraph-1 margin--bottom-10">Questo sito utilizza cookie, anche di terze parti, per offrirti una migliore esperienza di navigazione e inviarti pubblicità e servizi in linea con le tue preferenze. Chiudendo questo banner o proseguendo nella navigazione cliccando al di fuori di esso acconsenti all'uso dei cookie. Per saperne di più o per modificare le tue preferenze sui cookie consulta la nostra Cookie Policy.</p>
-            </div>
-            <div class="col-12">
-                <a href="javascript: void(0);" class="btn btn-primary" id="cookie-accept">Accept</a>
-                <a href="en/privacy.html" target="_blank" class="btn btn-secondary">Learn more</a>
-            </div>
-        </div>
-    </div>
-</div>-->
+
     <div class="notifications-container">
         <div class="container">
             <div class="notification-track" id="notification-track">
