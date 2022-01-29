@@ -139,6 +139,19 @@
             
 
         }
+
+
+        //mycastello
+        function showLettiSubMenu(){
+            if(document.getElementById('submenu-100').style.display == "block"){
+                document.getElementById("submenu-100").style.display = "none";
+                console.log("showMenuClicked");
+            }else{
+                document.getElementById("submenu-100").style.display = "block";
+                console.log("showMenuClicked");
+            }
+        }
+
        
 
     </script>
@@ -1843,6 +1856,8 @@ N° REA: TV 185064                    </p>
 
 </header>
 
+
+
 <div class="header">
     <ul class="menu">
         <li class="menu-has-submenu menu-item">
@@ -1883,7 +1898,7 @@ N° REA: TV 185064                    </p>
                                                         
 
                                                             <li>
-                                                                <a href="en/ottomans-and-floor-cushions.html">Globo
+                                                                <a href="#">Globo
                                                                 </a>
                                                             </li>
 
@@ -2071,13 +2086,41 @@ N° REA: TV 185064                    </p>
                                                     </a>
                                                 </li>
                                                                                             <li>
-                                                    <a id="submenu-main" href="">
+                                                    <a id="submenu-main" href="#">
                                                         Letti
                                                     </a>
                                                 </li>
                                                                                             <li>
-                                                    <a id="submenu-main" href="">
+                                                    <a onclick="showLettiSubMenu()" class="mycastello" id="submenu-main" href="#">
                                                         Letti a castello
+
+                                                        <ul id="submenu-100" class="menu-submenu-item-single-list">
+                                                            <li>
+                                                                <a href="letticastelofly.html">letti castelo fly
+                                                                </a>
+                                                            </li>
+                                                            
+                                                            <li>
+                                                                <a href="letticastelomix.html">letti castelo mix
+                                                                </a>
+                                                            </li>
+
+                                                        
+
+                                                            <li>
+                                                                <a href="letticasteloobliquo.html">letti castelo obliquo
+                                                                </a>
+                                                            </li>
+
+
+                                                            <li>
+                                                                <a href="letticasteloslim.html">letti castelo slim
+                                                                </a>
+                                                            </li>
+
+                                                            
+
+                                                        </ul>
                                                     </a>
                                                 </li>
                                                                                             <li>
@@ -2133,12 +2176,12 @@ N° REA: TV 185064                    </p>
                                                     </a>
                                                 </li>
                                                                                             <li>
-                                                    <a id="submenu-main" href="#">
-                                                        Sedie
+                                                    <a id="submenu-main" href="sadeepoltroncine.html">
+                                                        Sedie e poltroncine
                                                     </a>
                                                 </li>
                                                                                             <li>
-                                                    <a id="submenu-main" href="#">
+                                                    <a id="submenu-main" href="tavotavolini.html">
                                                         Tavoli e Tavolini
                                                     </a>
                                                 </li>
