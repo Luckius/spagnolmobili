@@ -152,6 +152,28 @@
             }
         }
 
+
+        function showLettiKidsSubMenu(){
+            if(document.getElementById('submenu-200').style.display == "block"){
+                document.getElementById("submenu-200").style.display = "none";
+                console.log("showMenuClicked");
+            }else{
+                document.getElementById("submenu-200").style.display = "block";
+                console.log("showMenuClicked");
+            }
+        }
+
+
+        function showLettiZonnaSubMenu(){
+            if(document.getElementById('submenu-300').style.display == "block"){
+                document.getElementById("submenu-300").style.display = "none";
+                console.log("showMenuClicked");
+            }else{
+                document.getElementById("submenu-300").style.display = "block";
+                console.log("showMenuClicked");
+            }
+        }
+
        
 
     </script>
@@ -172,7 +194,6 @@
         
 
     </script>
-
 
     
     </head>
@@ -1928,8 +1949,20 @@ N° REA: TV 185064                    </p>
                                                 </li>-->
 
                                                 <li>
-                                                    <a id="submenu-main" href="#">
+                                                    <a onclick="showLettiZonnaSubMenu()" id="submenu-main" href="#">
                                                         Letti
+                                                        <ul id="submenu-300" class="menu-submenu-item-single-list">
+                                                            <li>
+                                                                <a href="lettiimbotiti.html">Letti imbotiti
+                                                                </a>
+                                                            </li>
+                                                            
+                                                            <li>
+                                                                <a href="lettilegino.html">letti legino
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
                                                     </a>
                                                 </li>
 
@@ -1937,6 +1970,13 @@ N° REA: TV 185064                    </p>
                                                 <li>
                                                     <a id="submenu-main" href="comodine.html">
                                                         Comò e Comodini
+                                                    </a>
+                                                </li>
+
+
+                                                <li>
+                                                    <a id="submenu-main" href="cabineamadio.html">
+                                                        Cabine Amadio 
                                                     </a>
                                                 </li>
 
@@ -2085,9 +2125,22 @@ N° REA: TV 185064                    </p>
                                                         Camerette
                                                     </a>
                                                 </li>
-                                                                                            <li>
-                                                    <a id="submenu-main" href="#">
+                                                                                            <l>
+                                                    <li>
+                                                    <a onclick="showLettiKidsSubMenu()" id="submenu-main" href="#">
                                                         Letti
+                                                        <ul id="submenu-200" class="menu-submenu-item-single-list">
+                                                            <li>
+                                                                <a href="kidslettiimbotiti.html">Letti imbotiti
+                                                                </a>
+                                                            </li>
+                                                            
+                                                            <li>
+                                                                <a href="#">letti legino
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
                                                     </a>
                                                 </li>
                                                                                             <li>
