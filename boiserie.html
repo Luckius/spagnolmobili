@@ -18,7 +18,10 @@
 
 <title>Camerette bambini - Camerette ragazzi | Zalf</title>
 <meta name="description" content="Camerette per bambini e ragazzi: arredamento cameretta del tuo bambino o bambina, mobili per camerette da letto moderne. Scopri le camerette Zalf.">
-<link type="text/css" href="https://www.zalf.com/css/build/young.css?v=20211104"  rel="stylesheet" media="all"  />
+
+<link type="text/css" href="./cssZal/build/young2.css"  rel="stylesheet" media="all"  />
+
+<!--<link type="text/css" href="https://www.zalf.com/css/build/young.css?v=20211104"  rel="stylesheet" media="all"  />-->
  
 
 <link rel="alternate" href="https://www.zalf.com/it/prodotti/camerette-per-bambini/camerette-schema-libero" hreflang="it" />
@@ -22979,6 +22982,28 @@ input[type=submit]:hover {
   
 }
 
+
+.lista-scomposta ul li a>div:before {
+    content: " ";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    position: absolute;
+    z-index: 1;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+
+ #boise:before{
+    background-color: #FFFFFF;
+ }
+
+
+
 </style>
 
 
@@ -23523,7 +23548,7 @@ input[type=submit]:hover {
 	
 		<ul class="">
 		            <li style="margin-top: -20%;">
-                <a href="boiserie01.html">
+                <a id="boise" href="boiserie01.html">
                     <div>
                         <div class="wrapperImg">
                             <div data-scroll data-scroll-speed="-.8">
