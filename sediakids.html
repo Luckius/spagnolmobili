@@ -155,15 +155,16 @@
         //The DOMContentLoaded event has already fired. Just run the code.
         //iubenda-cs-banner
         afterLoaded();
+        
     }
 
 
   function afterLoaded(){
-    document.getElementById("iubenda-cs-banner").style.display = "none";
-    /*const boxes = Array.from(document.getElementsByClassName('iubenda-cs-banner'));
+    //document.getElementById("iubenda-cs-banner").style.display = "none";
+    const boxes = Array.from(document.getElementsByClassName('iubenda-cs-container'));
     boxes.forEach(box => {
       box.remove();
-    });*/
+    });
   }
   
 
@@ -181,7 +182,7 @@ footer{
   
 }
 
-#iubenda-cs-banner{
+.iubenda-cs-container{
   display: none;
 }
 
@@ -2394,13 +2395,13 @@ footer{
 </script>-->
 
     <!-- Start of HubSpot Embed Code -->
-    <script
+    <!--<script
       type="text/javascript"
       id="hs-script-loader"
       async
       defer
       src="//js.hs-scripts.com/19582231.js"
-    ></script>
+    ></script>-->
     <!-- End of HubSpot Embed Code -->
   </body>
 </html>
